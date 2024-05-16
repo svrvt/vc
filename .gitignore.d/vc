@@ -1,0 +1,16 @@
+*
+!/bin/vc
+!/.config/mr/available.d/repo-prog.github
+!/.config/mr/available.d/repo-proj.github
+!/.config/mr/available.d/repo-re.github
+!/.config/mr/available.d/repo-vc.github
+!/.config/mr/available.d/show.mr
+!/.config/mr/available.d/vc-desktop.vcsh
+!/.config/mr/available.d/vc-master.vcsh
+!/.config/mr/available.d/vc-test.vcsh
+!/.config/mr/available.d/vc.vcsh
+!/.config/mr/config.d-vaio/vc-desktop.vcsh
+!/.config/mr/config.d-vaio/vc-master.vcsh
+!/.config/mr/config.d-vaio/vc-test.vcsh
+!/.gitignore.d/vc
+!/.mrconfig

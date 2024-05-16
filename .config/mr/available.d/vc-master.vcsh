@@ -1,0 +1,5 @@
+[.config/vcsh/repo.d/vc_master.git]
+checkout = vcsh clone 'git@github.com:chikh-chikh/vc_master' 'vc_master'
+
+# vim: ft=ini
+

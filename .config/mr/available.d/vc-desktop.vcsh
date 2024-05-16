@@ -1,0 +1,9 @@
+[.config/vcsh/repo.d/vcsh_luakit.git]
+checkout =
+      vcsh clone 'git@github.com:chikh-chikh/vcsh_luakit' 'vcsh_luakit'
+      # vcsh vcsh_luakit checkout -b main -f
+# update = git pull --rebase
+# order = 5
+# init = vcsh run vcsh_luakit git stash
+
+# vi: ft=ini syntax=bash

@@ -1,0 +1,6 @@
+[show/dots/aspiers.mr-config/]
+checkout = git clone git@github.com:aspiers/mr-config.git aspiers.mr-config 
+
+[show/dots/alerque.que]
+checkout = git clone git@github.com:alerque/que.git alerque.que
+# vim: ft=ini syntax=sh

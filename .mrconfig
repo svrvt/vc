@@ -1,0 +1,16 @@
+[DEFAULT]
+git_gc = git gc "$@"
+jobs = 3
+
+  # cat ${XDG_CONFIG_HOME:-$HOME/.config}/mr/config.d/*
+include = 
+	cat $HOME/.config/mr/available.d/vc.vcsh
+	if [ -d $HOME/.config/mr/config.d-$HOSTNAME ]; then
+		for conf in $HOME/.config/mr/config.d-$HOSTNAME/*; do
+			test -x $conf && $conf || cat $conf
+		done
+	fi
+
+[ALIAS]
+
+# vim: ft=ini syntax=bash

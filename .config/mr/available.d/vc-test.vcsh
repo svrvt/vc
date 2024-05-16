@@ -1,0 +1,5 @@
+[.config/vcsh/repo.d/vc_test.git]
+checkout = vcsh clone 'git@github.com:chikh-chikh/vc_test' 'vc_test'
+# update = git pull --rebase
+
+# vim: ft=ini syntax=sh
