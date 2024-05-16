@@ -12,5 +12,8 @@
 !/.config/mr/config.d-vaio/vc-desktop.vcsh
 !/.config/mr/config.d-vaio/vc-master.vcsh
 !/.config/mr/config.d-vaio/vc-test.vcsh
+!/.config/vcsh/hooks-enabled/post-merge-unclobber
+!/.config/vcsh/hooks-enabled/pre-merge-unclobber
+!/.config/vcsh/hooks-enabled/pre-upgrade.pull-rebase
 !/.gitignore.d/vc
 !/.mrconfig
