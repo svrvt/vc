@@ -2,7 +2,7 @@
 order = 1
 checkout = 
     vcsh clone 'git@github.com:chikh-chikh/vc_test' 'vc_test'
-update = 
+init = 
     git fetch origin
     git checkout main -f
 

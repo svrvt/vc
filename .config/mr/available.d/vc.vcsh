@@ -4,8 +4,8 @@ checkout = vcsh clone git@github.com:chikh-chikh/vc.git
 init =
     git fetch origin
     git checkout main -f
-# update = 
-#     git push origin
+pull = git pull --rebase
+push = git push origin
 
 # vim: ft=ini syntax=sh
 
