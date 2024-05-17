@@ -1,5 +1,6 @@
 *
 !/bin/vc
+!/bin/vc-home-bootstrap.zsh
 !/.config/mr/available.d/repo-prog.github
 !/.config/mr/available.d/repo-proj.github
 !/.config/mr/available.d/repo-re.github
