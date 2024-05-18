@@ -1,7 +1,7 @@
-[/home/ru/Repos/vcsh/vc]
+[aggregate/vc]
 checkout = git clone git@github.com:chikh-chikh/vc.git 
 
-[/home/ru/Repos/vcsh/vc_luakit]
+[aggregate/vc_luakit]
 checkout = git clone git@github.com:chikh-chikh/vc_luakit.git 
 
 # vim: ft=ini syntax=sh
