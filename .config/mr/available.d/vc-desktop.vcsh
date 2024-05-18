@@ -1,9 +1,9 @@
-[.config/vcsh/repo.d/vcsh_luakit.git]
+[.config/vcsh/repo.d/vc_luakit.git]
 order = 5
-checkout = vcsh clone 'git@github.com:chikh-chikh/vcsh_luakit' 'vcsh_luakit'
-init =
-    git fetch origin
-    git checkout main -f
+checkout = vcsh clone 'git@github.com:chikh-chikh/vc_luakit' 'vc_luakit'
+# init =
+#     git fetch origin
+#     git checkout main -f
 pull = git pull --rebase
 # init = vcsh run vcsh_luakit git stash
 

@@ -1,9 +1,0 @@
-[.config/vcsh/repo.d/vc_test.git]
-order = 1
-checkout = 
-    vcsh clone 'git@github.com:chikh-chikh/vc_test' 'vc_test'
-init = 
-    git fetch origin
-    git checkout main -f
-
-# vim: ft=ini syntax=sh
