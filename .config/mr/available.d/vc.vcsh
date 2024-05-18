@@ -1,9 +1,9 @@
 [$HOME/.config/vcsh/repo.d/vc.git]
 order = 1
 checkout = vcsh clone git@github.com:chikh-chikh/vc.git
-init =
-    git fetch origin
-    git checkout main -f
+# init =
+#     git fetch origin
+#     git checkout main -f
 pull = git pull --rebase
 push = git push origin
 

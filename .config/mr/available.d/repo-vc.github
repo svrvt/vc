@@ -1,10 +1,7 @@
-[/home/ru/Repos/vcsh/vcsh_luakit]
-checkout = git clone git@github.com:chikh-chikh/vcsh_luakit.git 
+[/home/ru/Repos/vcsh/vc]
+checkout = git clone git@github.com:chikh-chikh/vc.git 
 
-[/home/ru/Repos/vcsh/vc_test]
-checkout = git clone git@github.com:chikh-chikh/vc_test.git 
-
-[/home/ru/Repos/vcsh/vc_master]
-checkout = git clone git@github.com:chikh-chikh/vc_master.git 
+[/home/ru/Repos/vcsh/vc_luakit]
+checkout = git clone git@github.com:chikh-chikh/vc_luakit.git 
 
 # vim: ft=ini syntax=sh
