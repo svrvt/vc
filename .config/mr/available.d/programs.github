@@ -1,4 +1,4 @@
-[${XDG_HOME:-$HOME}/prog/OHIF]
+[${XDG_HOME:-$HOME}/DICOM/OHIF]
 checkout = 
     git clone 'git@github.com:chikh-chikh/md_watcher.git' 'OHIF'
     cd OHIF
