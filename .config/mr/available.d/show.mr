@@ -1,19 +1,19 @@
-[show/vcsh/aspiers.mr-config]
+[accommodate/vcsh/aspiers.mr-config]
 checkout = git clone git@github.com:aspiers/mr-config.git aspiers.mr-config 
-[show/vcsh/alerque.que]
+[accommodate/vcsh/alerque.que]
 checkout = git clone git@github.com:alerque/que.git alerque.que
 
-[show/ansible/LearnLinuxTV.personal_ansible_desktop_configs.git]
+[accommodate/ansible/LearnLinuxTV.personal_ansible_desktop_configs.git]
 checkout = git clone git@github.com:LearnLinuxTV/personal_ansible_desktop_configs.git LearnLinuxTV.personal_ansible_desktop_configs.git
-[show/ansible/TechDufus.dotfiles.git]
+[accommodate/ansible/TechDufus.dotfiles.git]
 checkout = git clone git@github.com:TechDufus/dotfiles.git TechDufus.dotfiles.git
-[show/ansible/adithyakhamithkar.ansible-playbooks.git]
+[accommodate/ansible/adithyakhamithkar.ansible-playbooks.git]
 checkout = git clone git@github.com:adithyakhamithkar/ansible-playbooks.git adithyakhamithkar.ansible-playbooks.git
-[show/ansible/anuvyklack.dotfiles.git]
+[accommodate/ansible/anuvyklack.dotfiles.git]
 checkout = git clone git@github.com:anuvyklack/dotfiles.git anuvyklack.dotfiles.git
-[show/ansible/folke.dot.git]
+[accommodate/ansible/folke.dot.git]
 checkout = git clone git@github.com:folke/dot.git folke.dot.git
-[show/ansible/tangledhelix.dotfiles.git]
+[accommodate/ansible/tangledhelix.dotfiles.git]
 checkout = git clone git@github.com:tangledhelix/dotfiles.git tangledhelix.dotfiles.git
 
 # vim: ft=ini syntax=sh
