@@ -3,6 +3,19 @@ checkout = git clone git@github.com:aspiers/mr-config.git aspiers.mr-config
 [adduce/vcsh/alerque.que]
 checkout = git clone git@github.com:alerque/que.git alerque.que
 
+[adduce/barter/Arbitrage_Bot]
+checkout =
+      git clone git@github.com:andrewsiah/Arbitrage_Bot.git git@github.com:andrewsiah/Arbitrage_Bot.git
+      git checkout feat/script_strategy
+[adduce/barter/community-tools]
+checkout = git clone git@github.com:hummingbot/community-tools.git git@github.com:hummingbot/community-tools.git
+[adduce/barter/deploy-examples]
+checkout = git clone git@github.com:hummingbot/deploy-examples.git git@github.com:hummingbot/deploy-examples.git
+[adduce/barter/hummingbot]
+checkout = 
+      git clone git@github.com:hummingbot/hummingbot.git https://github.com/hummingbot/hummingbot.git
+      git checkout development
+
 [adduce/ansible/LearnLinuxTV.personal_ansible_desktop_configs.git]
 checkout = git clone git@github.com:LearnLinuxTV/personal_ansible_desktop_configs.git LearnLinuxTV.personal_ansible_desktop_configs.git
 [adduce/ansible/TechDufus.dotfiles.git]
