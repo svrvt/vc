@@ -1,41 +1,41 @@
-[adduce/vcsh/aspiers.mr-config]
-checkout = git clone git@github.com:aspiers/mr-config.git aspiers.mr-config 
+[adduce/vcsh/aspiers]
+checkout = git clone git@github.com:aspiers/mr-config.git aspiers
 [adduce/vcsh/alerque.que]
-checkout = git clone git@github.com:alerque/que.git alerque.que
+checkout = git clone git@github.com:alerque/que.git alerque
 
 [adduce/barter/Arbitrage_Bot]
 checkout =
-      git clone git@github.com:andrewsiah/Arbitrage_Bot.git git@github.com:andrewsiah/Arbitrage_Bot.git
+      git clone git@github.com:andrewsiah/Arbitrage_Bot.git Arbitrage_Bot
       git checkout feat/script_strategy
 [adduce/barter/community-tools]
-checkout = git clone git@github.com:hummingbot/community-tools.git git@github.com:hummingbot/community-tools.git
+checkout = git clone git@github.com:hummingbot/community-tools.git community-tools
 [adduce/barter/deploy-examples]
-checkout = git clone git@github.com:hummingbot/deploy-examples.git git@github.com:hummingbot/deploy-examples.git
+checkout = git clone git@github.com:hummingbot/deploy-examples.git deploy-examples
 [adduce/barter/hummingbot]
 checkout = 
-      git clone git@github.com:hummingbot/hummingbot.git https://github.com/hummingbot/hummingbot.git
+      git clone git@github.com:hummingbot/hummingbot.git hummingbot
       git checkout development
 
 [adduce/ansible/LearnLinuxTV]
-checkout = git clone git@github.com:LearnLinuxTV/personal_ansible_desktop_configs.git LearnLinuxTV.personal_ansible_desktop_configs.git
+checkout = git clone git@github.com:LearnLinuxTV/personal_ansible_desktop_configs.git LearnLinuxTV
 [adduce/ansible/TechDufus]
-checkout = git clone git@github.com:TechDufus/dotfiles.git TechDufus.dotfiles.git
+checkout = git clone git@github.com:TechDufus/dotfiles.git TechDufus
 [adduce/ansible/adithyakhamithkar]
-checkout = git clone git@github.com:adithyakhamithkar/ansible-playbooks.git adithyakhamithkar.ansible-playbooks.git
+checkout = git clone git@github.com:adithyakhamithkar/ansible-playbooks.git adithyakhamithkar
 [adduce/ansible/anuvyklack]
-checkout = git clone git@github.com:anuvyklack/dotfiles.git anuvyklack.dotfiles.git
+checkout = git clone git@github.com:anuvyklack/dotfiles.git anuvyklack
 [adduce/ansible/folke]
-checkout = git clone git@github.com:folke/dot.git folke.dot.git
+checkout = git clone git@github.com:folke/dot.git folke
 [adduce/ansible/tangledhelix]
-checkout = git clone git@github.com:tangledhelix/dotfiles.git tangledhelix.dotfiles.git
+checkout = git clone git@github.com:tangledhelix/dotfiles.git tangledhelix
 
-[adduce/cheats/denisidoro]
-checkout = git clone git@github.com:denisidoro/cheats.git
-[adduce/sceats/papanito]
-checkout = git clone git@github.com:papanito/cheats.git
-[adduce/cheats/mrVanDalo]
-checkout = git clone git@github.com:mrVanDalo/navi-cheats.git
-[adduce/cheats/infosecstreams]
-checkout = git clone git@github.com:infosecstreams/cheat.sheets.git
+[adduce/navi-cheats/denisidoro]
+checkout = git clone git@github.com:denisidoro/cheats.git denisidoro
+[adduce/navi-cheats/papanito]
+checkout = git clone git@github.com:papanito/cheats.git papanito
+[adduce/navi-cheats/mrVanDalo]
+checkout = git clone git@github.com:mrVanDalo/navi-cheats.git mrVanDalo
+[adduce/navi-cheats/infosecstreams]
+checkout = git clone git@github.com:infosecstreams/cheat.sheets.git infosecstreams
 
 # vim: ft=ini syntax=sh
