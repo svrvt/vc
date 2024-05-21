@@ -35,6 +35,8 @@ checkout = git clone git@github.com:aos/dotfiles.git aos.dotfiles
 
 [adduce/dot/zanshin]
 checkout = git clone git@github.com:zanshin/dotfiles.git zanshin
+[adduce/dot/zanshin.bin]
+checkout = git clone git@github.com:zanshin/bin.git zanshin.bin
 
 [adduce/nix-home/aos]
 checkout = git clone git@github.com:aos/home.nix.git aos
