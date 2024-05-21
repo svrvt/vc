@@ -1,6 +1,6 @@
 [adduce/vcsh/aspiers]
 checkout = git clone git@github.com:aspiers/mr-config.git aspiers
-[adduce/vcsh/alerque.que]
+[adduce/vcsh/alerque]
 checkout = git clone git@github.com:alerque/que.git alerque
 
 [adduce/barter/Arbitrage_Bot]
@@ -28,6 +28,21 @@ checkout = git clone git@github.com:anuvyklack/dotfiles.git anuvyklack
 checkout = git clone git@github.com:folke/dot.git folke
 [adduce/ansible/tangledhelix]
 checkout = git clone git@github.com:tangledhelix/dotfiles.git tangledhelix
+[adduce/ansible/aos.homelab]
+checkout = git clone git@github.com:aos/homelab.git aos.homelab
+[adduce/ansible/aos.dotfiles]
+checkout = git clone git@github.com:aos/dotfiles.git aos.dotfiles 
+
+[adduce/dot/zanshin]
+checkout = git clone git@github.com:zanshin/dotfiles.git zanshin
+
+[adduce/nix-home/aos]
+checkout = git clone git@github.com:aos/home.nix.git aos
+
+[adduce/zsh/zsh-quickstart-kit]
+checkout = git clone git@github.com:unixorn/zsh-quickstart-kit.git zsh-quickstart-kit
+[adduce/zsh/geometry]
+checkout = git clone git@github.com:geometry-zsh/geometry.git geometry
 
 [adduce/navi-cheats/denisidoro]
 checkout = git clone git@github.com:denisidoro/cheats.git denisidoro
