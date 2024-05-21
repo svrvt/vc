@@ -4,4 +4,14 @@ checkout = git clone git@github.com:chikh-chikh/vc.git
 [aggregate/vc_luakit]
 checkout = git clone git@github.com:chikh-chikh/vc_luakit.git 
 
+[aggregate/vc_filers]
+checkout = git clone git@github.com:chikh-chikh/vc_filers.git 
+[aggregate/vc_gits]
+checkout = git clone git@github.com:chikh-chikh/vc_gits.git 
+[aggregate/vc_terminals]
+checkout = git clone git@github.com:chikh-chikh/vc_terminals.git 
+[aggregate/vc_shells]
+checkout = git clone git@github.com:chikh-chikh/vc_shells.git 
+
+
 # vim: ft=ini syntax=sh
