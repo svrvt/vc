@@ -19,19 +19,34 @@ checkout =
 [adduce/ansible/LearnLinuxTV]
 checkout = git clone git@github.com:LearnLinuxTV/personal_ansible_desktop_configs.git LearnLinuxTV
 [adduce/ansible/TechDufus]
-checkout = git clone git@github.com:TechDufus/dotfiles.git TechDufus
+order = 15
+checkout =
+      git clone git@github.com:TechDufus/dotfiles.git TechDufus
+      ln -svnf $PWD $HOME/accommodate/ansible/ansible_use
+
 [adduce/ansible/adithyakhamithkar]
 checkout = git clone git@github.com:adithyakhamithkar/ansible-playbooks.git adithyakhamithkar
 [adduce/ansible/anuvyklack]
 checkout = git clone git@github.com:anuvyklack/dotfiles.git anuvyklack
-[adduce/ansible/folke]
-checkout = git clone git@github.com:folke/dot.git folke
+[adduce/dot/folke]
+checkout =
+      git clone git@github.com:folke/dot.git folke
+      ln -svn $PWD/folke/ansible ../ansible/folke
 [adduce/ansible/tangledhelix]
 checkout = git clone git@github.com:tangledhelix/dotfiles.git tangledhelix
 [adduce/ansible/aos.homelab]
 checkout = git clone git@github.com:aos/homelab.git aos.homelab
 [adduce/ansible/aos.dotfiles]
 checkout = git clone git@github.com:aos/dotfiles.git aos.dotfiles 
+
+[adduce/docker/ChristianLempa.boilerplates]
+checkout = 
+      git clone git@github.com:ChristianLempa/boilerplates.git ChristianLempa.boilerplates
+      ln -svnf $PWD/ChristianLempa.boilerplates/ansible ../ansible/Chris.plates
+[adduce/docker/ChristianLempa.homelab]
+checkout = 
+      git clone git@github.com:ChristianLempa/homelab.git ChristianLempa.homelab
+      ln -svnf $PWD/ChristianLempa.homelab/ansible ../ansible/Chris.homelab 
 
 [adduce/dot/zanshin]
 checkout = git clone git@github.com:zanshin/dotfiles.git zanshin
