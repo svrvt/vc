@@ -1,11 +1,17 @@
 #!/bin/sh
 
-# This finds objects that the pre-merge script moved out of the way to
-# avoid conflicts when running git clone and moves them back to their
-# original places. The result is that the git repository gets checked out
-# and the extant objects end up back in the working directory. Git now
-# sees these as un-staged changes to the working branch and you can deal
-# with them by adding them or reverting.
+# Это позволяет найти объекты, которые сценарий предварительного слияния убрал с пути,
+# чтобы избежать конфликтов при запуске git clone, и переместить их на прежние места.
+# В результате репозиторий git будет проверен, а сохранившиеся объекты окажутся
+# в рабочем каталоге. Теперь Git воспринимает их как неотредактированные изменения
+# в рабочей ветке, и вы можете добавить их или отменить.
 
 # find ./ -name '*.vcsh-unclobber' -execdir rename .vcsh-unclobber '' {} \;
-find ./ -name '*.vcsh-unclobber' -execdir rename s/.vcsh-unclobber// '' {} \;
+# find ./ -name '*.vcsh-unclobber' -execdir rename s/.vcsh-unclobber// '' {} \;
+
+for f in $(find ./ -name "*.vcsh-unclobber"); do
+  new=${f%.*}
+  old=$f
+  rm -rf "$new" && mv "$old" "$new"
+done
+
