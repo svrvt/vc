@@ -1,6 +1,6 @@
 [${XDG_HOME:-$HOME}/DICOM/OHIF]
 checkout = 
-    git clone 'git@github.com:chikh-chikh/md_watcher.git' 'OHIF'
+    git clone 'git@github.com:svrvt/md_watcher.git' 'OHIF'
     cd OHIF
     git remote add upstream 'git@github.com:OHIF/Viewers.git'
 upgrade =

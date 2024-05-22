@@ -1,6 +1,6 @@
 [.config/vcsh/repo.d/vc_terminals.git]
 order = 5
-checkout = vcsh clone 'git@github.com:chikh-chikh/vc_terminals' 'vc_terminals'
+checkout = vcsh clone 'git@github.com:svrvt/vc_terminals' 'vc_terminals'
 # init =
 #     git fetch origin
 #     git checkout main -f
@@ -8,12 +8,12 @@ checkout = vcsh clone 'git@github.com:chikh-chikh/vc_terminals' 'vc_terminals'
 
 [.config/vcsh/repo.d/vc_shells.git]
 order = 5
-checkout = vcsh clone 'git@github.com:chikh-chikh/vc_terminals' 'vc_terminals'
+checkout = vcsh clone 'git@github.com:svrvt/vc_terminals' 'vc_terminals'
 [.config/vcsh/repo.d/vc_gits.git]
 order = 5
-checkout = vcsh clone 'git@github.com:chikh-chikh/vc_gits' 'vc_gits'
+checkout = vcsh clone 'git@github.com:svrvt/vc_gits' 'vc_gits'
 [.config/vcsh/repo.d/vc_filers.git]
 order = 5
-checkout = vcsh clone 'git@github.com:chikh-chikh/vc_filers' 'vc_filers'
+checkout = vcsh clone 'git@github.com:svrvt/vc_filers' 'vc_filers'
 
 # vi: ft=ini syntax=bash
