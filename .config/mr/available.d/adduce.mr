@@ -1,8 +1,9 @@
+# vcsh
 [adduce/vcsh/aspiers]
 checkout = git clone git@github.com:aspiers/mr-config.git aspiers
 [adduce/vcsh/alerque]
 checkout = git clone git@github.com:alerque/que.git alerque
-
+#trade
 [adduce/barter/Arbitrage_Bot]
 checkout =
       git clone git@github.com:andrewsiah/Arbitrage_Bot.git Arbitrage_Bot
@@ -16,22 +17,18 @@ checkout =
       git clone git@github.com:hummingbot/hummingbot.git hummingbot
       git checkout development
 
+#ansible
 [adduce/ansible/LearnLinuxTV]
 checkout = git clone git@github.com:LearnLinuxTV/personal_ansible_desktop_configs.git LearnLinuxTV
 [adduce/ansible/TechDufus]
 order = 15
 checkout =
       git clone git@github.com:TechDufus/dotfiles.git TechDufus
-      ln -svnf $PWD $HOME/accommodate/ansible/ansible_use
-
+link = ln -svnf $HOME/adduce/ansible $HOME/accommodate/automate/ansible_dot/ansible_use
 [adduce/ansible/adithyakhamithkar]
 checkout = git clone git@github.com:adithyakhamithkar/ansible-playbooks.git adithyakhamithkar
 [adduce/ansible/anuvyklack]
 checkout = git clone git@github.com:anuvyklack/dotfiles.git anuvyklack
-[adduce/dot/folke]
-checkout =
-      git clone git@github.com:folke/dot.git folke
-      ln -svn $PWD/folke/ansible ../ansible/folke
 [adduce/ansible/tangledhelix]
 checkout = git clone git@github.com:tangledhelix/dotfiles.git tangledhelix
 [adduce/ansible/aos.homelab]
@@ -39,23 +36,35 @@ checkout = git clone git@github.com:aos/homelab.git aos.homelab
 [adduce/ansible/aos.dotfiles]
 checkout = git clone git@github.com:aos/dotfiles.git aos.dotfiles 
 
+#docker
 [adduce/docker/ChristianLempa.boilerplates]
 checkout = 
       git clone git@github.com:ChristianLempa/boilerplates.git ChristianLempa.boilerplates
-      ln -svnf $PWD/ChristianLempa.boilerplates/ansible ../ansible/Chris.plates
+link = ln -svnf $PWD/ansible $HOME/adduce/ansible/Chris.plates
 [adduce/docker/ChristianLempa.homelab]
 checkout = 
       git clone git@github.com:ChristianLempa/homelab.git ChristianLempa.homelab
-      ln -svnf $PWD/ChristianLempa.homelab/ansible ../ansible/Chris.homelab 
+link = ln -svnf $PWD/ansible $HOME/adduce/ansible/Chris.homelab 
 
+#dotfiles
+[adduce/dot/folke]
+order = 15
+checkout = git clone git@github.com:folke/dot.git folke
+link = ln -svnf $PWD/ansible $HOME/adduce/ansible/folke
 [adduce/dot/zanshin]
 checkout = git clone git@github.com:zanshin/dotfiles.git zanshin
 [adduce/dot/zanshin.bin]
 checkout = git clone git@github.com:zanshin/bin.git zanshin.bin
+[adduce/dot/omerxx]
+checkout = git clone git@github.com:omerxx/dotfiles.git omerxx
 
+#nix-home
 [adduce/nix-home/aos]
 checkout = git clone git@github.com:aos/home.nix.git aos
+[adduce/nix-home/benbrastmckie]
+checkout = git clone git@github.com:benbrastmckie/.dotfiles.git benbrastmckie
 
+#zsh
 [adduce/zsh/zsh-quickstart-kit]
 checkout = git clone git@github.com:unixorn/zsh-quickstart-kit.git zsh-quickstart-kit
 [adduce/zsh/geometry]
@@ -69,5 +78,12 @@ checkout = git clone git@github.com:papanito/cheats.git papanito
 checkout = git clone git@github.com:mrVanDalo/navi-cheats.git mrVanDalo
 [adduce/navi-cheats/infosecstreams]
 checkout = git clone git@github.com:infosecstreams/cheat.sheets.git infosecstreams
+
+#secure
+[adduce/secure/apparmor]
+checkout = git clone https://gitlab.com/apparmor/apparmor.git apparmor
+[adduce/secure/apparmor-profiles]
+checkout = git clone git://git.launchpad.net/apparmor-profiles apparmor-profiles
+
 
 # vim: ft=ini syntax=sh
