@@ -1,0 +1,201 @@
+# vcsh
+[associate/vcsh/aspiers]
+checkout = git clone git@github.com:aspiers/mr-config.git aspiers
+[associate/vcsh/alerque]
+checkout = git clone git@github.com:alerque/que.git alerque
+
+#trade
+[associate/barter/Arbitrage_Bot]
+checkout =
+      git clone git@github.com:andrewsiah/Arbitrage_Bot.git Arbitrage_Bot
+      git checkout feat/script_strategy
+[associate/barter/community-tools]
+checkout = git clone git@github.com:hummingbot/community-tools.git community-tools
+[associate/barter/deploy-examples]
+checkout = git clone git@github.com:hummingbot/deploy-examples.git deploy-examples
+[associate/barter/hummingbot]
+checkout = 
+      git clone git@github.com:hummingbot/hummingbot.git hummingbot
+      git checkout development
+
+#ansible
+[associate/ansible/LearnLinuxTV]
+checkout = git clone git@github.com:LearnLinuxTV/personal_ansible_desktop_configs.git LearnLinuxTV
+[associate/ansible/TechDufus]
+order = 15
+checkout =
+      git clone git@github.com:TechDufus/dotfiles.git TechDufus
+link = ln -svnf $HOME/associate/ansible $HOME/accommodate/automate/ansible_dot/ansible_use
+[associate/ansible/adithyakhamithkar]
+checkout = git clone git@github.com:adithyakhamithkar/ansible-playbooks.git adithyakhamithkar
+[associate/ansible/anuvyklack]
+checkout = git clone git@github.com:anuvyklack/dotfiles.git anuvyklack
+[associate/ansible/tangledhelix]
+checkout = git clone git@github.com:tangledhelix/dotfiles.git tangledhelix
+[associate/ansible/aos.homelab]
+checkout = git clone git@github.com:aos/homelab.git aos.homelab
+[associate/ansible/aos.dotfiles]
+checkout = git clone git@github.com:aos/dotfiles.git aos.dotfiles 
+
+#docker
+[associate/docker/ChristianLempa.boilerplates]
+checkout = 
+      git clone git@github.com:ChristianLempa/boilerplates.git ChristianLempa.boilerplates
+link = ln -svnf $PWD/ansible $HOME/associate/ansible/Chris.plates
+[associate/docker/ChristianLempa.homelab]
+checkout = 
+      git clone git@github.com:ChristianLempa/homelab.git ChristianLempa.homelab
+link = ln -svnf $PWD/ansible $HOME/associate/ansible/Chris.homelab 
+
+#nix-home
+[associate/nix-home/aos]
+checkout = git clone git@github.com:aos/home.nix.git aos
+[associate/nix-home/benbrastmckie]
+checkout = git clone git@github.com:benbrastmckie/.dotfiles.git benbrastmckie
+
+#zsh
+[associate/zsh/zsh-quickstart-kit]
+checkout = git clone git@github.com:unixorn/zsh-quickstart-kit.git zsh-quickstart-kit
+[associate/zsh/geometry]
+checkout = git clone git@github.com:geometry-zsh/geometry.git geometry
+
+[associate/navi-cheats/denisidoro]
+checkout = git clone git@github.com:denisidoro/cheats.git denisidoro
+[associate/navi-cheats/papanito]
+checkout = git clone git@github.com:papanito/cheats.git papanito
+[associate/navi-cheats/mrVanDalo]
+checkout = git clone git@github.com:mrVanDalo/navi-cheats.git mrVanDalo
+[associate/navi-cheats/infosecstreams]
+checkout = git clone git@github.com:infosecstreams/cheat.sheets.git infosecstreams
+
+#secure
+[associate/secure/apparmor]
+checkout = git clone https://gitlab.com/apparmor/apparmor.git apparmor
+[associate/secure/apparmor-profiles]
+checkout = git clone git://git.launchpad.net/apparmor-profiles apparmor-profiles
+
+#awesome
+[associate/awesome/WillPower3309]
+checkout = git clone git@github.com:WillPower3309/awesome-dowqtfiles.git WillPower3309
+[associate/awesome/lcpz]
+checkout = git clone --recurse-submodules --remote-submodules --depth 1 -j 2 git@github.com:lcpz/awesome-copycats.git lcpz
+[associate/awesome/2KAbhishek]
+checkout = git clone git@github.com:2KAbhishek/awesome2k.git 2KAbhishek
+[associate/awesome/alerque]
+checkout = git clone git@github.com:alerque/que-awesome.git alerque
+[associate/awesome/streetturtle.widgets]
+checkout = git clone git@github.com:streetturtle/awesome-wm-widgets.git streetturtle.widgets
+[associate/awesome/streetturtle.buttons]
+checkout = git clone git@github.com:streetturtle/awesome-buttons.git streetturtle.buttons
+[associate/awesome/worron]
+checkout = git clone --recurse-submodules git@github.com:worron/awesome-config.git worron
+[associate/awesome/Kasper]
+checkout = git clone --recurse-submodules git@github.com:Kasper24/KwesomeDE Kasper
+
+
+#latex
+[associate/latex/ledovsky.latex-gost-template]
+checkout = git clone git@github.com:ledovsky/latex-gost-template.git
+
+#dotfiles
+[associate/dots/folke]
+order = 15
+checkout = git clone git@github.com:folke/dot.git folke
+link = ln -svnf $PWD/ansible $HOME/associate/ansible/folke
+[associate/dots/zanshin]
+checkout = git clone git@github.com:zanshin/dotfiles.git zanshin
+[associate/dots/zanshin.bin]
+checkout = git clone git@github.com:zanshin/bin.git zanshin
+[associate/dots/omerxx]
+checkout = git clone git@github.com:omerxx/dotfiles.git omerxx
+[associate/dots/tadmccorkle]
+checkout = git clone -b cfg git@github.com:tadmccorkle/dotfiles.git tadmccorkle
+[associate/dots/weihanglo]
+checkout = git clone git@github.com:weihanglo/dotfiles.git weihanglo
+[associate/dots/2KAbhishek]
+checkout = git clone git@github.com:2KAbhishek/Dotfiles.git 2KAbhishek
+[associate/dots/ChristianChiarulli]
+checkout = git clone git@github.com:ChristianChiarulli/Machfiles.git ChristianChiarulli
+[associate/dots/Traap]
+checkout = git clone git@github.com:Traap/dotfiles.git Traap
+[associate/dots/adalessa]
+checkout = git clone git@github.com:adalessa/dotfiles.git adalessa
+[associate/dots/dane-harnett]
+checkout = git clone git@github.com:dane-harnett/dotfiles.git dane-harnett
+[associate/dots/dwt1]
+checkout = git clone https://gitlab.com/dwt1/dotfiles.git dwt1
+[associate/dots/endoze]
+checkout = git clone git@github.com:endoze/dotfiles.git endoze
+[associate/dots/gotbletu]
+checkout = git clone git@github.com:gotbletu/shownotes.git gotbletu
+[associate/dots/mathletedev]
+checkout = git clone git@github.com:mathletedev/dotfiles.git mathletedev
+[associate/dots/mischavandenburg]
+checkout = git clone git@github.com:mischavandenburg/dotfiles-everforest.git mischavandenburg
+[associate/dots/thelinuxcast]
+checkout = git clone https://gitlab.com/thelinuxcast/my-dots.git thelinuxcast
+[associate/dots/jtuz]
+checkout = git clone git@github.com:jtuz/dotfiles.git jtuz
+[associate/dots/siduck]
+checkout = git clone git@github.com:siduck/dotfiles.git siduck
+
+[associate/dots/doctorfree]
+checkout = git clone https://github.com/doctorfree/dotfiles-linux.git doctorfree
+
+[associate/neovim/IfCodingWereNatural]
+checkout = 
+      git clone git@github.com:IfCodingWereNatural/minimal-nvim.git IfCodingWereNatural
+      git checkout lunarvim
+[associate/neovim/abshekh]
+checkout =
+      git clone git@github.com:abshekh/chadrc.git abshekh
+      git checkout custom-main
+[associate/neovim/Lunar.basic-ide]
+checkout = git clone git@github.com:LunarVim/nvim-basic-ide.git Lunar.basic-ide
+[associate/neovim/Lunar.starter]
+checkout =
+      git clone git@github.com:LunarVim/starter.lvim.git Lunar.starter
+      git checkout latex-ide
+[associate/neovim/NvChad]
+checkout = git clone --depth 10 git@github.com:NvChad/NvChad.git
+[associate/neovim/Traap]
+checkout = git clone git@github.com:Traap/nvim.git Traap
+[associate/neovim/zbirenbaum]
+checkout = git clone git@github.com:zbirenbaum/NvCustom.git zbirenbaum
+
+
+#vim
+[associate/vim/RobMulla]
+checkout = git clone git@github.com:RobMulla/vim_settings.git
+
+#tmux
+[associate/tmux/gpakosz]
+checkout = git clone git@github.com:gpakosz/.tmux.git
+
+#scripts
+[associate/scripts/bbugyi200]
+checkout = git clone git@github.com:bbugyi200/scripts.git bbugyi200
+[associate/scripts/getnf]
+checkout = git clone https://github.com/ronniedroid/getnf.git getnf
+[associate/scripts/yusuphwickama]
+checkout = git clone git@github.com:yusuphwickama/wickerscripts.git yusuphwickama
+[associate/scripts/siduck.chadwm]
+checkout = git clone git@github.com:siduck/chadwm.git siduck.chadwm
+[associate/scripts/ksk0.nvim-install]
+checkout = git clone git@github.com:ksk0/nvim-install.git ksk0.nvim-install
+[associate/scripts/pystardust.ytfzf]
+checkout = git clone git@github.com:pystardust/ytfzf.git pystardust.ytfzf
+
+[associate/scripts/termpdf]
+checkout = git clone git@github.com:ljcolling/termpdf.git termpdf
+[associate/scripts/snips.sh]
+checkout = git clone git@github.com:robherley/snips.sh.git snips.sh
+
+#R
+[associate/R/jalvesaq.colorout]
+checkout = git clone git@github.com/jalvesaq.colorout jalvesaq.colorout
+#rofi
+[associate/rofi/recordrofi]
+checkout = git clone git@github.com:Andrey0189/recordrofi.git recordrofi
+
+# vim: ft=ini

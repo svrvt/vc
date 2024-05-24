@@ -1,11 +1,1 @@
-[${XDG_HOME:-$HOME}/DICOM/OHIF]
-checkout = 
-    git clone 'git@github.com:svrvt/md_watcher.git' 'OHIF'
-    cd OHIF
-    git remote add upstream 'git@github.com:OHIF/Viewers.git'
-upgrade =
-    git pull upstream
-    git merge upstream/master user
-    git push origin user
-
-# vim: ft=ini syntax=sh
+../available.d/programs.github

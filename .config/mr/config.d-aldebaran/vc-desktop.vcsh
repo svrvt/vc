@@ -1,10 +1,1 @@
-[.config/vcsh/repo.d/vc_luakit.git]
-order = 5
-checkout = vcsh clone 'git@github.com:svrvt/vc_luakit' 'vc_luakit'
-# init =
-#     git fetch origin
-#     git checkout main -f
-pull = git pull --rebase
-# init = vcsh run vcsh_luakit git stash
-
-# vi: ft=ini syntax=bash
+../available.d/vc-desktop.vcsh

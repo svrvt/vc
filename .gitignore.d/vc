@@ -1,7 +1,7 @@
 *
 !/bin/vc
 !/bin/vc-home-bootstrap.zsh
-!/.config/mr/available.d/adduce.mr
+!/.config/mr/available.d/associate.mr
 !/.config/mr/available.d/my-projects.github
 !/.config/mr/available.d/programs.github
 !/.config/mr/available.d/repo-re.github
@@ -9,14 +9,14 @@
 !/.config/mr/available.d/vc-console.vcsh
 !/.config/mr/available.d/vc-desktop.vcsh
 !/.config/mr/available.d/vc.vcsh
-!/.config/mr/config.d-aldebaran/adduce.mr
+!/.config/mr/config.d-aldebaran/associate.mr
 !/.config/mr/config.d-aldebaran/my-projects.github
 !/.config/mr/config.d-aldebaran/programs.github
 !/.config/mr/config.d-aldebaran/repo-re.github
 !/.config/mr/config.d-aldebaran/repo-vc.github
 !/.config/mr/config.d-aldebaran/vc-console.vcsh
 !/.config/mr/config.d-aldebaran/vc-desktop.vcsh
-!/.config/mr/config.d-vaio/adduce.mr
+!/.config/mr/config.d-vaio/associate.mr
 !/.config/mr/config.d-vaio/my-projects.github
 !/.config/mr/config.d-vaio/programs.github
 !/.config/mr/config.d-vaio/repo-re.github
