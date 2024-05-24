@@ -76,7 +76,7 @@ checkout = git clone git://git.launchpad.net/apparmor-profiles apparmor-profiles
 
 #awesome
 [associate/awesome/WillPower3309]
-checkout = git clone git@github.com:WillPower3309/awesome-dowqtfiles.git WillPower3309
+checkout = git clone git@github.com:WillPower3309/awesome-dotfiles.git WillPower3309
 [associate/awesome/lcpz]
 checkout = git clone --recurse-submodules --remote-submodules --depth 1 -j 2 git@github.com:lcpz/awesome-copycats.git lcpz
 [associate/awesome/2KAbhishek]
@@ -94,8 +94,8 @@ checkout = git clone --recurse-submodules git@github.com:Kasper24/KwesomeDE Kasp
 
 
 #latex
-[associate/latex/ledovsky.latex-gost-template]
-checkout = git clone git@github.com:ledovsky/latex-gost-template.git
+[associate/latex/latex-gost-template]
+checkout = git clone git@github.com:ledovsky/latex-gost-template.git latex-gost-template
 
 #dotfiles
 [associate/dots/folke]
@@ -166,11 +166,11 @@ checkout = git clone git@github.com:zbirenbaum/NvCustom.git zbirenbaum
 
 #vim
 [associate/vim/RobMulla]
-checkout = git clone git@github.com:RobMulla/vim_settings.git
+checkout = git clone git@github.com:RobMulla/vim_settings.git RobMulla
 
 #tmux
 [associate/tmux/gpakosz]
-checkout = git clone git@github.com:gpakosz/.tmux.git
+checkout = git clone git@github.com:gpakosz/.tmux.git gpakosz
 
 #scripts
 [associate/scripts/bbugyi200]
@@ -193,7 +193,7 @@ checkout = git clone git@github.com:robherley/snips.sh.git snips.sh
 
 #R
 [associate/R/jalvesaq.colorout]
-checkout = git clone git@github.com/jalvesaq.colorout jalvesaq.colorout
+checkout = git clone git@github.com:jalvesaq/colorout jalvesaq.colorout
 #rofi
 [associate/rofi/recordrofi]
 checkout = git clone git@github.com:Andrey0189/recordrofi.git recordrofi
