@@ -5,18 +5,25 @@ checkout = git clone git@github.com:aspiers/mr-config.git aspiers
 checkout = git clone git@github.com:alerque/que.git alerque
 
 #trade
-[associate/barter/Arbitrage_Bot]
+[associate/trade/Arbitrage_Bot]
 checkout =
       git clone git@github.com:andrewsiah/Arbitrage_Bot.git Arbitrage_Bot
       git checkout feat/script_strategy
-[associate/barter/community-tools]
+[associate/trade/community-tools]
 checkout = git clone git@github.com:hummingbot/community-tools.git community-tools
-[associate/barter/deploy-examples]
+[associate/trade/deploy-examples]
 checkout = git clone git@github.com:hummingbot/deploy-examples.git deploy-examples
-[associate/barter/hummingbot]
+[associate/trade/hummingbot]
 checkout = 
       git clone git@github.com:hummingbot/hummingbot.git hummingbot
       git checkout development
+[associate/trade/dashboard]
+checkout = git clone git@github.com:hummingbot/dashboard.git dashboard
+[associate/trade/helper]
+checkout = git clone git@github.com:hummingbot/helper.git helper
+[associate/trade/hummingbot-deploy]
+checkout = git clone git@github.com:cardosofede/hummingbot-deploy.git hummingbot-deploy
+link = ln -svnf $HOME/associate/trade $HOME/accommodate/trade/hummingbot_all
 
 #ansible
 [associate/ansible/LearnLinuxTV]
@@ -59,13 +66,13 @@ checkout = git clone git@github.com:unixorn/zsh-quickstart-kit.git zsh-quickstar
 [associate/zsh/geometry]
 checkout = git clone git@github.com:geometry-zsh/geometry.git geometry
 
-[associate/navi-cheats/denisidoro]
+[associate/zsh/navi-cheats/denisidoro]
 checkout = git clone git@github.com:denisidoro/cheats.git denisidoro
-[associate/navi-cheats/papanito]
+[associate/zsh/navi-cheats/papanito]
 checkout = git clone git@github.com:papanito/cheats.git papanito
-[associate/navi-cheats/mrVanDalo]
+[associate/zsh/navi-cheats/mrVanDalo]
 checkout = git clone git@github.com:mrVanDalo/navi-cheats.git mrVanDalo
-[associate/navi-cheats/infosecstreams]
+[associate/zsh/navi-cheats/infosecstreams]
 checkout = git clone git@github.com:infosecstreams/cheat.sheets.git infosecstreams
 
 #secure
@@ -89,59 +96,61 @@ checkout = git clone git@github.com:streetturtle/awesome-wm-widgets.git streettu
 checkout = git clone git@github.com:streetturtle/awesome-buttons.git streetturtle.buttons
 [associate/awesome/worron]
 checkout = git clone --recurse-submodules git@github.com:worron/awesome-config.git worron
-[associate/awesome/Kasper]
-checkout = git clone --recurse-submodules git@github.com:Kasper24/KwesomeDE Kasper
-
+[associate/awesome/Kasper24]
+checkout = git clone --recurse-submodules git@github.com:Kasper24/KwesomeDE Kasper24
+[associate/awesome/awesome-rice]
+checkout = git clone git@github.com:kosorin/awesome-rice.git
 
 #latex
 [associate/latex/latex-gost-template]
 checkout = git clone git@github.com:ledovsky/latex-gost-template.git latex-gost-template
 
 #dotfiles
-[associate/dots/folke]
+[associate/dotfiles/folke]
 order = 15
 checkout = git clone git@github.com:folke/dot.git folke
 link = ln -svnf $PWD/ansible $HOME/associate/ansible/folke
-[associate/dots/zanshin]
+[associate/dotfiles/zanshin]
 checkout = git clone git@github.com:zanshin/dotfiles.git zanshin
-[associate/dots/zanshin.bin]
+[associate/dotfiles/zanshin.bin]
 checkout = git clone git@github.com:zanshin/bin.git zanshin
-[associate/dots/omerxx]
+[associate/dotfiles/omerxx]
 checkout = git clone git@github.com:omerxx/dotfiles.git omerxx
-[associate/dots/tadmccorkle]
+[associate/dotfiles/tadmccorkle]
 checkout = git clone -b cfg git@github.com:tadmccorkle/dotfiles.git tadmccorkle
-[associate/dots/weihanglo]
+[associate/dotfiles/weihanglo]
 checkout = git clone git@github.com:weihanglo/dotfiles.git weihanglo
-[associate/dots/2KAbhishek]
+[associate/dotfiles/2KAbhishek]
 checkout = git clone git@github.com:2KAbhishek/Dotfiles.git 2KAbhishek
-[associate/dots/ChristianChiarulli]
+[associate/dotfiles/ChristianChiarulli]
 checkout = git clone git@github.com:ChristianChiarulli/Machfiles.git ChristianChiarulli
-[associate/dots/Traap]
+[associate/dotfiles/Traap]
 checkout = git clone git@github.com:Traap/dotfiles.git Traap
-[associate/dots/adalessa]
+[associate/dotfiles/adalessa]
 checkout = git clone git@github.com:adalessa/dotfiles.git adalessa
-[associate/dots/dane-harnett]
+[associate/dotfiles/dane-harnett]
 checkout = git clone git@github.com:dane-harnett/dotfiles.git dane-harnett
-[associate/dots/dwt1]
-checkout = git clone https://gitlab.com/dwt1/dotfiles.git dwt1
-[associate/dots/endoze]
+[associate/dotfiles/dwt1]
+checkout = git clone git@gitlab.com:dwt1/dotfiles.git dwt1
+[associate/dotfiles/endoze]
 checkout = git clone git@github.com:endoze/dotfiles.git endoze
-[associate/dots/gotbletu]
+[associate/dotfiles/gotbletu]
 checkout = git clone git@github.com:gotbletu/shownotes.git gotbletu
-[associate/dots/mathletedev]
+[associate/dotfiles/mathletedev]
 checkout = git clone git@github.com:mathletedev/dotfiles.git mathletedev
-[associate/dots/mischavandenburg]
+[associate/dotfiles/mischavandenburg]
 checkout = git clone git@github.com:mischavandenburg/dotfiles-everforest.git mischavandenburg
-[associate/dots/thelinuxcast]
-checkout = git clone https://gitlab.com/thelinuxcast/my-dots.git thelinuxcast
-[associate/dots/jtuz]
+[associate/dotfiles/thelinuxcast]
+checkout = git clone git@gitlab.com:thelinuxcast/my-dots.git thelinuxcast
+[associate/dotfiles/jtuz]
 checkout = git clone git@github.com:jtuz/dotfiles.git jtuz
-[associate/dots/siduck]
+[associate/dotfiles/siduck]
 checkout = git clone git@github.com:siduck/dotfiles.git siduck
 
-[associate/dots/doctorfree]
-checkout = git clone https://github.com/doctorfree/dotfiles-linux.git doctorfree
+[associate/dotfiles/doctorfree]
+checkout = git clone git@github.com:doctorfree/dotfiles-linux.git doctorfree
 
+#nvim
 [associate/neovim/IfCodingWereNatural]
 checkout = 
       git clone git@github.com:IfCodingWereNatural/minimal-nvim.git IfCodingWereNatural

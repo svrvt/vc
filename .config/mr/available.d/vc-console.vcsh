@@ -1,11 +1,6 @@
 [.config/vcsh/repo.d/vc_terminals.git]
 order = 5
 checkout = vcsh clone 'git@github.com:svrvt/vc_terminals' 'vc_terminals'
-# init =
-#     git fetch origin
-#     git checkout main -f
-# init = vcsh run vcsh_luakit git stash
-
 [.config/vcsh/repo.d/vc_shells.git]
 order = 5
 checkout = vcsh clone 'git@github.com:svrvt/vc_terminals' 'vc_terminals'

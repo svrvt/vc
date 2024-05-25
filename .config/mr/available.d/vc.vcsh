@@ -5,7 +5,6 @@ checkout = vcsh clone git@github.com:svrvt/vc.git
 #     git fetch origin
 #     git checkout main -f
 pull = git pull --rebase
-push = git push origin
 
 # vim: ft=ini syntax=sh
 
