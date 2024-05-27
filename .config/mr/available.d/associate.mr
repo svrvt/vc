@@ -1,63 +1,65 @@
 # vcsh
-[associate/vcsh/aspiers]
+[associate/automate/vcsh/aspiers]
 checkout = git clone git@github.com:aspiers/mr-config.git aspiers
-[associate/vcsh/alerque]
+[associate/automate/vcsh/alerque]
 checkout = git clone git@github.com:alerque/que.git alerque
 
 #trade
-[associate/trade/Arbitrage_Bot]
+[associate/trade/hummingbot/Arbitrage_Bot]
 checkout =
       git clone git@github.com:andrewsiah/Arbitrage_Bot.git Arbitrage_Bot
       git checkout feat/script_strategy
-[associate/trade/community-tools]
+[associate/trade/hummingbot/community-tools]
 checkout = git clone git@github.com:hummingbot/community-tools.git community-tools
-[associate/trade/deploy-examples]
+[associate/trade/hummingbot/deploy-examples]
 checkout = git clone git@github.com:hummingbot/deploy-examples.git deploy-examples
-[associate/trade/hummingbot]
+[associate/trade/hummingbot/hummingbot]
 checkout = 
       git clone git@github.com:hummingbot/hummingbot.git hummingbot
       git checkout development
-[associate/trade/dashboard]
+[associate/trade/hummingbot/dashboard]
 checkout = git clone git@github.com:hummingbot/dashboard.git dashboard
-[associate/trade/helper]
+[associate/trade/hummingbot/helper]
 checkout = git clone git@github.com:hummingbot/helper.git helper
-[associate/trade/hummingbot-deploy]
+[associate/trade/hummingbot/hummingbot-deploy]
 checkout = git clone git@github.com:cardosofede/hummingbot-deploy.git hummingbot-deploy
-link = ln -svnf $HOME/associate/trade $HOME/accommodate/trade/hummingbot_all
+link = ln -svnf $HOME/associate/trade/hummingbot $HOME/accommodate/trade/hummingbot_all
 
 #ansible
-[associate/ansible/LearnLinuxTV]
+[associate/automate/ansible/LearnLinuxTV]
 checkout = git clone git@github.com:LearnLinuxTV/personal_ansible_desktop_configs.git LearnLinuxTV
-[associate/ansible/TechDufus]
+[associate/automate/ansible/TechDufus]
 order = 15
 checkout =
       git clone git@github.com:TechDufus/dotfiles.git TechDufus
-link = ln -svnf $HOME/associate/ansible $HOME/accommodate/automate/ansible_dot/ansible_use
-[associate/ansible/adithyakhamithkar]
+link = ln -svnf $HOME/associate/automate/ansible $HOME/accommodate/automate/ansible_dot/ansible_use
+[associate/automate/ansible/adithyakhamithkar]
 checkout = git clone git@github.com:adithyakhamithkar/ansible-playbooks.git adithyakhamithkar
-[associate/ansible/anuvyklack]
+[associate/automate/ansible/anuvyklack]
 checkout = git clone git@github.com:anuvyklack/dotfiles.git anuvyklack
-[associate/ansible/tangledhelix]
+[associate/automate/ansible/tangledhelix]
 checkout = git clone git@github.com:tangledhelix/dotfiles.git tangledhelix
-[associate/ansible/aos.homelab]
+[associate/automate/ansible/aos.homelab]
 checkout = git clone git@github.com:aos/homelab.git aos.homelab
-[associate/ansible/aos.dotfiles]
+[associate/automate/ansible/aos.dotfiles]
 checkout = git clone git@github.com:aos/dotfiles.git aos.dotfiles 
+[associate/automate/ansible/xsrv]
+checkout = git clone git@github.com:nodiscc/xsrv.git xsrv
 
 #docker
-[associate/docker/ChristianLempa.boilerplates]
+[associate/automate/docker/ChristianLempa.boilerplates]
 checkout = 
       git clone git@github.com:ChristianLempa/boilerplates.git ChristianLempa.boilerplates
-link = ln -svnf $PWD/ansible $HOME/associate/ansible/Chris.plates
-[associate/docker/ChristianLempa.homelab]
+link = ln -svnf $PWD/ansible $HOME/associate/automate/ansible/Chris.plates
+[associate/automate/docker/ChristianLempa.homelab]
 checkout = 
       git clone git@github.com:ChristianLempa/homelab.git ChristianLempa.homelab
-link = ln -svnf $PWD/ansible $HOME/associate/ansible/Chris.homelab 
+link = ln -svnf $PWD/ansible $HOME/associate/automate/ansible/Chris.homelab 
 
 #nix-home
-[associate/nix-home/aos]
+[associate/automate/nix-home/aos]
 checkout = git clone git@github.com:aos/home.nix.git aos
-[associate/nix-home/benbrastmckie]
+[associate/automate/nix-home/benbrastmckie]
 checkout = git clone git@github.com:benbrastmckie/.dotfiles.git benbrastmckie
 
 #zsh
@@ -84,22 +86,24 @@ checkout = git clone git://git.launchpad.net/apparmor-profiles apparmor-profiles
 #awesome
 [associate/awesome/WillPower3309]
 checkout = git clone git@github.com:WillPower3309/awesome-dotfiles.git WillPower3309
-[associate/awesome/lcpz]
-checkout = git clone --recurse-submodules --remote-submodules --depth 1 -j 2 git@github.com:lcpz/awesome-copycats.git lcpz
-[associate/awesome/2KAbhishek]
-checkout = git clone git@github.com:2KAbhishek/awesome2k.git 2KAbhishek
-[associate/awesome/alerque]
-checkout = git clone git@github.com:alerque/que-awesome.git alerque
+[associate/awesome/awesome-copycats.lcpz]
+checkout = git clone --recurse-submodules --remote-submodules --depth 1 -j 2 git@github.com:lcpz/awesome-copycats.git awesome-copycats.lcpz
+[associate/awesome/awesome2k.2KAbhishek]
+checkout = git clone git@github.com:2KAbhishek/awesome2k.git awesome2k.2KAbhishek
+[associate/awesome/que-awesome.alerque]
+checkout = git clone git@github.com:alerque/que-awesome.git que-awesome.alerque
 [associate/awesome/streetturtle.widgets]
 checkout = git clone git@github.com:streetturtle/awesome-wm-widgets.git streetturtle.widgets
 [associate/awesome/streetturtle.buttons]
 checkout = git clone git@github.com:streetturtle/awesome-buttons.git streetturtle.buttons
 [associate/awesome/worron]
 checkout = git clone --recurse-submodules git@github.com:worron/awesome-config.git worron
-[associate/awesome/Kasper24]
-checkout = git clone --recurse-submodules git@github.com:Kasper24/KwesomeDE Kasper24
-[associate/awesome/awesome-rice]
-checkout = git clone git@github.com:kosorin/awesome-rice.git
+[associate/awesome/KwesomeDE.Kasper24]
+checkout = git clone --recurse-submodules git@github.com:Kasper24/KwesomeDE KwesomeDE.Kasper24
+[associate/awesome/awesome-rice.kosorin]
+order = 15
+checkout = git clone git@github.com:kosorin/awesome-rice.git awesome-rice.kosorin
+link = ln -svnf $HOME/associate/awesome $HOME/accommodate/awesome/awesome_all
 
 #latex
 [associate/latex/latex-gost-template]
@@ -109,7 +113,7 @@ checkout = git clone git@github.com:ledovsky/latex-gost-template.git latex-gost-
 [associate/dotfiles/folke]
 order = 15
 checkout = git clone git@github.com:folke/dot.git folke
-link = ln -svnf $PWD/ansible $HOME/associate/ansible/folke
+link = ln -svnf $PWD/ansible $HOME/associate/automate/ansible/folke
 [associate/dotfiles/zanshin]
 checkout = git clone git@github.com:zanshin/dotfiles.git zanshin
 [associate/dotfiles/zanshin.bin]
