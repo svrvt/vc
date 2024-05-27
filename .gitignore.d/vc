@@ -1,4 +1,5 @@
 *
+!/bin/link-configs.sh
 !/bin/vc
 !/bin/vc-home-bootstrap.zsh
 !/.config/mr/available.d/associate.mr

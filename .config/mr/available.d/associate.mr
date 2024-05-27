@@ -161,6 +161,7 @@ checkout = git clone git@github.com:doctorfree/dotfiles-linux.git doctorfree
 
 [associate/dotfiles/ygalblum]
 checkout = git clone git@github.com:ygalblum/linux-environment.git ygalblum
+link = link-configs.sh
 
 #nvim
 [associate/config/neovim/IfCodingWereNatural]
