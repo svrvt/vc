@@ -1,16 +1,35 @@
 #!/bin/bash
-owner=$(command ls "$HOME"/associate/dotfiles)
-config="nvim tmux"
+o_dir="$HOME/associate/.owner"
+owner=$(command ls "$o_dir")
+config="nvim tmux zellij ranger xplr bash zsh shell"
+
+for c in $config; do
+	path=()
+	mkdir -p "$HOME/associate/config/$c"
+done
 
 for o in $owner; do
 	for c in $config; do
-    mkdir -p "$HOME/associate/config/$c"
-		# path=$(realpath -q "$(find "$HOME"/associate/dotfiles/"$o" -type d -name "$c" -print0 | xargs -r -0 | awk 'NR==1 {print $1}')")
-		path=$(find "$HOME"/associate/dotfiles/"$o" -type d -name "$c" -print0 | xargs -r -0 realpath -q | awk 'NR==1 {print $1}')
-		if [ -n "$path" ]; then
-      # echo "$path"
+		path=()
+		while IFS= read -r line; do
+			path+=("$line")
+			# done < <(find "$o_dir/$o" -type d -name "$c" -print0 | xargs -r -0 realpath -q)
+		done < <(find "$o_dir/$o" -type d -name "$c")
+		if [ -n "${path[*]}" ]; then
+			if [ "${#path[*]}" == 1 ]; then
+				path="${path[0]}"
+			elif [ "${#path[*]}" -gt 1 ]; then
+				if [[ "${path[1]}" == "${path[0]}"* ]]; then
+					path="${path[1]}"
+				else
+					break
+					# echo "${path[0]}"
+					# echo "${path[1]}"
+				fi
+			fi
+			# echo "${#path[@]} ${path[*]}"
 			ln -svnf "$path" "$HOME/associate/config/$c/$o"
-      # find "$HOME/associate/config/$c/$o/" -maxdepth 1 -name "$c" #-print0 | xargs -0 rm
+			# find "$HOME/associate/config/$c/$o/" -maxdepth 1 -name "$c" #-print0 | xargs -0 rm
 		fi
 	done
 done

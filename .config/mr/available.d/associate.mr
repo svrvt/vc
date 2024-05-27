@@ -117,50 +117,48 @@ link = ln -svnf $HOME/associate/awesome $HOME/accommodate/awesome/awesome_all
 [associate/publisher/latex-gost-template]
 checkout = git clone git@github.com:ledovsky/latex-gost-template.git latex-gost-template
 
-#dotfiles
-[associate/dotfiles/folke]
-checkout = git clone git@github.com:folke/dot.git folke
+#owner
+[associate/.owner/folke/dot.git]
+checkout = git clone git@github.com:folke/dot.git folke/dot.git
 link = ln -svnf $PWD/ansible $HOME/associate/automate/ansible/dot-lab/folke
-[associate/dotfiles/zanshin]
-checkout = git clone git@github.com:zanshin/dotfiles.git zanshin
-[associate/dotfiles/zanshin.bin]
-checkout = git clone git@github.com:zanshin/bin.git zanshin
-[associate/dotfiles/omerxx]
-checkout = git clone git@github.com:omerxx/dotfiles.git omerxx
-[associate/dotfiles/tadmccorkle]
-checkout = git clone -b cfg git@github.com:tadmccorkle/dotfiles.git tadmccorkle
-[associate/dotfiles/weihanglo]
-checkout = git clone git@github.com:weihanglo/dotfiles.git weihanglo
-[associate/dotfiles/2KAbhishek]
-checkout = git clone git@github.com:2KAbhishek/Dotfiles.git 2KAbhishek
-[associate/dotfiles/ChristianChiarulli]
-checkout = git clone git@github.com:ChristianChiarulli/Machfiles.git ChristianChiarulli
-[associate/dotfiles/Traap]
-checkout = git clone git@github.com:Traap/dotfiles.git Traap
-[associate/dotfiles/adalessa]
-checkout = git clone git@github.com:adalessa/dotfiles.git adalessa
-[associate/dotfiles/dane-harnett]
-checkout = git clone git@github.com:dane-harnett/dotfiles.git dane-harnett
-[associate/dotfiles/dwt1]
-checkout = git clone git@gitlab.com:dwt1/dotfiles.git dwt1
-[associate/dotfiles/endoze]
-checkout = git clone git@github.com:endoze/dotfiles.git endoze
-[associate/dotfiles/mathletedev]
-checkout = git clone git@github.com:mathletedev/dotfiles.git mathletedev
-[associate/dotfiles/mischavandenburg]
-checkout = git clone git@github.com:mischavandenburg/dotfiles-everforest.git mischavandenburg
-[associate/dotfiles/thelinuxcast]
-checkout = git clone git@gitlab.com:thelinuxcast/my-dots.git thelinuxcast
-[associate/dotfiles/jtuz]
-checkout = git clone git@github.com:jtuz/dotfiles.git jtuz
-[associate/dotfiles/siduck]
-checkout = git clone git@github.com:siduck/dotfiles.git siduck
-
-[associate/dotfiles/doctorfree]
-checkout = git clone git@github.com:doctorfree/dotfiles-linux.git doctorfree
-
-[associate/dotfiles/ygalblum]
-checkout = git clone git@github.com:ygalblum/linux-environment.git ygalblum
+[associate/.owner/zanshin/dotfiles.git]
+checkout = git clone git@github.com:zanshin/dotfiles.git zanshin/dotfiles.git 
+[associate/.owner/zanshin/bin.git]
+checkout = git clone git@github.com:zanshin/bin.git zanshin/bin.git
+[associate/.owner/omerxx/dotfiles.git]
+checkout = git clone git@github.com:omerxx/dotfiles.git omerxx/dotfiles.git
+[associate/.owner/tadmccorkle/dotfiles.git]
+checkout = git clone -b cfg git@github.com:tadmccorkle/dotfiles.git tadmccorkle/dotfiles.git
+[associate/.owner/weihanglo/dotfiles.git]
+checkout = git clone git@github.com:weihanglo/dotfiles.git weihanglo/dotfiles.git
+[associate/.owner/2KAbhishek/Dotfiles.git]
+checkout = git clone git@github.com:2KAbhishek/Dotfiles.git 2KAbhishek/Dotfiles.git
+[associate/.owner/ChristianChiarulli/Machfiles.git]
+checkout = git clone git@github.com:ChristianChiarulli/Machfiles.git ChristianChiarulli/Machfiles.git
+[associate/.owner/Traap/dotfiles.git]
+checkout = git clone git@github.com:Traap/dotfiles.git Traap/dotfiles.git
+[associate/.owner/adalessa/dotfiles.git]
+checkout = git clone git@github.com:adalessa/dotfiles.git adalessa/dotfiles.git
+[associate/.owner/dane-harnett/dotfiles.git]
+checkout = git clone git@github.com:dane-harnett/dotfiles.git dane-harnett/dotfiles.git
+[associate/.owner/dwt1/dotfiles.git]
+checkout = git clone git@gitlab.com:dwt1/dotfiles.git dwt1/dotfiles.git
+[associate/.owner/endoze/dotfiles.git]
+checkout = git clone git@github.com:endoze/dotfiles.git endoze/dotfiles.git
+[associate/.owner/mathletedev/dotfiles.git]
+checkout = git clone git@github.com:mathletedev/dotfiles.git mathletedev/dotfiles.git
+[associate/.owner/mischavandenburg/dotfiles-everforest.git]
+checkout = git clone git@github.com:mischavandenburg/dotfiles-everforest.git mischavandenburg/dotfiles-everforest.git
+[associate/.owner/thelinuxcast/my-dots.git]
+checkout = git clone git@gitlab.com:thelinuxcast/my-dots.git thelinuxcast/my-dots.git
+[associate/.owner/jtuz/dotfiles.git]
+checkout = git clone git@github.com:jtuz/dotfiles.git jtuz/dotfiles.git
+[associate/.owner/siduck/dotfiles.git]
+checkout = git clone git@github.com:siduck/dotfiles.git siduck/dotfiles.git
+[associate/.owner/doctorfree/dotfiles-linux.git]
+checkout = git clone git@github.com:doctorfree/dotfiles-linux.git doctorfree/dotfiles-linux.git
+[associate/.owner/ygalblum/linux-environment.git]
+checkout = git clone git@github.com:ygalblum/linux-environment.git ygalblum/linux-environment.git
 link = link-configs.sh
 
 #nvim
