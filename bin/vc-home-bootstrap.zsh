@@ -12,7 +12,7 @@ function fail_deps () {
 }
 
 function vcsh_get () {
-    test -d .config/vcsh/repo.d/$1.git &&
+    test -d ~/.config/vcsh/repo.d/$1.git &&
     vcsh $1 pull ||
     case $2 in
         github|*)
@@ -59,12 +59,12 @@ grep -q 'hook pre-merge' $(which vcsh) ||
 # auth
 
 # For the sake of un-updated vc repos, get hooks to handle existing files
-mkdir -p .config/vcsh/hooks-enabled
-test -f .config/vcsh/hooks-enabled/pre-merge-unclobber ||
+mkdir -p ~/.config/vcsh/hooks-enabled
+test -f ~/.config/vcsh/hooks-enabled/pre-merge-unclobber ||
     curl -sfSLo {,$STRAP_URL/}.config/vcsh/hooks-enabled/pre-merge-unclobber
-test -f .config/vcsh/hooks-enabled/post-merge-unclobber ||
+test -f ~/.config/vcsh/hooks-enabled/post-merge-unclobber ||
     curl -sfSLo {,$STRAP_URL/}.config/vcsh/hooks-enabled/post-merge-unclobber
-chmod +x .config/vcsh/hooks-enabled/{pre,post}-merge-unclobber
+chmod +x ~/.config/vcsh/hooks-enabled/{pre,post}-merge-unclobber
 
 # Get repo that has GPG unlock stuff
 # vcsh_get vc-secure
