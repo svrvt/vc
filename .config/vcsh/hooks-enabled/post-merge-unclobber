@@ -7,14 +7,14 @@
 # в рабочей ветке, и вы можете добавить их или отменить.
 
 # find ./ -name '*.vcsh-unclobber' -execdir rename .vcsh-unclobber '' {} \;
-# find ./ -name '*.vcsh-unclobber' -execdir rename s/.vcsh-unclobber// '' {} \;
+find ./ -name '*.vcsh-unclobber' -execdir rename s/.vcsh-unclobber// '' {} \;
 
 # while IFS= read -r line; do
 #   files+=("$line")
 # done < <(find ./ -name "*.vcsh-unclobber" -print0 | xargs -r -0)
 
-for f in $(find ./ -name "*.vcsh-unclobber" -print0 | xargs -r -0 realpath -q); do
-	new=${f%.*}
-	old=$f
-	rm -f "$new" && mv "$old" "$new"
-done
+# for f in $(find ./ -name "*.vcsh-unclobber" -print0 | xargs -r -0 realpath -q); do
+# 	new=${f%.*}
+# 	old=$f
+# 	rm -f "$new" && mv "$old" "$new"
+# done
