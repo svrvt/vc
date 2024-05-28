@@ -1,14 +1,17 @@
 [.config/vcsh/repo.d/vc_terminals.git]
 order = 5
-checkout = vcsh clone 'git@github.com:svrvt/vc_terminals' 'vc_terminals'
+checkout = vcsh clone git@github.com:svrvt/vc_terminals
+
 [.config/vcsh/repo.d/vc_shells.git]
 order = 5
-checkout = vcsh clone 'git@github.com:svrvt/vc_terminals' 'vc_terminals'
+checkout = vcsh clone git@github.com:svrvt/vc_shells
+
 [.config/vcsh/repo.d/vc_gits.git]
 order = 5
-checkout = vcsh clone 'git@github.com:svrvt/vc_gits' 'vc_gits'
+checkout = vcsh clone git@github.com:svrvt/vc_gits
+
 [.config/vcsh/repo.d/vc_filers.git]
 order = 5
-checkout = vcsh clone 'git@github.com:svrvt/vc_filers' 'vc_filers'
+checkout = vcsh clone git@github.com:svrvt/vc_filers
 
 # vi: ft=ini syntax=bash

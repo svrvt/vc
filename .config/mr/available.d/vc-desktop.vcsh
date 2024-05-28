@@ -1,6 +1,6 @@
 [.config/vcsh/repo.d/vc_luakit.git]
 order = 5
-checkout = vcsh clone 'git@github.com:svrvt/vc_luakit' 'vc_luakit'
+checkout = vcsh clone git@github.com:svrvt/vc_luakit
 pull = git pull --rebase
 
 # vi: ft=ini syntax=bash
