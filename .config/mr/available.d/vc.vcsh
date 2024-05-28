@@ -1,6 +1,6 @@
 [.config/vcsh/repo.d/vc.git]
 order = 1
-checkout = vcsh clone git@github.com:svrvt/vc.git
+checkout = vcsh clone git@github.com:svrvt/vc.git vc
 # init =
 #     git fetch origin
 #     git checkout main -f

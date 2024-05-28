@@ -16,7 +16,7 @@ function vcsh_get () {
     vcsh $1 pull ||
     case $2 in
         github|*)
-            vcsh clone git@github.com:svrvt/$1.git
+            vcsh clone git@github.com:svrvt/$1.git $1
             ;;
     esac
 }
