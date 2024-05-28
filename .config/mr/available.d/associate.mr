@@ -5,24 +5,23 @@ checkout = git clone git@github.com:aspiers/mr-config.git aspiers
 checkout = git clone git@github.com:alerque/que.git alerque
 
 #trade
-[associate/trade/hummingbot/Arbitrage_Bot]
-checkout =
-      git clone git@github.com:andrewsiah/Arbitrage_Bot.git Arbitrage_Bot
-      git checkout feat/script_strategy
-[associate/trade/hummingbot/community-tools]
-checkout = git clone git@github.com:hummingbot/community-tools.git community-tools
-[associate/trade/hummingbot/deploy-examples]
-checkout = git clone git@github.com:hummingbot/deploy-examples.git deploy-examples
-[associate/trade/hummingbot/hummingbot]
+[associate/trade/hummingbot/Arbitrage_Bot.git]
+checkout = git clone git@github.com:andrewsiah/Arbitrage_Bot.git Arbitrage_Bot.git
+      # git checkout feat/script_strategy
+[associate/trade/hummingbot/community-tools.git]
+checkout = git clone git@github.com:hummingbot/community-tools.git community-tools.git
+[associate/trade/hummingbot/deploy-examples.git]
+checkout = git clone git@github.com:hummingbot/deploy-examples.git deploy-examples.git
+[associate/trade/hummingbot/hummingbot.git]
 checkout = 
-      git clone git@github.com:hummingbot/hummingbot.git hummingbot
-      git checkout development
-[associate/trade/hummingbot/dashboard]
-checkout = git clone git@github.com:hummingbot/dashboard.git dashboard
-[associate/trade/hummingbot/helper]
-checkout = git clone git@github.com:hummingbot/helper.git helper
-[associate/trade/hummingbot/hummingbot-deploy]
-checkout = git clone git@github.com:cardosofede/hummingbot-deploy.git hummingbot-deploy
+    git clone git@github.com:hummingbot/hummingbot.git hummingbot.git &&
+    git checkout development
+[associate/trade/hummingbot/dashboard.git]
+checkout = git clone git@github.com:hummingbot/dashboard.git dashboard.git
+[associate/trade/hummingbot/helper.git]
+checkout = git clone git@github.com:hummingbot/helper.git helper.git
+[associate/trade/hummingbot/hummingbot-deploy.git]
+checkout = git clone git@github.com:cardosofede/hummingbot-deploy.git hummingbot-deploy.git
 link = ln -svnf $HOME/associate/trade/hummingbot $HOME/accommodate/trade/hummingbot_all
 
 #ansible
@@ -119,46 +118,46 @@ checkout = git clone git@github.com:ledovsky/latex-gost-template.git latex-gost-
 
 #owner
 [associate/.owner/folke/dot.git]
-checkout = git clone git@github.com:folke/dot.git folke/dot.git
+checkout = git clone git@github.com:folke/dot.git dot.git
 link = ln -svnf $PWD/ansible $HOME/associate/automate/ansible/dot-lab/folke
 [associate/.owner/zanshin/dotfiles.git]
-checkout = git clone git@github.com:zanshin/dotfiles.git zanshin/dotfiles.git 
+checkout = git clone git@github.com:zanshin/dotfiles.git dotfiles.git 
 [associate/.owner/zanshin/bin.git]
-checkout = git clone git@github.com:zanshin/bin.git zanshin/bin.git
+checkout = git clone git@github.com:zanshin/bin.git bin.git
 [associate/.owner/omerxx/dotfiles.git]
-checkout = git clone git@github.com:omerxx/dotfiles.git omerxx/dotfiles.git
+checkout = git clone git@github.com:omerxx/dotfiles.git dotfiles.git
 [associate/.owner/tadmccorkle/dotfiles.git]
-checkout = git clone -b cfg git@github.com:tadmccorkle/dotfiles.git tadmccorkle/dotfiles.git
+checkout = git clone -b cfg git@github.com:tadmccorkle/dotfiles.git dotfiles.git
 [associate/.owner/weihanglo/dotfiles.git]
-checkout = git clone git@github.com:weihanglo/dotfiles.git weihanglo/dotfiles.git
+checkout = git clone git@github.com:weihanglo/dotfiles.git dotfiles.git
 [associate/.owner/2KAbhishek/Dotfiles.git]
-checkout = git clone git@github.com:2KAbhishek/Dotfiles.git 2KAbhishek/Dotfiles.git
+checkout = git clone git@github.com:2KAbhishek/Dotfiles.git Dotfiles.git
 [associate/.owner/ChristianChiarulli/Machfiles.git]
-checkout = git clone git@github.com:ChristianChiarulli/Machfiles.git ChristianChiarulli/Machfiles.git
+checkout = git clone git@github.com:ChristianChiarulli/Machfiles.git Machfiles.git
 [associate/.owner/Traap/dotfiles.git]
-checkout = git clone git@github.com:Traap/dotfiles.git Traap/dotfiles.git
+checkout = git clone git@github.com:Traap/dotfiles.git dotfiles.git
 [associate/.owner/adalessa/dotfiles.git]
-checkout = git clone git@github.com:adalessa/dotfiles.git adalessa/dotfiles.git
+checkout = git clone git@github.com:adalessa/dotfiles.git dotfiles.git
 [associate/.owner/dane-harnett/dotfiles.git]
-checkout = git clone git@github.com:dane-harnett/dotfiles.git dane-harnett/dotfiles.git
-[associate/.owner/dwt1/dotfiles.git]
-checkout = git clone git@gitlab.com:dwt1/dotfiles.git dwt1/dotfiles.git
+checkout = git clone git@github.com:dane-harnett/dotfiles.git dotfiles.git
 [associate/.owner/endoze/dotfiles.git]
-checkout = git clone git@github.com:endoze/dotfiles.git endoze/dotfiles.git
+checkout = git clone git@github.com:endoze/dotfiles.git dotfiles.git
 [associate/.owner/mathletedev/dotfiles.git]
-checkout = git clone git@github.com:mathletedev/dotfiles.git mathletedev/dotfiles.git
+checkout = git clone git@github.com:mathletedev/dotfiles.git dotfiles.git
 [associate/.owner/mischavandenburg/dotfiles-everforest.git]
-checkout = git clone git@github.com:mischavandenburg/dotfiles-everforest.git mischavandenburg/dotfiles-everforest.git
-[associate/.owner/thelinuxcast/my-dots.git]
-checkout = git clone git@gitlab.com:thelinuxcast/my-dots.git thelinuxcast/my-dots.git
+checkout = git clone git@github.com:mischavandenburg/dotfiles-everforest.git dotfiles-everforest.git
 [associate/.owner/jtuz/dotfiles.git]
-checkout = git clone git@github.com:jtuz/dotfiles.git jtuz/dotfiles.git
+checkout = git clone git@github.com:jtuz/dotfiles.git dotfiles.git
 [associate/.owner/siduck/dotfiles.git]
-checkout = git clone git@github.com:siduck/dotfiles.git siduck/dotfiles.git
+checkout = git clone git@github.com:siduck/dotfiles.git dotfiles.git
 [associate/.owner/doctorfree/dotfiles-linux.git]
-checkout = git clone git@github.com:doctorfree/dotfiles-linux.git doctorfree/dotfiles-linux.git
+checkout = git clone git@github.com:doctorfree/dotfiles-linux.git dotfiles-linux.git
+[associate/.owner/dwt1/dotfiles.git]
+checkout = git clone git@gitlab.com:dwt1/dotfiles.git dotfiles.git
+[associate/.owner/thelinuxcast/my-dots.git]
+checkout = git clone git@gitlab.com:thelinuxcast/my-dots.git my-dots.git
 [associate/.owner/ygalblum/linux-environment.git]
-checkout = git clone git@github.com:ygalblum/linux-environment.git ygalblum/linux-environment.git
+checkout = git clone git@github.com:ygalblum/linux-environment.git linux-environment.git
 link = link-configs.sh
 
 #nvim
