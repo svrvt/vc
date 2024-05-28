@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # Это позволяет найти объекты, которые сценарий предварительного слияния убрал с пути,
 # чтобы избежать конфликтов при запуске git clone, и переместить их на прежние места.
@@ -9,9 +9,12 @@
 # find ./ -name '*.vcsh-unclobber' -execdir rename .vcsh-unclobber '' {} \;
 # find ./ -name '*.vcsh-unclobber' -execdir rename s/.vcsh-unclobber// '' {} \;
 
-for f in $(find ./ -name "*.vcsh-unclobber"); do
-  new=${f%.*}
-  old=$f
-  rm -rf "$new" && mv "$old" "$new"
-done
+# while IFS= read -r line; do
+#   files+=("$line")
+# done < <(find ./ -name "*.vcsh-unclobber" -print0 | xargs -r -0)
 
+for f in $(find ./ -name "*.vcsh-unclobber" -print0 | xargs -r -0); do
+	new=${f%.*}
+	old=$f
+	rm -f "$new" && mv "$old" "$new"
+done
