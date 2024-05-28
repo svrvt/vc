@@ -16,7 +16,7 @@ function vcsh_get () {
     vcsh $1 pull ||
     case $2 in
         github|*)
-            vcsh clone git@github.com:svrvt/$1.git $1
+            vcsh clone git@github.com:svrvt/$1.git
             ;;
     esac
 }
@@ -33,7 +33,7 @@ test $UID -eq 0 && fail "Don't be root!"
 cd $HOME
 
 # If we don't have these tools, we should be running vc-sys-bootstrap.bash instead
-whence -p curl git gpg-agent keychain mr ssh-agent vcsh > /dev/null || fail_deps  "Some tools not available"
+whence -p curl git gpg-agent keychain mr ssh-agent vcsh rename > /dev/null || fail_deps  "Some tools not available"
 
 grep -q 'hook pre-merge' $(which vcsh) ||
     fail "VCSH version too old, does not have required pre-merge hook system"

@@ -1,4 +1,4 @@
-[.config/vcsh/repo.d/vc.git]
+[.config/vcsh/repo.d/vc]
 order = 1
 checkout = vcsh clone git@github.com:svrvt/vc.git vc
 # init =
