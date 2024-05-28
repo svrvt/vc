@@ -1,6 +1,6 @@
 #!/usr/bin/env zsh
 
-: ${STRAP_URL:=https://raw.github.com/chikh-chikh/vc/main}
+: ${STRAP_URL:=https://raw.github.com/svrvt/vc/main}
 
 function fail () {
     echo "$@" >&2
@@ -16,7 +16,7 @@ function vcsh_get () {
     vcsh $1 pull ||
     case $2 in
         github|*)
-            vcsh clone git@github.com:chikh-chikh/$1.git $1
+            vcsh clone git@github.com:svrvt/$1.git
             ;;
     esac
 }
@@ -38,7 +38,7 @@ whence -p curl git gpg-agent keychain mr ssh-agent vcsh > /dev/null || fail_deps
 grep -q 'hook pre-merge' $(which vcsh) ||
     fail "VCSH version too old, does not have required pre-merge hook system"
 
-export GIT_SSH_COMMAND="ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no"
+# export GIT_SSH_COMMAND="ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no"
 
 # If everything isn't just right with SSH keys and config for the next step, manually fetch them
 # if ! grep -q 'PRIVATE KEY' ~/.ssh/id_rsa; then
@@ -86,7 +86,7 @@ chmod 600 $(grep 'PRIVATE KEY' -Rl ~/.ssh) $GNUPGHOME/private-keys*/*
 # TODO: Test in vc-secure actually got unlocked
 
 # Get repo that has mr configs
-vcsh_get vc
+vcsh_get vc github
 
 # Setup permanent agent(s)
 # auth
