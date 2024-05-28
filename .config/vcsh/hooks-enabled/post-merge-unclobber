@@ -6,8 +6,8 @@
 # в рабочем каталоге. Теперь Git воспринимает их как неотредактированные изменения
 # в рабочей ветке, и вы можете добавить их или отменить.
 
-# find ./ -name '*.vcsh-unclobber' -execdir rename -f '.vcsh-unclobber' '' {} \;
-find ./ -name '*.vcsh-unclobber' -execdir rename -f -d 's/\.vcsh-unclobber//' {} \;
+find ./ -name '*.vcsh-unclobber' -execdir rename -f '.vcsh-unclobber' '' {} \;
+# find ./ -name '*.vcsh-unclobber' -execdir rename -f 's/\.vcsh-unclobber//' {} \;
 
 # while IFS= read -r line; do
 #   files+=("$line")
