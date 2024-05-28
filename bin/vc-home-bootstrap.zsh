@@ -67,7 +67,7 @@ test -f .config/vcsh/hooks-enabled/post-merge-unclobber ||
 chmod +x .config/vcsh/hooks-enabled/{pre,post}-merge-unclobber
 
 # Get repo that has GPG unlock stuff
-# vcsh_get vc-secure gitlab
+# vcsh_get vc-secure
 # vcsh run vc-secure git config core.attributesfile .gitattributes.d/vc-secure
 chmod 644 ~/.ssh/*.pub
 chmod 700 ~/.ssh $GNUPGHOME{,/private-keys*/}
@@ -85,14 +85,11 @@ chmod 600 $(grep 'PRIVATE KEY' -Rl ~/.ssh) $GNUPGHOME/private-keys*/*
 
 # TODO: Test in vc-secure actually got unlocked
 
-
 # Get repo that has mr configs
-# vcsh_get vc
-# vcsh run vc git fetch
-# vcsh run vc git checkout main -f
+vcsh_get vc
 
 # Setup permanent agent(s)
 # auth
 
 # checkout everything else
-# mr co
+mr co
