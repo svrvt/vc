@@ -4,5 +4,37 @@ checkout = git clone git@github.com:svrvt/vc.git
 [aggregate/vc_luakit]
 checkout = git clone git@github.com:svrvt/vc_luakit.git 
 
+[aggregate/vc_xorg]
+checkout = git clone git@github.com:svrvt/vc_xorg.git
+
+[aggregate/vc_vifm]
+checkout = git clone git@github.com:svrvt/vc_vifm.git
+
+[aggregate/vc_zathura]
+checkout = git clone git@github.com:svrvt/vc_zathura.git
+
+[aggregate/vc_xplr]
+checkout = git clone git@github.com:svrvt/vc_xplr.git
+
+[aggregate/vc_vim]
+checkout = git clone git@github.com:svrvt/vc_vim.git
+
+[aggregate/vc_nvim]
+checkout = git clone git@github.com:svrvt/vc_nvim.git
+
+[aggregate/vc_ranger]
+checkout = git clone git@github.com:svrvt/vc_ranger.git
+
+[aggregate/vc_tmux]
+checkout = git clone git@github.com:svrvt/vc_tmux.git
+
+[aggregate/vc_gitconfig]
+checkout = git clone git@github.com:svrvt/vc_gitconfig.git
+
+[aggregate/vc_bash]
+checkout = git clone git@github.com:svrvt/vc_bash.git
+
+[aggregate/vc_zsh]
+checkout = git clone git@github.com:svrvt/vc_zsh.git
 
 # vim: ft=ini syntax=sh
