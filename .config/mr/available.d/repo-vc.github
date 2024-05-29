@@ -4,14 +4,5 @@ checkout = git clone git@github.com:svrvt/vc.git
 [aggregate/vc_luakit]
 checkout = git clone git@github.com:svrvt/vc_luakit.git 
 
-[aggregate/vc_filers]
-checkout = git clone git@github.com:svrvt/vc_filers.git 
-[aggregate/vc_gits]
-checkout = git clone git@github.com:svrvt/vc_gits.git 
-[aggregate/vc_terminals]
-checkout = git clone git@github.com:svrvt/vc_terminals.git 
-[aggregate/vc_shells]
-checkout = git clone git@github.com:svrvt/vc_shells.git 
-
 
 # vim: ft=ini syntax=sh
