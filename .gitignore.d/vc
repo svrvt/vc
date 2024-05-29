@@ -1,5 +1,6 @@
 *
-!/bin/link-configs.sh
+!/bin/git-genlocal.sh
+!/bin/link-associate-dot.sh
 !/bin/vc
 !/bin/vc-home-bootstrap.zsh
 !/.config/mr/available.d/associate.mr

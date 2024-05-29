@@ -1,8 +1,7 @@
 [DEFAULT]
 git_gc = git gc "$@"
-jobs = 3
+jobs = 5
 
-  # cat ${XDG_CONFIG_HOME:-$HOME/.config}/mr/config.d/*
 include = 
 	cat $HOME/.config/mr/available.d/vc.vcsh
 	if [ -d $HOME/.config/mr/config.d-$HOSTNAME ]; then
