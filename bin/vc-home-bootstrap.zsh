@@ -16,7 +16,7 @@ function vcsh_get () {
     vcsh $1 pull ||
     case $2 in
         github|*)
-            vcsh clone git@github.com:svrvt/$1.git
+            vcsh clone git@github.com:svrvt/$1.git $1
             ;;
     esac
 }
@@ -87,9 +87,10 @@ chmod 600 $(grep 'PRIVATE KEY' -Rl ~/.ssh) $GNUPGHOME/private-keys*/*
 
 # Get repo that has mr configs
 vcsh_get vc github
+vcsh_get vc_luakit github
 
 # Setup permanent agent(s)
 # auth
 
 # checkout everything else
-mr co
+# mr co
