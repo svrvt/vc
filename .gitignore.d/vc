@@ -10,6 +10,12 @@
 !/.config/mr/available.d/repo-vc.github
 !/.config/mr/available.d/vc-desktop.vcsh
 !/.config/mr/available.d/vc.vcsh
+!/.config/mr/config.d-aldebaran/associate.mr
+!/.config/mr/config.d-aldebaran/my-projects.github
+!/.config/mr/config.d-aldebaran/programs.github
+!/.config/mr/config.d-aldebaran/repo-re.github
+!/.config/mr/config.d-aldebaran/repo-vc.github
+!/.config/mr/config.d-aldebaran/vc-desktop.vcsh
 !/.config/mr/config.d-vaio/associate.mr
 !/.config/mr/config.d-vaio/my-projects.github
 !/.config/mr/config.d-vaio/programs.github

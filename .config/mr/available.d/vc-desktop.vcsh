@@ -1,5 +1,5 @@
-[.config/vcsh/repo.d/vc_luakit]
-checkout = vcsh clone git@github.com:svrvt/vc_luakit.git vc_luakit
+[.config/vcsh/repo.d/vc_luakit.git]
+checkout = vcsh clone git@github.com:svrvt/vc_luakit.git
 pull = git pull --rebase
 
 # vi: ft=ini syntax=bash
