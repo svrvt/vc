@@ -17,5 +17,6 @@
 !/.config/mr/config.d-vaio/vc-desktop.vcsh
 !/.config/vcsh/hooks-enabled/post-merge-unclobber
 !/.config/vcsh/hooks-enabled/pre-merge-unclobber
+!/.config/vcsh/hooks-enabled/vc.pre-merge-reset
 !/.gitignore.d/vc
 !/.mrconfig
