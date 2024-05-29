@@ -9,6 +9,12 @@
 !/.config/mr/available.d/repo-vc.github
 !/.config/mr/available.d/vc-desktop.vcsh
 !/.config/mr/available.d/vc.vcsh
+!/.config/mr/config.d-vaio/associate.mr
+!/.config/mr/config.d-vaio/my-projects.github
+!/.config/mr/config.d-vaio/programs.github
+!/.config/mr/config.d-vaio/repo-re.github
+!/.config/mr/config.d-vaio/repo-vc.github
+!/.config/mr/config.d-vaio/vc-desktop.vcsh
 !/.config/vcsh/hooks-enabled/post-merge-unclobber
 !/.config/vcsh/hooks-enabled/pre-merge-unclobber
 !/.gitignore.d/vc
