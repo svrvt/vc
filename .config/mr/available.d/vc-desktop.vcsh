@@ -1,39 +1,48 @@
 [.config/vcsh/repo.d/vc_xorg.git]
 checkout = vcsh clone git@github.com:svrvt/vc_xorg.git
-pull = git pull --rebase
+
 [.config/vcsh/repo.d/vc_vifm.git]
 checkout = vcsh clone git@github.com:svrvt/vc_vifm.git
-pull = git pull --rebase
+
 [.config/vcsh/repo.d/vc_zathura.git]
 checkout = vcsh clone git@github.com:svrvt/vc_zathura.git
-pull = git pull --rebase
+
 [.config/vcsh/repo.d/vc_xplr.git]
 checkout = vcsh clone git@github.com:svrvt/vc_xplr.git
-pull = git pull --rebase
+
 [.config/vcsh/repo.d/vc_vim.git]
 checkout = vcsh clone git@github.com:svrvt/vc_vim.git
-pull = git pull --rebase
+
 [.config/vcsh/repo.d/vc_nvim.git]
 checkout = vcsh clone git@github.com:svrvt/vc_nvim.git
-pull = git pull --rebase
+
 [.config/vcsh/repo.d/vc_ranger.git]
 checkout = vcsh clone git@github.com:svrvt/vc_ranger.git
-pull = git pull --rebase
+
 [.config/vcsh/repo.d/vc_tmux.git]
 checkout = vcsh clone git@github.com:svrvt/vc_tmux.git
-pull = git pull --rebase
+
 [.config/vcsh/repo.d/vc_gitconfig.git]
 checkout = vcsh clone git@github.com:svrvt/vc_gitconfig.git
-pull = git pull --rebase
+
 [.config/vcsh/repo.d/vc_bash.git]
 checkout = vcsh clone git@github.com:svrvt/vc_bash.git
-pull = git pull --rebase
+
 [.config/vcsh/repo.d/vc_zsh.git]
 checkout = vcsh clone git@github.com:svrvt/vc_zsh.git
-pull = git pull --rebase
+
+[.config/vcsh/repo.d/vc_alacritty.git]
+checkout = vcsh clone git@github.com:svrvt/vc_alacritty.git
+
+[.config/vcsh/repo.d/vc_rofi.git]
+checkout = vcsh clone git@github.com:svrvt/vc_rofi.git
+
+[.config/vcsh/repo.d/vc_environment.git]
+checkout = vcsh clone git@github.com:svrvt/vc_environment.git
+
 
 [.config/vcsh/repo.d/vc_luakit.git]
 checkout = vcsh clone git@github.com:svrvt/vc_luakit.git
-pull = git pull --rebase
+
 
 # vi: ft=ini syntax=bash

@@ -37,4 +37,13 @@ checkout = git clone git@github.com:svrvt/vc_bash.git
 [aggregate/vc_zsh]
 checkout = git clone git@github.com:svrvt/vc_zsh.git
 
+[aggregate/vc_alacritty]
+checkout = git clone git@github.com:svrvt/vc_alacritty.git
+
+[aggregate/vc_rofi]
+checkout = git clone git@github.com:svrvt/vc_rofi.git
+
+[aggregate/vc_environment]
+checkout = git clone git@github.com:svrvt/vc_environment.git
+
 # vim: ft=ini syntax=sh
