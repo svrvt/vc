@@ -26,4 +26,5 @@
 !/.config/vcsh/hooks-enabled/pre-merge-unclobber
 !/.config/vcsh/hooks-enabled/vc.pre-merge-reset
 !/.gitignore.d/vc
+!/.local/share/zsh/vendor-completions/_vc
 !/.mrconfig
