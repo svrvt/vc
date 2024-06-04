@@ -45,21 +45,21 @@ link = ln -svnf $PWD $HOME/src/hummingbot/helper.link
 #ansible
 [src/github.com/LearnLinuxTV/personal_ansible_desktop_configs.git]
 checkout = git clone git@github.com:LearnLinuxTV/personal_ansible_desktop_configs.git personal_ansible_desktop_configs.git
-link = ln -svnf $PWD $HOME/src/ansible/dot-lab/personal_ansible_desktop_configs.link
+link = ln -svnf $PWD $HOME/src/ansible/dot-lab/LearnLinuxTV.link
 
 [src/github.com/TechDufus/dotfiles.git]
 checkout = git clone git@github.com:TechDufus/dotfiles.git dotfiles.git
 link =
-    ln -svnf $PWD $HOME/src/ansible/dot-lab/TechDufus.dotfiles.link 
+    ln -svnf $PWD $HOME/src/ansible/dot-lab/TechDufus.link 
     ln -svnf $HOME/src/ansible/ $HOME/ansible/ansible_src.link
-
 
 [src/github.com/anuvyklack/dotfiles.git]
 checkout = git clone git@github.com:anuvyklack/dotfiles.git dotfiles.git
-link = ln -svnf $PWD $HOME/src/ansible/dot-lab/anuvyklack.dotfiles.link
+link = ln -svnf $PWD $HOME/src/ansible/dot-lab/anuvyklack.link
 
 [src/github.com/tangledhelix/dotfiles.git]
 checkout = git clone git@github.com:tangledhelix/dotfiles.git dotfiles.git
+link = ln -svnf $PWD $HOME/src/ansible/dot-lab/tangledhelix.link
 
 [src/github.com/aos/homelab.git]
 checkout = git clone git@github.com:aos/homelab.git homelab.git
@@ -69,7 +69,7 @@ link = ln -svnf $PWD $HOME/src/ansible/dot-lab/aos.homelab.link
 checkout = git clone git@github.com:aos/dotfiles.git dotfiles.git 
 link = ln -svnf $PWD $HOME/src/ansible/dot-lab/aos.dotfiles.link
 
-
+#full-up
 [src/github.com/adithyakhamithkar/ansible-playbooks.git]
 checkout = git clone git@github.com:adithyakhamithkar/ansible-playbooks.git ansible-playbooks.git
 link = ln -svnf $PWD $HOME/src/ansible/full-up/ansible-playbooks.link
@@ -87,7 +87,7 @@ link = ln -svnf $PWD $HOME/src/ansible/full-up/personal-deployment.link
 checkout = git clone git@github.com:cheifcyber/ollamaAnsible.git ollamaAnsible.git
 link = ln -svnf $PWD $HOME/src/ansible/ollama/ollamaAnsible.link
 
-[src/github.com/ollama/ollama-deploy]
+[src/github.com/Work-From-Home-Tech/ollama-deploy.git]
 checkout = git clone git@github.com:Work-From-Home-Tech/ollama-deploy.git ollama-deploy.git
 link = ln -svnf $PWD $HOME/src/ansible/ollama/ollama-deploy.link
 
@@ -97,8 +97,7 @@ link = ln -svnf $PWD $HOME/src/ansible/ollama/ansible-collection-ollama.link
 
 [src/github.com/bifrostlab/deploy-llm-bot.git]
 checkout = git clone git@github.com:bifrostlab/deploy-llm-bot.git deploy-llm-bot.git
-link = ln -svnf $PWD $HOME/src/andible/ollama/deploy-llm-bot.link
-
+link = ln -svnf $PWD $HOME/src/ansible/ollama/deploy-llm-bot.link
 
 #docker
 [src/github.com/ChristianLempa/boilerplates.git]
@@ -163,16 +162,16 @@ checkout = git clone --recurse-submodules git@github.com:Kasper24/KwesomeDE Kwes
 checkout = git clone git@github.com:kosorin/awesome-rice.git awesome-rice.git
 
 #latex
-[paperwork/temlates/latex-gost-template]
+[paperwork/templates/latex-gost-template]
 checkout = git clone git@github.com:ledovsky/latex-gost-template.git latex-gost-template
 
 #owner
 [src/github.com/infokiller/config-public.git]
-checkout = git@github.com:infokiller/config-public.git config-public.git
+checkout = git clone git@github.com:infokiller/config-public.git config-public.git
 
 [src/github.com/folke/dot.git]
 checkout = git clone git@github.com:folke/dot.git dot.git
-link = ln -svnf $PWD/ansible $HOME/src/ansible/dot-lab/folke
+link = ln -svnf $PWD/ansible $HOME/src/ansible/dot-lab/folke.link
 
 [src/github.com/zanshin/dotfiles.git]
 checkout = git clone git@github.com:zanshin/dotfiles.git dotfiles.git 
@@ -258,7 +257,7 @@ checkout = git clone git@github.com:ljcolling/termpdf.git termpdf.git
 checkout = git clone git@github.com:robherley/snips.sh.git snips.sh.git
 
 #R
-[src/github.com/jalvesaq/colorout]
-checkout = git clone git@github.com:jalvesaq/colorout jalvesaq.colorout
+[src/github.com/jalvesaq/colorout.git]
+checkout = git clone git@github.com:jalvesaq/colorout colorout.git
 
 # vim: ft=ini

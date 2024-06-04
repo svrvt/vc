@@ -44,7 +44,7 @@ checkout = git clone git@github.com:svrvt/auth_template.git
 [code/study/GB_DSinM]
 checkout = git clone git@github.com:svrvt/GB_DSinM.git
 
-[paperwokr/clin_rec]
+[paperwork/clin_rec]
 checkout = git clone git@github.com:svrvt/clin_rec.git
 
 

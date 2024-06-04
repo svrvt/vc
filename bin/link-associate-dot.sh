@@ -1,11 +1,11 @@
 #!/bin/bash
-o_dir="$HOME/associate/.owner"
+o_dir="$HOME/src/github.com"
 owner=$(command ls "$o_dir")
-config="nvim tmux zellij ranger xplr bash zsh shell"
+config="nvim tmux zellij ranger xplr bash zsh shell scripts awesome bin"
 
 for c in $config; do
 	path=()
-	mkdir -p "$HOME/associate/config/$c"
+	mkdir -p "$HOME/src/config/$c"
 done
 
 for o in $owner; do
@@ -28,7 +28,7 @@ for o in $owner; do
 				fi
 			fi
 			# echo "${#path[@]} ${path[*]}"
-			ln -svnf "$path" "$HOME/associate/config/$c/$o"
+			ln -svnf "$path" "$HOME/src/config/$c/$o"
 			# find "$HOME/associate/config/$c/$o/" -maxdepth 1 -name "$c" #-print0 | xargs -0 rm
 		fi
 	done
