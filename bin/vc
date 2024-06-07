@@ -16,7 +16,8 @@ fi
 
 shift
 
-vcsh run $repo git $@
+# vcsh run $repo git $@
+vcsh run $repo $@
 
 if [ "$1" = "add" -a "$2" = "-f" ]; then
 	vcsh write-gitignore $repo
