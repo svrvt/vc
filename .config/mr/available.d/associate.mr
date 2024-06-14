@@ -1,11 +1,11 @@
 # vcsh
 [src/github.com/aspiers/mr-config.git]
 checkout = git clone git@github.com:aspiers/mr-config.git mr-config.git
-link = ln -svnf $PWD $HOME/src/configs/vcsh/mr-config.link
+link = ln -svnf $PWD $HOME/src/config/vcsh/mr-config.link
 
 [src/github.com/alerque/que.git]
 checkout = git clone git@github.com:alerque/que.git que.git
-link = ln -svnf $PWD $HOME/src/configs/vcsh/que.link
+link = ln -svnf $PWD $HOME/src/config/vcsh/que.link
 
 #trade
 [src/github.com/cardosofede/hummingbot-deploy.git]
@@ -29,7 +29,7 @@ link = ln -svnf $PWD $HOME/src/hummingbot/deploy-examples.link
 
 [src/github.com/hummingbot/hummingbot.git]
 checkout = 
-    git clone git@github.com:hummingbot/hummingbot.git hummingbot.git &&
+    git clone git@github.com:hummingbot/hummingbot.git hummingbot.git
     git checkout development
 link = ln -svnf $PWD $HOME/src/hummingbot/hummingbot.link
 
@@ -104,7 +104,7 @@ link = ln -svnf $PWD $HOME/src/ansible/ollama/deploy-llm-bot.link
 checkout = git clone git@github.com:ChristianLempa/boilerplates.git boilerplates.git
 link = 
     # ln -svnf $PWD/ansible $HOME/src/ansible/boilerplates.link
-    ln -svnf $PWD/docker $HOME/src/docker/boilerplates.link
+    ln -svnf $PWD/docker-compose $HOME/src/docker/boilerplates.link
 
 [src/github.com/ChristianLempa/homelab.git]
 checkout = git clone git@github.com:ChristianLempa/homelab.git homelab.git
