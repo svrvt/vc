@@ -7,6 +7,16 @@ link = ln -svnf $PWD $HOME/src/config/vcsh/mr-config.link
 checkout = git clone git@github.com:alerque/que.git que.git
 link = ln -svnf $PWD $HOME/src/config/vcsh/que.link
 
+#proxy
+[src/gitlab.com/tinyproxy/tinyproxy.git]
+checkout = git clone git@github.com:tinyproxy/tinyproxy.git tinyproxy.git
+
+[src/github.com/Oxyd76/tor-service.git]
+checkout = git clone git@github.com:Oxyd76/tor-service.git tor-service.git
+
+[src/github.com/Oxyd76/tinyxit.git]
+checkout = git clone git@github.com:Oxyd76/tinyxit.git tinyxit.git
+
 #trade
 [src/github.com/cardosofede/hummingbot-deploy.git]
 checkout = git clone git@github.com:cardosofede/hummingbot-deploy.git hummingbot-deploy.git
@@ -142,6 +152,9 @@ checkout = git clone git://git.launchpad.net/apparmor-profiles apparmor-profiles
 
 
 #awesome
+[src/github.com/pA0k/AwesomeWm-config.git]
+checkout = git clone git@github.com:pA0k/AwesomeWm-config.git AwesomeWm-config.git
+
 [src/github.com/WillPower3309/awesome-dotfiles.git]
 checkout = git clone git@github.com:WillPower3309/awesome-dotfiles.git awesome-dotfiles.git
 [src/github.com/lcpz/awesome-copycats.git]
