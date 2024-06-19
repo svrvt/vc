@@ -29,6 +29,9 @@ link = ln -svfn $PWD ~/.config/nvim-rafi
 [code/proj/pass-rofi-gui]
 checkout = git clone git@github.com:svrvt/pass-rofi-gui.git
 
+[code/proj/buku_run]
+checkout = git clone git@github.com:svrvt/buku_run.git
+
 #trade     
 [code/trade/ex_change]
 checkout = 
