@@ -22,6 +22,8 @@
 !/.config/mr/config.d-vaio/repo-re.github
 !/.config/mr/config.d-vaio/repo-vc.github
 !/.config/mr/config.d-vaio/vc-desktop.vcsh
+!/.config/vcsh/hooks-enabled/post-clone-submodule
+!/.config/vcsh/hooks-enabled/post-init-config
 !/.config/vcsh/hooks-enabled/post-merge-unclobber
 !/.config/vcsh/hooks-enabled/pre-merge-unclobber
 !/.config/vcsh/hooks-enabled/vc.pre-merge-reset
