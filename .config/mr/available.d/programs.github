@@ -2,9 +2,9 @@
 checkout = 
     git clone -b user 'git@github.com:svrvt/md_watcher.git' 'OHIF'
     git remote add upstream 'git@github.com:OHIF/Viewers.git'
-upgrade =
-    git pull upstream
-    git merge upstream/master user
-    git push origin user
+# upgrade =
+#     git fetch upstream master
+#     git merge upstream/master user
+#     git push origin user
 
 # vim: ft=ini syntax=sh

@@ -1,0 +1,40 @@
+[.config/vcsh/repo.d/vc_xorg.git]
+checkout = vcsh clone git@github.com:svrvt/vc_xorg.git
+
+[.config/vcsh/repo.d/vc_awesome.git]
+checkout = vcsh clone git@github.com:svrvt/vc_awesome.git
+
+[.config/vcsh/repo.d/vc_rofi.git]
+checkout = vcsh clone git@github.com:svrvt/vc_rofi.git
+
+[.config/vcsh/repo.d/vc_jupyter.git]
+checkout = vcsh clone git@github.com:svrvt/vc_jupyter.git
+
+[.config/vcsh/repo.d/vc_luakit.git]
+checkout = vcsh clone git@github.com:svrvt/vc_luakit.git
+
+[.config/vcsh/repo.d/vc_zathura.git]
+checkout = vcsh clone git@github.com:svrvt/vc_zathura.git
+
+[.config/vcsh/repo.d/vc_alacritty.git]
+checkout = vcsh clone git@github.com:svrvt/vc_alacritty.git
+
+[.config/vcsh/repo.d/vc_nvim.git]
+checkout = vcsh clone git@github.com:svrvt/vc_nvim.git
+
+[.config/vcsh/repo.d/vc_xplr.git]
+checkout = vcsh clone git@github.com:svrvt/vc_xplr.git
+
+[.config/vcsh/repo.d/vc_vifm.git]
+checkout = vcsh clone git@github.com:svrvt/vc_vifm.git
+
+[.config/vcsh/repo.d/vc_ranger.git]
+checkout = vcsh clone git@github.com:svrvt/vc_ranger.git
+
+[.config/vcsh/repo.d/vc_newsboat.git]
+checkout = vcsh clone git@github.com:svrvt/vc_newsboat.git
+
+[.config/vcsh/repo.d/vc_gitconfig.git]
+checkout = vcsh clone git@github.com:svrvt/vc_gitconfig.git
+
+# vi: ft=ini syntax=bash

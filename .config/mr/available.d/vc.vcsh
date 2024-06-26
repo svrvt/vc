@@ -1,9 +1,6 @@
 [.config/vcsh/repo.d/vc.git]
 order = 1
 checkout = vcsh clone git@github.com:svrvt/vc.git
-# init =
-#     git fetch origin
-#     git checkout main -f
 pull = git pull --rebase
 
 # vim: ft=ini syntax=sh
