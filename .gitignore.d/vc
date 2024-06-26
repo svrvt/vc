@@ -1,5 +1,6 @@
 *
 !/bin/link_repos.sh
+!/bin/script.sh
 !/bin/vc
 !/bin/vc-home-bootstrap.zsh
 !/.config/mr/available.d/associate.mr
