@@ -1,6 +1,5 @@
 *
-!/bin/git-genlocal.sh
-!/bin/link-associate-dot.sh
+!/bin/link_repos.sh
 !/bin/vc
 !/bin/vc-home-bootstrap.zsh
 !/.config/mr/available.d/associate.mr
@@ -18,6 +17,7 @@
 !/.config/mr/config.d-aldebaran/repo-vc.github
 !/.config/mr/config.d-aldebaran/vcsh-default
 !/.config/mr/config.d-aldebaran/vcsh-desktop
+!/.config/mr/config.d-undef/vcsh-default
 !/.config/mr/config.d-vaio/associate.mr
 !/.config/mr/config.d-vaio/my-projects.github
 !/.config/mr/config.d-vaio/programs.github

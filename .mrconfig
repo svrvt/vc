@@ -8,6 +8,10 @@ include =
 		for conf in $HOME/.config/mr/config.d-$HOSTNAME/*; do
 			test -x $conf && $conf || cat $conf
 		done
+  else
+		for conf in $HOME/.config/mr/config.d-undef/*; do
+			test -x $conf && $conf || cat $conf
+		done
 	fi
 
 [ALIAS]
