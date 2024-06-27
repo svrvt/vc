@@ -7,6 +7,24 @@ link = ln -svnf $PWD $HOME/src/config/vcsh/mr-config.link
 checkout = git clone git@github.com:alerque/que.git que.git
 link = ln -svnf $PWD $HOME/src/config/vcsh/que.link
 
+[srs/github.com/lierdakil/vcsh-modules.git]
+checkout = git clone git@github.com:lierdakil/vcsh-modules.git vcsh-modules.git
+
+[src/github.com/srgvg/dotfiles.git]
+checkout = git clone git@github.com:srgvg/dotfiles.git dotfiles.git
+
+[src/github.com/ek9/vcsh-dotfiles.git]
+checkout = git clone git@github.com:ek9/vcsh-dotfiles.git vcsh-dotfiles.git
+
+[src/github.com/ek9/x11-config.git]
+checkout = git clone git@github.com:ek9/x11-config.git x11-config.git
+
+[src/github.com/ek9/shell-config.git]
+checkout = git clone git@github.com:ek9/shell-config.git shell-config.git
+
+[src/github.com/ek9/vim-config.git]
+checkout = git clone git@github.com:ek9/vim-config.git vim-config.git
+
 #proxy
 [src/gitlab.com/tinyproxy/tinyproxy.git]
 checkout = git clone git@github.com:tinyproxy/tinyproxy.git tinyproxy.git

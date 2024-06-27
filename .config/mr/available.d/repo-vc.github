@@ -51,4 +51,7 @@ checkout = git clone git@github.com:svrvt/vc_awesome.git
 
 [aggregate/vc_newsboat]
 checkout = git clone git@github.com:svrvt/vc_newsboat.git
+
+[aggregate/vc_jupyter]
+checkout = git clone git@github.com:svrvt/vc_jupyter.git
 # vim: ft=ini syntax=sh
