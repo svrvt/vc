@@ -8,6 +8,8 @@ for c in $config; do
 	mkdir -p "$HOME/src/config/$c"
 done
 
+mkdir -p "$HOME"/src/{ansible/{dot-lab,full-up,ollama},docker,hummingbot,config/{vcsh,}}
+
 for o in $owner; do
 	for c in $config; do
 		path=()
