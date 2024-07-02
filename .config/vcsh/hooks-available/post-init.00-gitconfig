@@ -1,0 +1,4 @@
+#!/bin/sh
+if ! test "$(git config fetch.recurseSubmodules)" = "true"; then
+	git config fetch.recurseSubmodules true
+fi
