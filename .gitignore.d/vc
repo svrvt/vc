@@ -34,6 +34,11 @@
 !/.config/mr/config.d-vaio/vcsh-default
 !/.config/mr/config.d-vaio/vcsh-desktop
 !/.config/vcsh
+!/.config/vcsh/config
+!/.config/vcsh/gitmodules
+!/.config/vcsh/gitmodules/config
+!/.config/vcsh/gitmodules/git-sh-setup
+!/.config/vcsh/gitmodules/git-submodule
 !/.config/vcsh/hooks-available
 !/.config/vcsh/hooks-available/.gitkeep
 !/.config/vcsh/hooks-available/post-clone.00-submodules
