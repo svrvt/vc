@@ -1,0 +1,19 @@
+#compdef readme
+typeset -A opt_args
+
+typeset -A opt_args
+
+_arguments -C \
+  '1:cmd:->cmds' \
+&& ret=0
+
+case "$state" in
+  (cmds)
+	local -a repos
+	repos=( ${(f)"$(_call_program repositories vcsh list)"} )
+  repos=( "${repos[@]#vc_}" )
+	_describe -t commands 'command' repos
+  ;;
+esac
+
+return 1

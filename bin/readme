@@ -1,0 +1,39 @@
+#!/bin/bash
+
+md_dir="$HOME/paperwork/README"
+md_file=$1
+md_f="$md_dir/$md_file".md
+
+case $md_file in
+vc)
+	repo_file=$md_file
+	;;
+*)
+	repo_file=vc_$md_file
+	;;
+esac
+
+shift
+
+edit_file() {
+	$EDITOR "$md_f"
+}
+
+update_file() {
+	ln --backup=existing "$md_f" "$HOME/README.md" || exit
+	vcsh run "$repo_file" git stash
+	vcsh run "$repo_file" git add -f --sparse "$HOME/README.md"
+	vcsh run "$repo_file" git commit -m "update README.md"
+  vcsh run "$repo_file" git push
+	vcsh run "$repo_file" git stash pop
+	rm -f "$HOME/README.md"
+}
+
+case $1 in
+update)
+	update_file
+	;;
+edit | *)
+	edit_file
+	;;
+esac

@@ -1,6 +1,7 @@
 *
 !/bin
 !/bin/link_repos.sh
+!/bin/readme
 !/bin/script.sh
 !/bin/vc
 !/bin/vc-home-bootstrap.zsh
@@ -60,5 +61,6 @@
 !/.local/share
 !/.local/share/zsh
 !/.local/share/zsh/vendor-completions
+!/.local/share/zsh/vendor-completions/_readme
 !/.local/share/zsh/vendor-completions/_vc
 !/.mrconfig
