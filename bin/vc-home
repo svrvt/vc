@@ -223,11 +223,20 @@ cmd_bootstrap() {
 	fi
 
 	if ssh -T git@github.com 2>&1 | grep -q "Permission denied"; then
-		if [ -d "$HOME"/.config/mr/config.d-"$HOSTNAME" ]; then
-			sed -i 's|git@github.com:|https://github.com/|g' ~/.config/mr/config.d-"$HOSTNAME"/*
-		else
-			sed -i 's|git@github.com:|https://github.com/|g' ~/.config/mr/config.d/*
-		fi
+		cat <<EOF >>"$HOME/.gitconfig"
+# This string added via "$(realpath "$0")"
+[url "https://github.com/"]
+    insteadOf = git@github.com:
+EOF
+		# else
+		# git config --global --remove-section url.git@github.com:
+
+		# if [ -d "$HOME"/.config/mr/config.d-"$HOSTNAME" ]; then
+		# 	sed -i 's|git@github.com:|https://github.com/|g' ~/.config/mr/config.d-"$HOSTNAME"/*
+		# else
+		# 	sed -i 's|git@github.com:|https://github.com/|g' ~/.config/mr/config.d/*
+		# fi
+
 	fi
 
 	log "Running 'mr update' to verify"
