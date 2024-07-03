@@ -4,7 +4,7 @@
 !/bin/readme
 !/bin/script.sh
 !/bin/vc
-!/bin/vc-home-bootstrap.zsh
+!/bin/vc-home
 !/.config
 !/.config/mr
 !/.config/mr/available.d
@@ -16,6 +16,7 @@
 !/.config/mr/available.d/vcsh-default
 !/.config/mr/available.d/vcsh-desktop
 !/.config/mr/available.d/vc.vcsh
+!/.config/mr/config.d
 !/.config/mr/config.d-aldebaran
 !/.config/mr/config.d-aldebaran/associate.mr
 !/.config/mr/config.d-aldebaran/my-projects.github
@@ -24,8 +25,6 @@
 !/.config/mr/config.d-aldebaran/repo-vc.github
 !/.config/mr/config.d-aldebaran/vcsh-default
 !/.config/mr/config.d-aldebaran/vcsh-desktop
-!/.config/mr/config.d-undef
-!/.config/mr/config.d-undef/vcsh-default
 !/.config/mr/config.d-vaio
 !/.config/mr/config.d-vaio/associate.mr
 !/.config/mr/config.d-vaio/my-projects.github
@@ -34,6 +33,7 @@
 !/.config/mr/config.d-vaio/repo-vc.github
 !/.config/mr/config.d-vaio/vcsh-default
 !/.config/mr/config.d-vaio/vcsh-desktop
+!/.config/mr/config.d/vcsh-default
 !/.config/vcsh
 !/.config/vcsh/config
 !/.config/vcsh/gitmodules

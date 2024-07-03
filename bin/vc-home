@@ -1,0 +1,283 @@
+#!/usr/bin/env bash
+## svrvt/vc - https://github.com/svrvt/vc
+## vc-home
+## vc-home is a generic script which aims to simplify managing your
+## dotfiles by setting up useful hooks for vcsh and configuring mr to be
+## extendable.
+#
+## It is inspired by the bootstrap script by Vincend Demeester at
+## https://github.com/vdemeester/vcsh-home/blob/bootstrap/bootstrap.sh
+##
+## original script:
+## https://github.com/ek9/vcsh-dotfiles
+## 
+## Commands
+#
+## bootstrap        bootstrap vcsh, mr and vc-home (bootstrap)
+## clone            clones vcsh repository and runs update (skips clone if
+##                  already cloned and just runs update)
+## update           update vcsh and mr
+##
+## verify           verify vc-home setup
+##
+## help             show help
+
+## Overview
+#
+## - Automatically download and setup `vcsh` and `mr`.
+## - Sets up `.local/bin` for local binaries and shell scripts (added to `PATH`)
+## - vcsh hooks setup to:
+##    - Enable sparse checkout for cloned repositories
+##    - Ignore `README` and other common development files when cloning
+##    - Make backup copies of files that would be overwritten when cloning.
+##    - Repositories can have `.gitignore` files stored
+##      in `.gitignore.d/<repo-name>` of every repository
+## - mr `.mrconfig` setup to source files in:
+##    - `.config/mr/config.d` (for vcsh repositories)
+##  This allows any repositories to extend `mr` configuration. See README.md for
+##  more information.
+set -e
+test -z "$HOME" && fatal "$HOME not set; exiting" 1
+test -z "$USER" && fatal "$USER not set; exiting" 1
+
+## Variables
+SELF="$(basename "$0")"
+SELF_URL="https://github.com/svrvt/vc"
+VCSH_URL="https://github.com/RichiH/vcsh/releases/latest/download/vcsh-standalone.sh"
+MR_URL="https://git.joeyh.name/git/myrepos.git/"
+HOMEBIN="$HOME/.local/bin"
+TMP_DIR="/tmp/vc-$USER"
+
+## Functions
+# *log*: a wrapper of echo to print stuff in a more colorful way
+log() {
+    ECHO_ARGS=""
+    test "$1" = "-n" && {
+        ECHO_ARGS="-n"
+        shift
+    }
+    echo $ECHO_ARGS "$(tput sgr0)$(tput setaf 2)>$(tput bold)>$(tput sgr0) $*"
+}
+# *warn*: a wrapper of echo to print stuff in a more colorful way, warning
+warn() {
+    test "$1" = "-n" && {
+        ECHO_ARGS="-n"
+        shift
+    }
+    echo $ECHO_ARGS "$(tput sgr0)$(tput setaf 3)<$(tput bold)<$(tput sgr0) $*"
+}
+# *fatal*: a wrapper of echo to print stuff in a more colorful way, error
+fatal () {
+    test "$1" = "-n" && {
+        ECHO_ARGS="-n"
+        shift
+    }
+    echo $ECHO_ARGS "$(tput sgr0)$(tput setaf 9)<$(tput bold)<$(tput sgr0) $*" >&2
+    exit "$2"
+}
+
+# *check_cmd* : check a command and fail if not present
+check_cmd() {
+    command -v "$1" >/dev/null && {
+        echo "   $1"
+    } || {
+        echo ""
+        warn "$1 is not available"
+        echo
+        exit 1
+    }
+}
+
+# *setup_local_bin* : sets up HOMEDIR and adds it to PATH, .profile,
+# .bash_profile
+setup_local_bin() {
+    # test -f "$HOME/.profile" && source "$HOME/.profile"
+    # enable local bin dir
+    test -d "$HOMEBIN" || (mkdir -p "$HOMEBIN" && echo "made $HOMEBIN")
+    # append $HOMEBIN to PATH if directory exists and it is not yet in PATH
+    if [[ $UID -ge 1000 ]] && [[ -d $HOMEBIN ]] && [[ -z $(echo "$PATH" | grep -o "$HOMEBIN") ]]; then
+        export PATH=$PATH:$HOMEBIN
+        log "added $HOMEBIN to path"
+    fi
+
+    # if [ ! -f "$HOME/.profile" ]; then
+    #     touch "$HOME/.profile"
+    #     log "created $HOME/.profile file"
+    # fi
+    # if [ ! -f "$HOME/.bash_profile" ]; then
+    #     touch "$HOME/.bash_profile"
+    #     log "created $HOME/.bash_profile file"
+    # fi
+
+    # echo "export PATH=\$PATH:$HOMEBIN" >> $HOME/.profile
+    # echo "export PATH=\$PATH:$HOMEBIN" >> $HOME/.bash_profile
+    # log "added PATH to $HOME/.profile and $HOME/.bash_profile"
+    return
+}
+
+# *install_vcsh* : install vcsh via github
+install_vcsh() {
+    test -z "$HTTP_GET" && command -v wget >/dev/null && HTTP_GET='wget -O vcsh -nv'
+    test -z "$HTTP_GET" && command -v curl >/dev/null && HTTP_GET='curl -o vcsh -s -S -O'
+    test -z "$HTTP_GET" && fatal 'Unable to find wget or curl'
+
+    echo "installing vcsh via $HTTP_GET $VCSH_URL"
+    cd "$HOMEBIN" && $HTTP_GET $VCSH_URL && chmod +x "$HOMEBIN/vcsh"
+}
+
+# *install_mr* : install vcsh via git
+install_mr() {
+    echo installing mr via git $MR_URL
+    test -d "/tmp/myrepos-$USER" && rm -rf "/tmp/myrepos-$USER"
+    git clone "$MR_URL" "/tmp/myrepos-$USER"
+    cp "/tmp/myrepos-$USER/mr" "$HOMEBIN/"
+    chmod +x "$HOMEBIN/mr"
+}
+
+# *setup_vcsh_hooks* : sets up base vcsh hooks
+setup_vc() {
+    # * Look at ``HOOK_D`` and ``HOOK_A`` variable if already defined
+    test -z "$HOOK_D" && HOOK_D=$HOME/.config/vcsh/hooks-enabled
+    test -z "$HOOK_A" && HOOK_A=$HOME/.config/vcsh/hooks-available
+    log "Setting up vcsh hooks:"
+    log "Available hooks : $HOOK_A"
+    log "Enabled hooks   : $HOOK_D"
+    # * Create hook directories
+    test -d "$HOOK_D" || mkdir -p "$HOOK_D"
+    test -d "$HOOK_A" || mkdir -p "$HOOK_A"
+
+    if [ ! -f "$HOOK_A/pre-upgrade.00-checkSparseCheckout" ] ||
+		[ ! -f "$HOOK_A/pre-upgrade.01-defaultsparsecheckout" ] ||
+		[ ! -f "$HOOK_A/pre-upgrade.02-GitignoresparseCheckout" ] ||
+		[ ! -f "$HOOK_A/pre-upgrade.02-LICENSEsparseCheckout" ] ||
+		[ ! -f "$HOOK_A/pre-upgrade.02-READMEsparseCheckout" ] ||
+		[ ! -f "$HOOK_A/pre-upgrade.03-buildsparseCheckout" ]; then
+
+		log "Cloning vc to $TMP_DIR"
+		test -d "$TMP_DIR" && rm -rf "$TMP_DIR"
+		git clone $SELF_URL "$TMP_DIR"
+		HOOK_SRC_DIR=$TMP_DIR/.config/vcsh/hooks-available
+		log "Copying all hooks from $HOOK_SRC_DIR/* to $HOOK_A/"
+		cp "$HOOK_SRC_DIR/*" "$HOOK_A/"
+    else
+        echo "vcsh hooks are already installed"
+    fi
+
+	log "Enabling all hooks via symlink"
+	cd "$HOOK_D" && ln -sf "$HOOK_A/*" .
+	log "Making sure all hooks are executable"
+	chmod +x "$HOOK_A/*"
+}
+
+# *cmd_help* : shows help message
+cmd_help() {
+    log "Commands"
+    log ""
+    log "bootstrap        bootstrap vcsh, mr and vc (bootstrap)"
+    log "update           updates vcsh and mr"
+    log "clone            clones mr repository and runs mr update. Skips the"
+    log "                 initial clone if repository is already cloned."
+    log "verify           verify vc setup"
+    log "help             show help"
+}
+
+# *cmd_verify* : verifies that vcsh, mr and vc is setup
+cmd_verify() {
+    log "Verifying vc setup"
+    check_cmd vcsh
+    check_cmd mr
+    check_cmd vc-home
+    check_cmd vc
+    export PATH=$PATH:$HOMEBIN
+    log "vc setup is verified!"
+}
+
+# *cmd_bootstrap* : bootstrap vcsm, mr and vc
+cmd_bootstrap() {
+    log "Checking needed commands :$(tput bold)"
+    check_cmd git
+    check_cmd rename
+    # check_cmd gpg-agent
+    # check_cmd ssh-agent
+    # check_cmd keychain
+
+    test -z "$HTTP_GET" && command -v wget >/dev/null && HTTP_GET='wget -nv'
+    test -z "$HTTP_GET" && command -v curl >/dev/null && HTTP_GET='curl -s -S -O'
+    test -z "$HTTP_GET" && fatal 'Unable to find wget or curl'
+
+    echo "$SELF: bootstrapping vc with '$HTTP_GET'"
+
+    setup_local_bin
+    install_vcsh
+    install_mr
+    setup_vc
+
+    # Explain the user how to add configurations
+    if ! test -f "$HOME/.config/mr/config.d/vc.vcsh"; then
+        log "vc will now self-bootstrap via vcsh and update via mr"
+        vcsh clone $SELF_URL vc
+        log "You should now have vc setup via vcsh and mr."
+    else
+        log "vc is already configued via mr and vcsh."
+    fi
+
+    log "Running 'mr update' to verify"
+    mr update
+    log "vc has been successfully setup."
+    log "Make sure to 'source ~/.profile' or restart your shell"
+
+    cd "$HOME"
+    tput sgr0
+
+}
+
+cmd_update() {
+    install_mr
+    install_vcsh
+}
+
+# *cmd_clone* : verifies that vcsh, mr and vc-home is setup
+cmd_clone() {
+    REPO_NAME=$(echo "$1" | awk -F'/' '{print $(NF)}')
+    if [ -d "$HOME/.config/vcsh/repo.d/$REPO_NAME.git" ]; then
+        log "$REPO_NAME is already cloned"
+    else
+        log "Cloning $1"
+        (cd "$HOME" && vcsh clone "$1")
+    fi
+
+    log "Running mr update"
+    (cd "$HOME" && mr update)
+
+}
+
+## CLI Arguments
+if [ $# -eq 0 ]; then
+    cmd_help
+    exit 1
+fi
+
+case $1 in
+    bootstrap)
+        cmd_bootstrap
+        ;;
+    verify)
+        cmd_verify
+        ;;
+    help)
+        cmd_help
+        ;;
+    update)
+        cmd_update
+        ;;
+    clone)
+        cmd_clone "$2"
+        ;;
+    *)
+        cmd_help
+        echo ""
+        fatal "Unknown command: $1"
+        ;;
+esac
+
+# source "$HOME/.profile"

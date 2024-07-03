@@ -9,8 +9,8 @@ include =
 			test -x $conf && $conf || cat $conf
 		done
   else
-		for conf in $HOME/.config/mr/config.d-undef/*; do
-			test -x $conf && $conf || cat $conf
+		for conf in $HOME/.config/mr/config.d/*; do
+			cat $conf
 		done
 	fi
 
