@@ -223,7 +223,11 @@ cmd_bootstrap() {
 	fi
 
 	if ssh -T git@github.com 2>&1 | grep -q "Permission denied"; then
-		sed -i 's|git@github.com:|https://github.com/|g' ~/.config/mr/config.d/*
+		if [ -d "$HOME"/.config/mr/config.d-"$HOSTNAME" ]; then
+			sed -i 's|git@github.com:|https://github.com/|g' ~/.config/mr/config.d-"$HOSTNAME"/*
+		else
+			sed -i 's|git@github.com:|https://github.com/|g' ~/.config/mr/config.d/*
+		fi
 	fi
 
 	log "Running 'mr update' to verify"
