@@ -123,7 +123,7 @@ install_vcsh() {
 
 	echo "installing vcsh via $HTTP_GET $VCSH_URL"
 	cd "$HOMEBIN" && $HTTP_GET -O vcsh $VCSH_URL && chmod +x "$HOMEBIN/vcsh"
-	sed -i 's|#!/bin/sh|#!/bin/bash|' "$HOMEBIN/vcsh"
+	# sed -i 's|#!/bin/sh|#!/bin/bash|' "$HOMEBIN/vcsh"
 }
 
 # *install_mr* : install vcsh via git
