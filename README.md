@@ -53,7 +53,7 @@ Run `vc-home bootstrap` via this `curl` one-liner:
 
 You can use `vc-home` to clone vcsh repositories:
 
-    $ vc-home clone https://github.com/svrvt/vc_zsh
+    $ vc-home clone awesome #https://github.com/svrvt/vc_awesome
 
 `vc-home` supports the following commands:
 
@@ -63,10 +63,10 @@ You can use `vc-home` to clone vcsh repositories:
 - `verify` - used to verify existing `vc-home` setup.
 - `help` - show help
 
+    <!-- $ vc-home clone https://github.com/svrvt/vc_alacritty -->
 Examples:
 
-    <!-- $ vc-home clone https://github.com/svrvt/vc_alacritty -->
-    $ vc-home clone rofi
+    $ vc-home clone rofi #https://github.com/svrvt/vc_rofi
     $ vc-home verify
     $ vc-home help
 
