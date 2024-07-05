@@ -6,8 +6,9 @@ dotfiles with [vcsh][1]. It sets up [vcsh][1], [mr][2], adds usable hooks and
 lays down simple directory that vcsh repositories can follow.
 
 It is inspired by:
-    - [ek9/vcsh-dotfiles][10]
-    - [alerque/que][7]
+
+- [ek9/vcsh-dotfiles][10]
+- [alerque/que][7]
 
 ## Features
 
