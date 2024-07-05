@@ -257,12 +257,23 @@ cmd_update() {
 # *cmd_clone* : verifies that vcsh, mr and vc-home is setup
 cmd_clone() {
 	REPO_NAME=$(echo "$1" | awk -F'/' '{print $(NF)}')
-	if [ -d "$HOME/.config/vcsh/repo.d/$REPO_NAME.git" ]; then
-		log "$REPO_NAME is already cloned"
-	else
-		log "Cloning $1"
-		(cd "$HOME" && vcsh clone "$1")
-	fi
+	for r in "$@"; do
+		case $r in
+		vc)
+			REPO_NAME="git@github.com:svrvt/$r"
+			;;
+		*)
+			REPO_NAME="git@github.com:svrvt/vc_$r"
+			;;
+		esac
+
+		if [ -d "$HOME/.config/vcsh/repo.d/$REPO_NAME.git" ]; then
+			log "$REPO_NAME is already cloned"
+		else
+			log "Cloning $r"
+			(cd "$HOME" && vcsh clone "$REPO_NAME")
+		fi
+	done
 
 	log "Running mr update"
 	(cd "$HOME" && mr update)
@@ -289,7 +300,8 @@ update)
 	cmd_update
 	;;
 clone)
-	cmd_clone "$2"
+	shift
+	cmd_clone "$@"
 	;;
 *)
 	cmd_help
