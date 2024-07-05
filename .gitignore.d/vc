@@ -75,3 +75,4 @@
 !/.local/share/zsh/vendor-completions/_readme
 !/.local/share/zsh/vendor-completions/_vc
 !/.mrconfig
+!/README.md

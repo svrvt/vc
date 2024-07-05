@@ -10,7 +10,7 @@ link =
 checkout = git clone git@github.com:alerque/que.git que.git
 link = ln -svnf $PWD $HOME/src/config/vcsh/que.link
 
-[srs/github.com/lierdakil/vcsh-modules.git]
+[src/github.com/lierdakil/vcsh-modules.git]
 checkout = git clone git@github.com:lierdakil/vcsh-modules.git vcsh-modules.git
 link = ln -svnf $PWD $HOME/src/config/vcsh/vcsh-modules.link
 
