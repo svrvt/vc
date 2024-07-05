@@ -33,6 +33,7 @@ It is inspired by [ek9/vcsh-dotfiles][10] repository.
 - `curl` or `wget`
 - `git`
 - `rename` 
+- `lynx` or `gh` autorization for parse list of repository
 
 ## Install
 
@@ -64,7 +65,8 @@ You can use `vc-home` to clone vcsh repositories:
 
 Examples:
 
-    $ vc-home clone https://github.com/svrvt/vc_alacritty
+    <!-- $ vc-home clone https://github.com/svrvt/vc_alacritty -->
+    $ vc-home clone rofi
     $ vc-home verify
     $ vc-home help
 
