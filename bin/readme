@@ -1,32 +1,34 @@
 #!/bin/bash
 
 md_dir="$HOME/paperwork/README"
-md_file=$1
-md_f="$md_dir/$md_file".md
+name=$1
+md_file="$md_dir/$name".md
 
-case $md_file in
+case $name in
 vc)
-	repo_file=$md_file
+	repo=$name
 	;;
 *)
-	repo_file=vc_$md_file
+	repo=vc_$name
 	;;
 esac
 
 shift
 
 edit_file() {
-	$EDITOR "$md_f"
+	$EDITOR "$md_file"
 }
 
 update_file() {
-	ln --backup=existing "$md_f" "$HOME/README.md" || exit
-	vcsh run "$repo_file" git stash
-	vcsh run "$repo_file" git add -f --sparse "$HOME/README.md"
-	vcsh run "$repo_file" git commit -m "update README.md"
-  vcsh run "$repo_file" git push
-	vcsh run "$repo_file" git stash pop
-	rm -f "$HOME/README.md"
+	vcsh run "$repo" git stash
+	vcsh run "$repo" git sparse-checkout disable
+	ln --backup=existing "$md_file" "$HOME/README.md" || exit
+	vcsh run "$repo" git add -f --sparse "$HOME/README.md"
+	vcsh run "$repo" git commit -m "update README.md"
+	vcsh run "$repo" git push
+	vcsh run "$repo" git sparse-checkout reapply
+	vcsh run "$repo" git stash pop
+	# rm -f "$HOME/README.md"
 }
 
 case $1 in
