@@ -7,7 +7,7 @@ lays down simple directory that vcsh repositories can follow.
 
 It is inspired by:
 
-- [ek9/vcsh-dotfiles][10]
+- [ek9/vcsh-dotfiles][0]
 - [alerque/que][7]
 
 ## Features
@@ -77,10 +77,9 @@ Examples:
 
 Copyright (c) 2024 Rustam Uzairov [svrvt/vc][9]
 
-Copyright (c) 2024 Caleb Maclennan for portins of code from [alerque/que][7]
+Copyright (c) 2024 Caleb Maclennan for [pre/post-merge-unclobber][8] hooks, [que][12] supporting script and idea for organize repo.
 
-Copyright (c) 2016-2017 ek9 <dev@ek9.co> (https://ek9.co)
-[vcsh-dotfiles][0].
+Copyright (c) 2016-2022 ek9 for [vcsh-dotfiles script][10] and [SparseCheckout][11] hooks.
 
 Copyright (c) 2011-2015 Vincent Demeester for portions of code from
 [vdemeester/vcsh-home][3] project.
@@ -94,5 +93,8 @@ Copyright (c) 2011-2015 Vincent Demeester for portions of code from
 [2]: https://github.com/joeyh/myrepos
 [3]: https://github.com/vdemeester/vcsh-home
 [7]: https://github.com/alerque/que
+[8]: https://github.com/alerque/que/tree/master/.config/vcsh/hooks-enabled
 [9]: https://github.com/svrvt/vc
-[10]: https://github.com/ek9/dotfiles
+[10]: https://github.com/ek9/vcsh-dotfiles/blob/main/.local/bin/vcsh-dotfiles
+[11]: https://github.com/ek9/vcsh-dotfiles/tree/main/.config/vcsh/hooks-available
+[12]: https://github.com/alerque/que/blob/master/bin/que
