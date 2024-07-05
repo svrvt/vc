@@ -1,11 +1,13 @@
 vc-home
 =============
 
-[vc][9] aims to simplify the bootstrap procedure of managing your
+[vc-home][9] aims to simplify the bootstrap procedure of managing your
 dotfiles with [vcsh][1]. It sets up [vcsh][1], [mr][2], adds usable hooks and
 lays down simple directory that vcsh repositories can follow.
 
-It is inspired by [ek9/vcsh-dotfiles][10] repository.
+It is inspired by:
+    - [ek9/vcsh-dotfiles][10]
+    - [alerque/que][7]
 
 ## Features
 
@@ -21,6 +23,7 @@ It is inspired by [ek9/vcsh-dotfiles][10] repository.
 - [mr][2] `.mrconfig` setup to source files in:
     - `.config/mr/config.d` (for [vcsh][1] repositories)
   This allows any repositories to extend `mr` configuration further.
+- Autocomplete commands and list of repositories to clone for zsh 
 
 <!-- [![asciicast](https://asciinema.org/a/125351.png)](https://asciinema.org/a/125351) -->
 
@@ -32,8 +35,8 @@ It is inspired by [ek9/vcsh-dotfiles][10] repository.
 
 - `curl` or `wget`
 - `git`
-- `rename` 
-- `lynx` or `gh` autorization for parse list of repository
+- `rename` for one hook that is triggered if the paths of cloned files are busy
+- `lynx` and `jq` or `gh` autorization to parsing the list of repositories for autocomplete
 
 ## Install
 
@@ -53,20 +56,18 @@ Run `vc-home bootstrap` via this `curl` one-liner:
 
 You can use `vc-home` to clone vcsh repositories:
 
-    $ vc-home clone awesome #https://github.com/svrvt/vc_awesome
+    $ vc-home clone awesome #relevant to "vcsh clone https://github.com/svrvt/vc_awesome"
 
 `vc-home` supports the following commands:
 
 - `bootstrap` - used to bootstrap vcsh, mr and bootstrap vc.
-- `clone` - used to clone vcsh repositories. `mr update` is always run at the
-   end. Will not try to clone already cloned repository.
+- `clone <Tab>` - used to clone vcsh repositories. `mr co` is always run at the end.
 - `verify` - used to verify existing `vc-home` setup.
 - `help` - show help
 
-    <!-- $ vc-home clone https://github.com/svrvt/vc_alacritty -->
 Examples:
 
-    $ vc-home clone rofi #https://github.com/svrvt/vc_rofi
+    $ vc-home clone rofi #relevant to "vcsh clone https://github.com/svrvt/vc_rofi"
     $ vc-home verify
     $ vc-home help
 
@@ -74,6 +75,8 @@ Examples:
 ## Authors
 
 Copyright (c) 2024 Rustam Uzairov [svrvt/vc][9]
+
+Copyright (c) 2024 Caleb Maclennan for portins of code from [alerque/que][7]
 
 Copyright (c) 2016-2017 ek9 <dev@ek9.co> (https://ek9.co)
 [vcsh-dotfiles][0].
@@ -89,5 +92,6 @@ Copyright (c) 2011-2015 Vincent Demeester for portions of code from
 [1]: https://github.com/RichiH/vcsh
 [2]: https://github.com/joeyh/myrepos
 [3]: https://github.com/vdemeester/vcsh-home
+[7]: https://github.com/alerque/que
 [9]: https://github.com/svrvt/vc
 [10]: https://github.com/ek9/dotfiles
