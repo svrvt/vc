@@ -9,6 +9,9 @@ _arguments -C \
 && ret=0
   # '*:: :->args' \
 
+GITHUB_USER=svrvt
+GITHUB_REPO=vc
+
 case "$state" in
   (cmds)
      local commands; commands=(
@@ -23,9 +26,14 @@ case "$state" in
   (source_lists)
     local sources
     jq_program='.[] | .html_url'
-    sources=( $(lynx -dump -listonly "https://api.github.com/users/svrvt/repos?per_page=100" | \
-      jq --raw-output $jq_program | grep svrvt/vc | awk '{print $1}' | \
-      sed 's|https://github.com/svrvt/||' | sed 's|vc_||' | sort))
+    if [ -z "$DUMP_REPO_LIST" ]; then
+      sources=($(lynx -dump -listonly "https://api.github.com/users/$GITHUB_USER/repos?per_page=100" | \
+        jq --raw-output $jq_program | grep $GITHUB_USER/vc | awk '{print $1}' | \
+        sed 's|https://github.com/svrvt/||' | sort))
+      DUMP_REPO_LIST=("${sources[@]}")
+    else
+      sources=("${DUMP_REPO_LIST[@]}")
+    fi
     # sources=( $(gh repo list -L 50 | grep svrvt/vc | awk '{print $1}' | cut -d/ -f2 | sed 's|vc_||' | sort))
     sources=( "${sources[@]#vc_}" )
     _describe -t sources 'source' sources && ret=0

@@ -42,7 +42,12 @@ test -z "$USER" && fatal "$USER not set; exiting" 1
 
 ## Variables
 SELF="$(basename "$0")"
-SELF_URL="https://github.com/svrvt/vc"
+
+GITHUB_USER=svrvt
+GITHUB_REPO=vc
+PREFIX_FOR_REPOS="$GITHUB_REPO"_
+
+SELF_URL="https://github.com/$GITHUB_USER/$GITHUB_REPO"
 VCSH_URL="https://github.com/RichiH/vcsh/releases/latest/download/vcsh-standalone.sh"
 MR_URL="https://git.joeyh.name/git/myrepos.git/"
 HOMEBIN="$HOME/.local/bin"
@@ -256,14 +261,14 @@ cmd_update() {
 
 # *cmd_clone* : verifies that vcsh, mr and vc-home is setup
 cmd_clone() {
-	REPO_NAME=$(echo "$1" | awk -F'/' '{print $(NF)}')
+	# REPO_NAME=$(echo "$1" | awk -F'/' '{print $(NF)}')
 	for r in "$@"; do
 		case $r in
-		vc)
-			REPO_NAME="git@github.com:svrvt/$r"
+		"$GITHUB_REPO")
+			REPO_NAME="git@github.com:$GITHUB_USER/$GITHUB_REPO"
 			;;
 		*)
-			REPO_NAME="git@github.com:svrvt/vc_$r"
+			REPO_NAME="git@github.com:$GITHUB_USER/$PREFIX_FOR_REPOS$r"
 			;;
 		esac
 
@@ -275,8 +280,8 @@ cmd_clone() {
 		fi
 	done
 
-	log "Running mr update"
-	(cd "$HOME" && mr update)
+	# log "Running mr update"
+	# (cd "$HOME" && mr update)
 
 }
 
