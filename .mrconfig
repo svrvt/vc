@@ -3,10 +3,12 @@ git_gc = git gc "$@"
 jobs = 5
 
 include = 
-	cat $HOME/.config/mr/available.d/vc.vcsh
 	if [ -d $HOME/.config/mr/config.d-$HOSTNAME ]; then
+	  cat $HOME/.config/mr/config.d-$HOSTNAME/vc
 		for conf in $HOME/.config/mr/config.d-$HOSTNAME/*; do
+    if [ $conf != vc ]; then
 			test -x $conf && $conf || cat $conf
+    fi
 		done
   else
 		for conf in $HOME/.config/mr/config.d/*; do
