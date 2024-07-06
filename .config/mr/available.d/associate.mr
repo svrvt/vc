@@ -206,6 +206,9 @@ checkout = git clone git@github.com:kosorin/awesome-rice.git awesome-rice.git
 checkout = git clone git@github.com:ledovsky/latex-gost-template.git latex-gost-template
 
 #owner
+[src/github.com/drduh/config.git]
+checkout = git clone git@github.com:drduh/config.git config.git
+
 [src/github.com/infokiller/config-public.git]
 checkout = git clone git@github.com:infokiller/config-public.git config-public.git
 
@@ -253,6 +256,9 @@ checkout = git clone git@gitlab.com:thelinuxcast/my-dots.git my-dots.git
 checkout = git clone git@github.com:ygalblum/linux-environment.git linux-environment.git
 
 #nvim
+[src/github.com/milanglacier/nvim.git]
+checkout = git clone git@github.com:milanglacier/nvim.git nvim.git
+
 [src/github.com/LunarVim/nvim-basic-ide.git]
 checkout = git clone git@github.com:LunarVim/nvim-basic-ide.git nvim-basic-ide.git
 
