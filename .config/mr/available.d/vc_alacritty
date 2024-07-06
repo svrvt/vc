@@ -1,0 +1,4 @@
+[.config/vcsh/repo.d/vc_alacritty.git]
+checkout = vcsh clone git@github.com:svrvt/vc_alacritty.git
+
+# vi: ft=ini syntax=sh

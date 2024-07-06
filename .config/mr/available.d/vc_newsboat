@@ -1,0 +1,4 @@
+[.config/vcsh/repo.d/vc_newsboat.git]
+checkout = vcsh clone git@github.com:svrvt/vc_newsboat.git
+
+# vi: ft=ini syntax=sh

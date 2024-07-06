@@ -1,0 +1,4 @@
+[.config/vcsh/repo.d/vc_jupyter.git]
+checkout = vcsh clone git@github.com:svrvt/vc_jupyter.git
+
+# vi: ft=ini syntax=sh
