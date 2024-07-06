@@ -13,9 +13,9 @@
 !/.config/mr/available.d/programs.github
 !/.config/mr/available.d/repo-re.github
 !/.config/mr/available.d/repo-vc.github
+!/.config/mr/available.d/vc
 !/.config/mr/available.d/vcsh-default
 !/.config/mr/available.d/vcsh-desktop
-!/.config/mr/available.d/vc.vcsh
 !/.config/mr/config.d
 !/.config/mr/config.d-aldebaran
 !/.config/mr/config.d-aldebaran/associate.mr
