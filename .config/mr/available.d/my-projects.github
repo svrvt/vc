@@ -32,6 +32,9 @@ checkout = git clone git@github.com:svrvt/pass-rofi-gui.git
 [code/proj/buku_run]
 checkout = git clone git@github.com:svrvt/buku_run.git
 
+[code/proj/rofi-systemd]
+checkout = git clone git@github.com:svrvt/rofi-systemd.git
+
 #trade     
 [code/trade/ex_change]
 checkout = 
