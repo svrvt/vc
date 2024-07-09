@@ -16,11 +16,9 @@ fi
 
 shift
 
-# vcsh run $repo git $@
-vcsh run $repo $@
+vcsh run $repo git $@
 
-# if [ "$1" = "add" -a "$2" = "-f" ]; then
-if [ "$2" = "add" -a "$3" = "-f" ]; then
+if [ "$1" = "add" -a "$2" = "-f" ]; then
 	vcsh write-gitignore $repo
 	vcsh run $repo git add ~/.gitignore.d/$repo
 fi

@@ -47,22 +47,6 @@ function _vc-list-untracked () {
 	_nothing
 }
 
-function _vc-pull () {
-	_nothing
-}
-
-function _vc-push () {
-	_nothing
-}
-
-function _vc-rename () {
-	case $CURRENT in
-		2) __vcsh_repositories ;;
-		3) _message "new repository name" ;;
-		*) _nothing ;;
-	esac
-}
-
 function _vc-run () {
 	(( CURRENT == 2 )) && __vcsh_repositories
 	(( CURRENT == 3 )) && _command_names -e
@@ -136,15 +120,23 @@ function _vc () {
 	if [[ ${state} == "subcommand_or_options_or_repo" ]]; then
 		if (( CURRENT == 1 )); then
 			# _describe -t subcommands 'vc sub-commands' subcommands && ret=0
-			_describe -t subcommands 'vc sub-commands' subcommands && ret=0
 			__vcsh_repositories && ret=0
 		else
 			vccommand="${words[1]}"
+      case ${vccommand} in 
+      vc)
+        state=${vccommand}
+      ;;
+      *)
+        state=vc_${vccommand}
+      ;;
+      esac
+
 			if ! (( ${+functions[_vc-$vccommand]} )); then
 				# There is no handler function, so this is probably the name
 				# of a repository. Act accordingly.
 				# FIXME: this may want to use '_dispatch vcsh git'
-				GIT_DIR=$VCSH_REPO_D/$words[1].git _dispatch git git && ret=0
+				GIT_DIR=$VCSH_REPO_D/$state.git _dispatch git git && ret=0
 			else
 				curcontext="${curcontext%:*:*}:vc-${vccommand}:"
 				_call_function ret _vc-${vccommand} && (( ret ))
