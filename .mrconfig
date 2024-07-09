@@ -3,18 +3,18 @@ git_gc = git gc "$@"
 jobs = 5
 
 include = 
-	if [ -d $HOME/.config/mr/config.d-$HOSTNAME ]; then
+	if [ -f $HOME/.config/mr/config.d-$HOSTNAME/vc ]; then
 	  cat $HOME/.config/mr/config.d-$HOSTNAME/vc
 		for conf in $HOME/.config/mr/config.d-$HOSTNAME/*; do
-    if [ $conf != vc ]; then
-			test -x $conf && $conf || cat $conf
-    fi
+			[ $conf != vc ] && test -x $conf && $conf || cat $conf
 		done
-  else
-		for conf in $HOME/.config/mr/config.d/*; do
-			cat $conf
-		done
-	fi
+  elif [ ! -d $HOME/.config/mr/config.d-$HOSTNAME ]; then
+    cp -r $HOME/.config/mr/config.d $HOME/.config/mr/config.d-$HOSTNAME 
+    cat $HOME/.config/mr/config.d-$HOSTNAME/vc
+    for conf in $HOME/.config/mr/config.d-$HOSTNAME/*; do
+      [ $conf != vc ] && test -x $conf && $conf || cat $conf
+    done
+  fi
 
 [ALIAS]
 

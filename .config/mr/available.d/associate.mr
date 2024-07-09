@@ -1,6 +1,6 @@
 # vcsh
 [src/github.com/aspiers/mr-config.git]
-order = 9
+order = 11
 checkout = git clone git@github.com:aspiers/mr-config.git mr-config.git
 link =
     link_repos.sh
@@ -290,6 +290,8 @@ checkout = git clone git@github.com:ksk0/nvim-install.git nvim-install.git
 [src/github.com/pystardust/ytfzf.git]
 checkout = git clone git@github.com:pystardust/ytfzf.git ytfzf.git
 #rofi
+[srs/github.com/adi1090x/rofi.git]
+checkout = git clone git@github.com:adi1090x/rofi.git rofi.git
 [src/github.com/gotbletu/shownotes.git]
 checkout = git clone git@github.com:gotbletu/shownotes.git shownotes.git
 [src/github.com/Andrey0189/recordrofi.git]
