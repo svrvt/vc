@@ -1,4 +1,9 @@
 [.config/vcsh/repo.d/vc_awesome.git]
-checkout = vcsh clone git@github.com:svrvt/vc_awesome.git
+checkout = 
+  vcsh clone git@github.com:svrvt/vc_awesome.git &&
+  git -C .config/awesome-worron remote add worron git@github.com:worron/awesome-config.git &&
+  git -C .config/awesome-worron remote add worron-rakanalh git@github.com:rakanalh/awesome-config.git
+  git -C .config/awesome-rice remote add rice git@github.com:kosorin/awesome-rice.git
+
 
 # vi: ft=ini syntax=sh

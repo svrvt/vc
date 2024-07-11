@@ -182,28 +182,17 @@ checkout = git clone git://git.launchpad.net/apparmor-profiles apparmor-profiles
 [src/github.com/pA0k/AwesomeWm-config.git]
 checkout = git clone git@github.com:pA0k/AwesomeWm-config.git AwesomeWm-config.git
 
-[src/github.com/WillPower3309/awesome-dotfiles.git]
-checkout = git clone git@github.com:WillPower3309/awesome-dotfiles.git awesome-dotfiles.git
-[src/github.com/lcpz/awesome-copycats.git]
-checkout = git clone --recurse-submodules --remote-submodules --depth 1 -j 2 git@github.com:lcpz/awesome-copycats.git awesome-copycats.git
-[src/github.com/2KAbhishek/awesome2k.git]
-checkout = git clone git@github.com:2KAbhishek/awesome2k.git awesome2k.git
-[src/github.com/alerque/que-awesome.git]
-checkout = git clone git@github.com:alerque/que-awesome.git que-awesome.git
 [src/github.com/streetturtle/awesome-wm-widgets.git]
 checkout = git clone git@github.com:streetturtle/awesome-wm-widgets.git awesome-wm-widgets.git
 [src/github.com/streetturtle/awesome-buttons.git]
 checkout = git clone git@github.com:streetturtle/awesome-buttons.git awesome-buttons.git
-[src/github.com/worron/awesome-config.git]
-checkout = git clone --recurse-submodules git@github.com:worron/awesome-config.git awesome-config.git
 [src/github.com/Kasper24/KwesomeDE.git]
 checkout = git clone --recurse-submodules git@github.com:Kasper24/KwesomeDE KwesomeDE.git
-[src/github.com/kosorin/awesome-rice.git]
-checkout = git clone git@github.com:kosorin/awesome-rice.git awesome-rice.git
 
-#latex
-[paperwork/templates/latex-gost-template]
-checkout = git clone git@github.com:ledovsky/latex-gost-template.git latex-gost-template
+[src/github.com/alfunx/.dotfiles.git]
+checkout = git clone git@github.com:alfunx/.dotfiles.git
+[src/github.com/rxyhn/yoru.git]
+checkout = git clone git@github.com:rxyhn/yoru.git
 
 #owner
 [src/github.com/drduh/config.git]
@@ -290,7 +279,7 @@ checkout = git clone git@github.com:ksk0/nvim-install.git nvim-install.git
 [src/github.com/pystardust/ytfzf.git]
 checkout = git clone git@github.com:pystardust/ytfzf.git ytfzf.git
 #rofi
-[srs/github.com/adi1090x/rofi.git]
+[src/github.com/adi1090x/rofi.git]
 checkout = git clone git@github.com:adi1090x/rofi.git rofi.git
 [src/github.com/gotbletu/shownotes.git]
 checkout = git clone git@github.com:gotbletu/shownotes.git shownotes.git
@@ -306,4 +295,7 @@ checkout = git clone git@github.com:robherley/snips.sh.git snips.sh.git
 [src/github.com/jalvesaq/colorout.git]
 checkout = git clone git@github.com:jalvesaq/colorout colorout.git
 
+#latex
+[paperwork/templates/latex-gost-template]
+checkout = git clone git@github.com:ledovsky/latex-gost-template.git latex-gost-template
 # vim: ft=ini
