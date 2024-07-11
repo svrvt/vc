@@ -10,11 +10,6 @@ checkout =
       git remote add upstream git@github.com:mrlesmithjr/Ansible.git
 
 #awesome
-[code/proj/awesome-rice]
-checkout = 
-      git clone git@github.com:svrvt/awesome-rice.git
-      git remote add upstream git@github.com:kosorin/awesome-rice.git
-
 [code/proj/wm_via_systemd-with_xdg]
 checkout = git clone git@github.com:svrvt/wm_via_systemd-with_xdg.git
 
