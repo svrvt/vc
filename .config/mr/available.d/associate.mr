@@ -148,7 +148,7 @@ checkout = git clone git@github.com:ChristianLempa/homelab.git homelab.git
 # link = ln -svnf $PWD/ansible $HOME/src/ansible/homelab.link 
 
 [src/github.com/stilicho2011/ubuntu_rep.git]
-checkout = git clone git@github.com:stilicho2011/ubuntu_rep.git
+checkout = git clone git@github.com:stilicho2011/ubuntu_rep.git ubuntu_rep.git
 
 #nix-home
 [src/github.com/aos/home.nix.git]
@@ -180,10 +180,10 @@ checkout = git clone git@gitlab.com:apparmor/apparmor.git apparmor.git
 [src/launchpad.net/apparmor-profiles.git]
 checkout = git clone git://git.launchpad.net/apparmor-profiles apparmor-profiles.git
 
-[src/build/github.com/CISOfy/lynis.git]
+[src/build/lynis]
 checkout = git clone git://git@github.com:CISOfy/lynis.git lynis.git
 
-[src/build/github.com/AdguardTeam/AdGuardHome]
+[src/build/AdGuardHome]
 checkout = git clone git@github.com:AdguardTeam/AdGuardHome.git AdGuardHome
 
 #awesome
@@ -198,9 +198,9 @@ checkout = git clone git@github.com:streetturtle/awesome-buttons.git awesome-but
 checkout = git clone --recurse-submodules git@github.com:Kasper24/KwesomeDE KwesomeDE.git
 
 [src/github.com/alfunx/.dotfiles.git]
-checkout = git clone git@github.com:alfunx/.dotfiles.git
+checkout = git clone git@github.com:alfunx/.dotfiles.git .dotfiles.git
 [src/github.com/rxyhn/yoru.git]
-checkout = git clone git@github.com:rxyhn/yoru.git
+checkout = git clone git@github.com:rxyhn/yoru.git yoru.git
 
 #owner
 [src/github.com/drduh/config.git]
@@ -309,10 +309,10 @@ checkout = git clone git@github.com:ledovsky/latex-gost-template.git latex-gost-
 
 #DICOM
 [src/github.com/orthanc-server/orthanc-setup-samples.git]
-checkout = git clone git@github.com:orthanc-server/orthanc-setup-samples.git
+checkout = git clone git@github.com:orthanc-server/orthanc-setup-samples.git orthanc-setup-samples.git
 
 [src/github.com/orthanc-team/orthanc-auth-service.git]
-checkout = git clone git@github.com:orthanc-team/orthanc-auth-service.git
+checkout = git clone git@github.com:orthanc-team/orthanc-auth-service.git orthanc-auth-service.git
 
 
 # vim: ft=ini

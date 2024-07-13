@@ -1,57 +1,57 @@
-[aggregate/vc]
+[.aggregate/vc]
 checkout = git clone git@github.com:svrvt/vc.git 
 
-[aggregate/vc_luakit]
+[.aggregate/vc_luakit]
 checkout = git clone git@github.com:svrvt/vc_luakit.git 
 
-[aggregate/vc_xorg]
+[.aggregate/vc_xorg]
 checkout = git clone git@github.com:svrvt/vc_xorg.git
 
-[aggregate/vc_vifm]
+[.aggregate/vc_vifm]
 checkout = git clone git@github.com:svrvt/vc_vifm.git
 
-[aggregate/vc_zathura]
+[.aggregate/vc_zathura]
 checkout = git clone git@github.com:svrvt/vc_zathura.git
 
-[aggregate/vc_xplr]
+[.aggregate/vc_xplr]
 checkout = git clone git@github.com:svrvt/vc_xplr.git
 
-[aggregate/vc_vim]
+[.aggregate/vc_vim]
 checkout = git clone git@github.com:svrvt/vc_vim.git
 
-[aggregate/vc_nvim]
+[.aggregate/vc_nvim]
 checkout = git clone git@github.com:svrvt/vc_nvim.git
 
-[aggregate/vc_ranger]
+[.aggregate/vc_ranger]
 checkout = git clone git@github.com:svrvt/vc_ranger.git
 
-[aggregate/vc_tmux]
+[.aggregate/vc_tmux]
 checkout = git clone git@github.com:svrvt/vc_tmux.git
 
-[aggregate/vc_gitconfig]
+[.aggregate/vc_gitconfig]
 checkout = git clone git@github.com:svrvt/vc_gitconfig.git
 
-[aggregate/vc_bash]
+[.aggregate/vc_bash]
 checkout = git clone git@github.com:svrvt/vc_bash.git
 
-[aggregate/vc_zsh]
+[.aggregate/vc_zsh]
 checkout = git clone git@github.com:svrvt/vc_zsh.git
 
-[aggregate/vc_alacritty]
+[.aggregate/vc_alacritty]
 checkout = git clone git@github.com:svrvt/vc_alacritty.git
 
-[aggregate/vc_rofi]
+[.aggregate/vc_rofi]
 checkout = git clone git@github.com:svrvt/vc_rofi.git
 
-[aggregate/vc_environment]
+[.aggregate/vc_environment]
 checkout = git clone git@github.com:svrvt/vc_environment.git
 
-[aggregate/vc_awesome]
+[.aggregate/vc_awesome]
 checkout = git clone git@github.com:svrvt/vc_awesome.git
 
-[aggregate/vc_newsboat]
+[.aggregate/vc_newsboat]
 checkout = git clone git@github.com:svrvt/vc_newsboat.git
 
-[aggregate/vc_jupyter]
+[.aggregate/vc_jupyter]
 checkout = git clone git@github.com:svrvt/vc_jupyter.git
 # vim: ft=ini syntax=sh
