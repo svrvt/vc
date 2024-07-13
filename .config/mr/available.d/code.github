@@ -30,12 +30,6 @@ checkout = git clone git@github.com:svrvt/buku_run.git
 [code/forks/rofi-systemd]
 checkout = git clone git@github.com:svrvt/rofi-systemd.git
 
-#trade     
-[work/trade/ex_change]
-checkout = 
-      git clone git@github.com:svrvt/ex_change.git
-      git remote add upstream git@github.com:hummingbot/hummingbot.git
-
 [code/init/pass_template]
 checkout = git clone git@github.com:svrvt/pass_template.git
 
@@ -47,6 +41,5 @@ checkout = git clone git@github.com:svrvt/GB_DSinM.git
 
 [paperwork/clin_rec]
 checkout = git clone git@github.com:svrvt/clin_rec.git
-
 
 # vim: ft=ini syntax=sh

@@ -180,6 +180,11 @@ checkout = git clone git@gitlab.com:apparmor/apparmor.git apparmor.git
 [src/launchpad.net/apparmor-profiles.git]
 checkout = git clone git://git.launchpad.net/apparmor-profiles apparmor-profiles.git
 
+[src/build/github.com/CISOfy/lynis.git]
+checkout = git clone git://git@github.com:CISOfy/lynis.git lynis.git
+
+[src/build/github.com/AdguardTeam/AdGuardHome]
+checkout = git clone git@github.com:AdguardTeam/AdGuardHome.git AdGuardHome
 
 #awesome
 [src/github.com/pA0k/AwesomeWm-config.git]
@@ -301,4 +306,13 @@ checkout = git clone git@github.com:jalvesaq/colorout colorout.git
 #latex
 [paperwork/templates/latex-gost-template]
 checkout = git clone git@github.com:ledovsky/latex-gost-template.git latex-gost-template
+
+#DICOM
+[src/github.com/orthanc-server/orthanc-setup-samples.git]
+checkout = git clone git@github.com:orthanc-server/orthanc-setup-samples.git
+
+[src/github.com/orthanc-team/orthanc-auth-service.git]
+checkout = git clone git@github.com:orthanc-team/orthanc-auth-service.git
+
+
 # vim: ft=ini
