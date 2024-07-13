@@ -49,7 +49,7 @@ checkout = git clone git@github.com:Oxyd76/tinyxit.git tinyxit.git
 checkout = git clone git@github.com:cardosofede/hummingbot-deploy.git hummingbot-deploy.git
 link = 
     ln -svnf $PWD $HOME/src/hummingbot/hummingbot-deploy.link
-    ln -svnf $HOME/src/github.com/hummingbot $HOME/code/trade/hummingbot_all
+    ln -svnf $HOME/src/github.com/hummingbot $HOME/work/trade/hummingbot_all
 
 [src/github.com/andrewsiah/Arbitrage_Bot.git]
 checkout = git clone git@github.com:andrewsiah/Arbitrage_Bot.git Arbitrage_Bot.git
@@ -146,6 +146,9 @@ link =
 [src/github.com/ChristianLempa/homelab.git]
 checkout = git clone git@github.com:ChristianLempa/homelab.git homelab.git
 # link = ln -svnf $PWD/ansible $HOME/src/ansible/homelab.link 
+
+[src/github.com/stilicho2011/ubuntu_rep.git]
+checkout = git clone git@github.com:stilicho2011/ubuntu_rep.git
 
 #nix-home
 [src/github.com/aos/home.nix.git]

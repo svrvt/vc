@@ -4,42 +4,42 @@
 [ansible]
 checkout = git clone git@github.com:svrvt/re_set.git ansible
 
-[src/ansible/mrlesmithjr]
+[src/ansible/forks/mrlesmithjr]
 checkout =
       git clone git@github.com:svrvt/ansible-mrlesmithjr-collections.git mrlesmithjr
       git remote add upstream git@github.com:mrlesmithjr/Ansible.git
 
 #awesome
-[code/proj/wm_via_systemd-with_xdg]
+[code/forks/wm_via_systemd-with_xdg]
 checkout = git clone git@github.com:svrvt/wm_via_systemd-with_xdg.git
 
 #nvim
-[code/proj/nvim-rafi]
+[code/forks/nvim-rafi]
 checkout =
       git clone git@github.com:svrvt/nvim-rafi.git
       git remote add upstream git@github.com:rafi/vim-config
 link = ln -svfn $PWD ~/.config/nvim-rafi
 
 #rofi
-[code/proj/pass-rofi-gui]
+[code/forks/pass-rofi-gui]
 checkout = git clone git@github.com:svrvt/pass-rofi-gui.git
 
-[code/proj/buku_run]
+[code/forks/buku_run]
 checkout = git clone git@github.com:svrvt/buku_run.git
 
-[code/proj/rofi-systemd]
+[code/forks/rofi-systemd]
 checkout = git clone git@github.com:svrvt/rofi-systemd.git
 
 #trade     
-[code/trade/ex_change]
+[work/trade/ex_change]
 checkout = 
       git clone git@github.com:svrvt/ex_change.git
       git remote add upstream git@github.com:hummingbot/hummingbot.git
 
-[code/template/pass_template]
+[code/init/pass_template]
 checkout = git clone git@github.com:svrvt/pass_template.git
 
-[code/template/auth_template]
+[code/init/auth_template]
 checkout = git clone git@github.com:svrvt/auth_template.git
 
 [code/study/GB_DSinM]
