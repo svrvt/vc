@@ -94,23 +94,15 @@ link =
 checkout = git clone git@github.com:anuvyklack/dotfiles.git dotfiles.git
 link = ln -svnf $PWD $HOME/src/ansible/dot-lab/anuvyklack.link
 
-[src/github.com/tangledhelix/dotfiles.git]
-checkout = git clone git@github.com:tangledhelix/dotfiles.git dotfiles.git
-link = ln -svnf $PWD $HOME/src/ansible/dot-lab/tangledhelix.link
-
 [src/github.com/aos/homelab.git]
 checkout = git clone git@github.com:aos/homelab.git homelab.git
 link = ln -svnf $PWD $HOME/src/ansible/dot-lab/aos.homelab.link
 
-[src/github.com/aos/dotfiles.git]
-checkout = git clone git@github.com:aos/dotfiles.git dotfiles.git 
-link = ln -svnf $PWD $HOME/src/ansible/dot-lab/aos.dotfiles.link
-
-#full-up
 [src/github.com/adithyakhamithkar/ansible-playbooks.git]
 checkout = git clone git@github.com:adithyakhamithkar/ansible-playbooks.git ansible-playbooks.git
-link = ln -svnf $PWD $HOME/src/ansible/full-up/ansible-playbooks.link
+link = ln -svnf $PWD $HOME/src/ansible/dot-lab/ansible-playbooks.link
 
+#full-up
 [src/github.com/nodiscc/xsrv.git]
 checkout = git clone git@github.com:nodiscc/xsrv.git xsrv.git
 link = ln -svnf $PWD $HOME/src/ansible/full-up/xsrv.link
@@ -212,10 +204,6 @@ checkout = git clone git@github.com:drduh/config.git config.git
 [src/github.com/infokiller/config-public.git]
 checkout = git clone git@github.com:infokiller/config-public.git config-public.git
 
-[src/github.com/folke/dot.git]
-checkout = git clone git@github.com:folke/dot.git dot.git
-link = ln -svnf $PWD/ansible $HOME/src/ansible/dot-lab/folke.link
-
 [src/github.com/zanshin/dotfiles.git]
 checkout = git clone git@github.com:zanshin/dotfiles.git dotfiles.git 
 [src/github.com/zanshin/bin.git]
@@ -254,6 +242,9 @@ checkout = git clone git@gitlab.com:dwt1/dotfiles.git dotfiles.git
 checkout = git clone git@gitlab.com:thelinuxcast/my-dots.git my-dots.git
 [src/github.com/ygalblum/linux-environment.git]
 checkout = git clone git@github.com:ygalblum/linux-environment.git linux-environment.git
+
+[src/github.com/tangledhelix/dotfiles.git]
+checkout = git clone git@github.com:tangledhelix/dotfiles.git dotfiles.git
 
 #nvim
 [src/github.com/milanglacier/nvim.git]
