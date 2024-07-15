@@ -33,17 +33,6 @@
 !/.config/vcsh/hooks-available/vc.pre-merge.00-reset
 !/.config/vcsh/hooks-enabled
 !/.config/vcsh/hooks-enabled/.gitkeep
-!/.config/vcsh/hooks-enabled/post-clone.00-submodules
-!/.config/vcsh/hooks-enabled/post-init.00-gitconfig
-!/.config/vcsh/hooks-enabled/post-merge.00-unclobber
-!/.config/vcsh/hooks-enabled/pre-merge.00-unclobber
-!/.config/vcsh/hooks-enabled/pre-upgrade.00-checkSparseCheckout
-!/.config/vcsh/hooks-enabled/pre-upgrade.01-defaultsparsecheckout
-!/.config/vcsh/hooks-enabled/pre-upgrade.02-GitignoresparseCheckout
-!/.config/vcsh/hooks-enabled/pre-upgrade.02-LICENSEsparseCheckout
-!/.config/vcsh/hooks-enabled/pre-upgrade.02-READMEsparseCheckout
-!/.config/vcsh/hooks-enabled/pre-upgrade.03-buildsparseCheckout
-!/.config/vcsh/hooks-enabled/vc.pre-merge.00-reset
 !/.gitignore.d
 !/.gitignore.d/vc
 !/.local
