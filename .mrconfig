@@ -9,11 +9,9 @@ include =
 			[ $conf != vc ] && test -x $conf && $conf || cat $conf
 		done
   elif [ ! -d $HOME/.config/mr/config.d-$HOSTNAME ]; then
-    cp -r $HOME/.config/mr/config.d $HOME/.config/mr/config.d-$HOSTNAME 
+    mkdir $HOME/.config/mr/config.d-$HOSTNAME 
+    cd $HOME/.config/mr/config.d-$HOSTNAME && ln -s ../available.d/vc .
     cat $HOME/.config/mr/config.d-$HOSTNAME/vc
-    for conf in $HOME/.config/mr/config.d-$HOSTNAME/*; do
-      [ $conf != vc ] && test -x $conf && $conf || cat $conf
-    done
   fi
 
 [ALIAS]

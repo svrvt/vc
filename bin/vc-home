@@ -44,14 +44,14 @@ test -z "$USER" && fatal "$USER not set; exiting" 1
 SELF="$(basename "$0")"
 
 GITHUB_USER=svrvt
-GITHUB_REPO=vc
-PREFIX_FOR_REPOS="$GITHUB_REPO"_
+VCSH_BASE=vc
+VCSH_TRAIT="$VCSH_BASE"_
 
-SELF_URL="https://github.com/$GITHUB_USER/$GITHUB_REPO"
+SELF_URL="https://github.com/$GITHUB_USER/$VCSH_BASE"
 VCSH_URL="https://github.com/RichiH/vcsh/releases/latest/download/vcsh-standalone.sh"
 MR_URL="https://git.joeyh.name/git/myrepos.git/"
 HOMEBIN="$HOME/.local/bin"
-TMP_DIR="/tmp/vc-$USER"
+TMP_DIR="/tmp/$VCSH_BASE-$USER"
 
 ## Functions
 # *log*: a wrapper of echo to print stuff in a more colorful way
@@ -141,7 +141,7 @@ install_mr() {
 }
 
 # *setup_vcsh_hooks* : sets up base vcsh hooks
-setup_vc() {
+setup_vcsh_base() {
 	# * Look at ``HOOK_D`` and ``HOOK_A`` variable if already defined
 	test -z "$HOOK_D" && HOOK_D=$HOME/.config/vcsh/hooks-enabled
 	test -z "$HOOK_A" && HOOK_A=$HOME/.config/vcsh/hooks-available
@@ -152,14 +152,10 @@ setup_vc() {
 	test -d "$HOOK_D" || mkdir -p "$HOOK_D"
 	test -d "$HOOK_A" || mkdir -p "$HOOK_A"
 
-	if [ ! -f "$HOOK_A/pre-upgrade.00-checkSparseCheckout" ] ||
-		[ ! -f "$HOOK_A/pre-upgrade.01-defaultsparsecheckout" ] ||
-		[ ! -f "$HOOK_A/pre-upgrade.02-GitignoresparseCheckout" ] ||
-		[ ! -f "$HOOK_A/pre-upgrade.02-LICENSEsparseCheckout" ] ||
-		[ ! -f "$HOOK_A/pre-upgrade.02-READMEsparseCheckout" ] ||
-		[ ! -f "$HOOK_A/pre-upgrade.03-buildsparseCheckout" ]; then
+	if [ ! -f "$HOOK_A/pre-merge.00-unclobber" ] ||
+		[ ! -f "$HOOK_A/post-merge.00-unclobber" ]; then
 
-		log "Cloning vc to $TMP_DIR"
+		log "Cloning $VCSH_BASE to $TMP_DIR"
 		test -d "$TMP_DIR" && rm -rf "$TMP_DIR"
 		git clone $SELF_URL "$TMP_DIR"
 		HOOK_SRC_DIR=$TMP_DIR/.config/vcsh/hooks-available
@@ -170,7 +166,7 @@ setup_vc() {
 	fi
 
 	log "Enabling all hooks via symlink"
-	cd "${HOOK_D}" && ln -sf "${HOOK_A}"/* .
+	cd "${HOOK_D}" && ln -sf ../hooks-available/* .
 	log "Making sure all hooks are executable"
 	chmod +x "${HOOK_A}"/*
 }
@@ -179,21 +175,21 @@ setup_vc() {
 cmd_help() {
 	log "Commands"
 	log ""
-	log "bootstrap        bootstrap vcsh, mr and vc (bootstrap)"
+	log "bootstrap        bootstrap vcsh, mr and $VCSH_BASE (bootstrap)"
 	log "update           updates vcsh and mr"
 	log "clone            clones mr repository and runs mr co. Skips the"
 	log "                 initial clone if repository is already cloned."
-	log "verify           verify vc setup"
+	log "verify           verify $VCSH_BASE setup"
 	log "help             show help"
 }
 
-# *cmd_verify* : verifies that vcsh, mr and vc is setup
+# *cmd_verify* : verifies that vcsh, mr and $VCSH_BASE is setup
 cmd_verify() {
-	log "Verifying vc setup"
+	log "Verifying $VCSH_BASE setup"
 	check_cmd vcsh
 	check_cmd mr
-	check_cmd vc-home
-	check_cmd vc
+	check_cmd "$VCSH_BASE"-home
+	check_cmd "$VCSH_BASE"
 	export PATH=$PATH:$HOMEBIN
 
 	if ssh -T git@github.com 2>&1 | grep -q "Permission denied"; then
@@ -208,7 +204,7 @@ EOF
 	# 	git config --global --remove-section url.git@github.com:
 	fi
 
-	log "vc setup is verified!"
+	log "$VCSH_BASE setup is verified!"
 }
 
 # *cmd_bootstrap* : bootstrap vcsm, mr and vc
@@ -224,25 +220,25 @@ cmd_bootstrap() {
 	test -z "$HTTP_GET" && command -v curl >/dev/null && HTTP_GET='curl -s -S -O'
 	test -z "$HTTP_GET" && fatal 'Unable to find wget or curl'
 
-	echo "$SELF: bootstrapping vc with '$HTTP_GET'"
+	echo "$SELF: bootstrapping $VCSH_BASE with '$HTTP_GET'"
 
 	setup_local_bin
 	install_vcsh
 	install_mr
-	setup_vc
+	setup_vcsh_base
 
 	# Explain the user how to add configurations
-	if ! test -f "$HOME/.config/mr/available.d/vc.vcsh"; then
-		log "vc will now self-bootstrap via vcsh and update via mr"
-		vcsh clone $SELF_URL vc
-		log "You should now have vc setup via vcsh and mr."
+	if ! test -f "$HOME/.config/mr/available.d/$VCSH_BASE"; then
+		log "$VCSH_BASE will now self-bootstrap via vcsh and update via mr"
+		vcsh clone $SELF_URL
+		log "You should now have $VCSH_BASE setup via vcsh and mr."
 	else
-		log "vc is already configued via mr and vcsh."
+		log "$VCSH_BASE is already configued via mr and vcsh."
 	fi
 
 	log "Running 'mr co' to verify"
 	mr co
-	log "vc has been successfully setup."
+	log "$VCSH_BASE has been successfully setup."
 	log "Make sure to 'source ~/.profile' or restart your shell"
 
 	cd "$HOME"
@@ -260,20 +256,20 @@ cmd_clone() {
 	# REPO_NAME=$(echo "$1" | awk -F'/' '{print $(NF)}')
 	for r in "$@"; do
 		case $r in
-		"$GITHUB_REPO")
-			REPO_NAME="$GITHUB_REPO"
-			REPO_ADDRESS="git@github.com:$GITHUB_USER/$REPO_NAME"
+		"$VCSH_BASE")
+			REPO_NAME="$VCSH_BASE"
 			;;
 		*)
-			REPO_NAME="$PREFIX_FOR_REPOS$r"
-			REPO_ADDRESS="git@github.com:$GITHUB_USER/$REPO_NAME"
+			REPO_NAME="$VCSH_TRAIT$r"
 			;;
 		esac
+
+		REPO_ADDRESS="git@github.com:$GITHUB_USER/$REPO_NAME"
 
 		if [ -d "$HOME/.config/vcsh/repo.d/$REPO_NAME.git" ]; then
 			log "$REPO_NAME is already cloned"
 		else
-			log "Cloning $r"
+			log "Cloning $REPO_ADDRESS"
 			(cd "$HOME" && vcsh clone "$REPO_ADDRESS")
 		fi
 
