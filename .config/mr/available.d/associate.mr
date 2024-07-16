@@ -48,8 +48,8 @@ checkout = git clone git@github.com:Oxyd76/tinyxit.git tinyxit.git
 [src/github.com/cardosofede/hummingbot-deploy.git]
 checkout = git clone git@github.com:cardosofede/hummingbot-deploy.git hummingbot-deploy.git
 link = 
-    ln -svnf $PWD $HOME/src/hummingbot/hummingbot-deploy.link
-    ln -svnf $HOME/src/github.com/hummingbot $HOME/work/trade/hummingbot_all
+    ln -svnf $PWD $HOME/src/hummingbot/hummingbot-deploy.link 
+    # ln -svnf $HOME/src/hummingbot $HOME/ /hummingbot_all
 
 [src/github.com/andrewsiah/Arbitrage_Bot.git]
 checkout = git clone git@github.com:andrewsiah/Arbitrage_Bot.git Arbitrage_Bot.git
@@ -60,8 +60,8 @@ link = ln -svnf $PWD $HOME/src/hummingbot/Arbitrage_Bot.link
 checkout = git clone git@github.com:hummingbot/community-tools.git community-tools.git
 link = ln -svnf $PWD $HOME/src/hummingbot/community-tools.link
 
-[src/github.com/hummingbot/deploy-examples.git]
-checkout = git clone git@github.com:hummingbot/deploy-examples.git deploy-examples.git
+[src/github.com/hummingbot/deploy.git]
+checkout = git clone git@github.com:hummingbot/deploy.git deploy.git
 link = ln -svnf $PWD $HOME/src/hummingbot/deploy-examples.link
 
 [src/github.com/hummingbot/hummingbot.git]
@@ -141,6 +141,9 @@ checkout = git clone git@github.com:ChristianLempa/homelab.git homelab.git
 
 [src/github.com/stilicho2011/ubuntu_rep.git]
 checkout = git clone git@github.com:stilicho2011/ubuntu_rep.git ubuntu_rep.git
+link =
+    ln -svfn $PWD $HOME/src/docker/ubuntu_rep.link
+    # ln -svnf $HOME/src/docker $HOME/ /docker_all.link
 
 #nix-home
 [src/github.com/aos/home.nix.git]
@@ -304,9 +307,12 @@ checkout = git clone git@github.com:ledovsky/latex-gost-template.git latex-gost-
 #DICOM
 [src/github.com/orthanc-server/orthanc-setup-samples.git]
 checkout = git clone git@github.com:orthanc-server/orthanc-setup-samples.git orthanc-setup-samples.git
+link = ln -svnf $PWD $HOME/src/orthanc/orthanc-setup-samples.link
 
 [src/github.com/orthanc-team/orthanc-auth-service.git]
 checkout = git clone git@github.com:orthanc-team/orthanc-auth-service.git orthanc-auth-service.git
-
+link = 
+    ln -svnf $PWD $HOME/src/orthanc/orthanc-auth-service.link
+    # ln -svnf $HOME/src/orthanc $HOME orthanc_all.link  
 
 # vim: ft=ini
