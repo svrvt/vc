@@ -45,12 +45,6 @@ checkout = git clone git@github.com:Oxyd76/tor-service.git tor-service.git
 checkout = git clone git@github.com:Oxyd76/tinyxit.git tinyxit.git
 
 #trade
-[src/github.com/cardosofede/hummingbot-deploy.git]
-checkout = git clone git@github.com:cardosofede/hummingbot-deploy.git hummingbot-deploy.git
-link = 
-    ln -svnf $PWD $HOME/src/hummingbot/hummingbot-deploy.link 
-    # ln -svnf $HOME/src/hummingbot $HOME/ /hummingbot_all
-
 [src/github.com/andrewsiah/Arbitrage_Bot.git]
 checkout = git clone git@github.com:andrewsiah/Arbitrage_Bot.git Arbitrage_Bot.git
       # git checkout feat/script_strategy
@@ -60,24 +54,19 @@ link = ln -svnf $PWD $HOME/src/hummingbot/Arbitrage_Bot.link
 checkout = git clone git@github.com:hummingbot/community-tools.git community-tools.git
 link = ln -svnf $PWD $HOME/src/hummingbot/community-tools.link
 
+[src/github.com/hummingbot/helper.git]
+checkout = git clone git@github.com:hummingbot/helper.git helper.git
+link = ln -svnf $PWD $HOME/src/hummingbot/helper.link
+
 [src/github.com/hummingbot/deploy.git]
 checkout = git clone git@github.com:hummingbot/deploy.git deploy.git
-link = ln -svnf $PWD $HOME/src/hummingbot/deploy-examples.link
+link = ln -svnf $PWD $HOME/src/hummingbot/deploy.link
 
 [src/github.com/hummingbot/hummingbot.git]
 checkout = 
     git clone git@github.com:hummingbot/hummingbot.git hummingbot.git
     git checkout development
 link = ln -svnf $PWD $HOME/src/hummingbot/hummingbot.link
-
-[src/github.com/hummingbot/dashboard.git]
-checkout = git clone git@github.com:hummingbot/dashboard.git dashboard.git
-link = ln -svnf $PWD $HOME/src/hummingbot/dashboard.link
-
-[src/github.com/hummingbot/helper.git]
-checkout = git clone git@github.com:hummingbot/helper.git helper.git
-link = ln -svnf $PWD $HOME/src/hummingbot/helper.link
-
 
 #ansible
 [src/github.com/LearnLinuxTV/personal_ansible_desktop_configs.git]
