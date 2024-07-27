@@ -165,10 +165,10 @@ checkout = git clone git@gitlab.com:apparmor/apparmor.git apparmor.git
 checkout = git clone git://git.launchpad.net/apparmor-profiles apparmor-profiles.git
 
 [src/build/apparmor.d]
-checkout = git clone https://github.com/roddhjav/apparmor.d.git apparmor.d
+checkout = git clone git@github.com:roddhjav/apparmor.d.git apparmor.d
 
 [src/build/lynis]
-checkout = git clone git://git@github.com:CISOfy/lynis.git lynis
+checkout = git clone git@github.com:CISOfy/lynis.git lynis
 
 [src/build/AdGuardHome]
 checkout = git clone git@github.com:AdguardTeam/AdGuardHome.git AdGuardHome
