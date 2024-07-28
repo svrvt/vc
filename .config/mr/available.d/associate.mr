@@ -174,20 +174,25 @@ checkout = git clone git@github.com:CISOfy/lynis.git lynis
 checkout = git clone git@github.com:AdguardTeam/AdGuardHome.git AdGuardHome
 
 #awesome
-[src/github.com/pA0k/AwesomeWm-config.git]
-checkout = git clone git@github.com:pA0k/AwesomeWm-config.git AwesomeWm-config.git
+[src/github.com/suconakh/awesome-awesome-rc.git]
+checkout = git clone git@github.com:suconakh/awesome-awesome-rc.git awesome-awesome-rc.git
 
 [src/github.com/streetturtle/awesome-wm-widgets.git]
 checkout = git clone git@github.com:streetturtle/awesome-wm-widgets.git awesome-wm-widgets.git
 [src/github.com/streetturtle/awesome-buttons.git]
 checkout = git clone git@github.com:streetturtle/awesome-buttons.git awesome-buttons.git
+
 [src/github.com/Kasper24/KwesomeDE.git]
 checkout = git clone --recurse-submodules git@github.com:Kasper24/KwesomeDE KwesomeDE.git
 
+[src/github.com/pA0k/AwesomeWm-config.git]
+checkout = git clone git@github.com:pA0k/AwesomeWm-config.git AwesomeWm-config.git
 [src/github.com/alfunx/.dotfiles.git]
 checkout = git clone git@github.com:alfunx/.dotfiles.git .dotfiles.git
 [src/github.com/rxyhn/yoru.git]
 checkout = git clone git@github.com:rxyhn/yoru.git yoru.git
+[src/github.com/pablonoya/awesomewm-configuration.git]
+checkout = git clone git@github.com:pablonoya/awesomewm-configuration.git awesomewm-configuration.git
 
 #owner
 [src/github.com/drduh/config.git]
