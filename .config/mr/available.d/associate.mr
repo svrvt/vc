@@ -1,310 +1,310 @@
 # vcsh
-[src/github.com/aspiers/mr-config.git]
+[~/src/github.com/aspiers/mr-config.git]
 order = 11
-checkout = git clone git@github.com:aspiers/mr-config.git mr-config.git
+checkout = git clone https://github.com/aspiers/mr-config.git mr-config.git
 link =
     link_repos.sh
     ln -svnf $PWD $HOME/src/config/vcsh/mr-config.link
 
-[src/github.com/alerque/que.git]
-checkout = git clone git@github.com:alerque/que.git que.git
+[~/src/github.com/alerque/que.git]
+checkout = git clone https://github.com/alerque/que.git que.git
 link = ln -svnf $PWD $HOME/src/config/vcsh/que.link
 
-[src/github.com/lierdakil/vcsh-modules.git]
-checkout = git clone git@github.com:lierdakil/vcsh-modules.git vcsh-modules.git
+[~/src/github.com/lierdakil/vcsh-modules.git]
+checkout = git clone https://github.com/lierdakil/vcsh-modules.git vcsh-modules.git
 link = ln -svnf $PWD $HOME/src/config/vcsh/vcsh-modules.link
 
-[src/github.com/srgvg/dotfiles.git]
-checkout = git clone git@github.com:srgvg/dotfiles.git dotfiles.git
+[~/src/github.com/srgvg/dotfiles.git]
+checkout = git clone https://github.com/srgvg/dotfiles.git dotfiles.git
 link = ln -svnf $PWD $HOME/src/config/vcsh/srvg.dotfiles.link
 
-[src/github.com/ek9/vcsh-dotfiles.git]
-checkout = git clone git@github.com:ek9/vcsh-dotfiles.git vcsh-dotfiles.git
+[~/src/github.com/ek9/vcsh-dotfiles.git]
+checkout = git clone https://github.com/ek9/vcsh-dotfiles.git vcsh-dotfiles.git
 link = ln -svnf $PWD $HOME/src/config/vcsh/ek9.vcsh-dotfiles.link
 
-[src/github.com/ek9/x11-config.git]
-checkout = git clone git@github.com:ek9/x11-config.git x11-config.git
+[~/src/github.com/ek9/x11-config.git]
+checkout = git clone https://github.com/ek9/x11-config.git x11-config.git
 link = ln -svnf $PWD $HOME/src/config/vcsh/ek9.x11-config.link
 
-[src/github.com/ek9/shell-config.git]
-checkout = git clone git@github.com:ek9/shell-config.git shell-config.git
+[~/src/github.com/ek9/shell-config.git]
+checkout = git clone https://github.com/ek9/shell-config.git shell-config.git
 link = ln -svnf $PWD $HOME/src/config/vcsh/ek9.shell-config.link
 
-[src/github.com/ek9/vim-config.git]
-checkout = git clone git@github.com:ek9/vim-config.git vim-config.git
+[~/src/github.com/ek9/vim-config.git]
+checkout = git clone https://github.com/ek9/vim-config.git vim-config.git
 link = ln -svnf $PWD $HOME/src/config/vcsh/ek9.vim-config.link
 
 #proxy
-[src/gitlab.com/tinyproxy/tinyproxy.git]
-checkout = git clone git@github.com:tinyproxy/tinyproxy.git tinyproxy.git
+[~/src/gitlab.com/tinyproxy/tinyproxy.git]
+checkout = git clone https://github.com/tinyproxy/tinyproxy.git tinyproxy.git
 
-[src/github.com/Oxyd76/tor-service.git]
-checkout = git clone git@github.com:Oxyd76/tor-service.git tor-service.git
+[~/src/github.com/Oxyd76/tor-service.git]
+checkout = git clone https://github.com/Oxyd76/tor-service.git tor-service.git
 
-[src/github.com/Oxyd76/tinyxit.git]
-checkout = git clone git@github.com:Oxyd76/tinyxit.git tinyxit.git
+[~/src/github.com/Oxyd76/tinyxit.git]
+checkout = git clone https://github.com/Oxyd76/tinyxit.git tinyxit.git
 
 #trade
-[src/github.com/andrewsiah/Arbitrage_Bot.git]
-checkout = git clone git@github.com:andrewsiah/Arbitrage_Bot.git Arbitrage_Bot.git
+[~/src/github.com/andrewsiah/Arbitrage_Bot.git]
+checkout = git clone https://github.com/andrewsiah/Arbitrage_Bot.git Arbitrage_Bot.git
       # git checkout feat/script_strategy
 link = ln -svnf $PWD $HOME/src/hummingbot/Arbitrage_Bot.link
 
-[src/github.com/hummingbot/community-tools.git]
-checkout = git clone git@github.com:hummingbot/community-tools.git community-tools.git
+[~/src/github.com/hummingbot/community-tools.git]
+checkout = git clone https://github.com/hummingbot/community-tools.git community-tools.git
 link = ln -svnf $PWD $HOME/src/hummingbot/community-tools.link
 
-[src/github.com/hummingbot/helper.git]
-checkout = git clone git@github.com:hummingbot/helper.git helper.git
+[~/src/github.com/hummingbot/helper.git]
+checkout = git clone https://github.com/hummingbot/helper.git helper.git
 link = ln -svnf $PWD $HOME/src/hummingbot/helper.link
 
-[src/github.com/hummingbot/deploy.git]
-checkout = git clone git@github.com:hummingbot/deploy.git deploy.git
+[~/src/github.com/hummingbot/deploy.git]
+checkout = git clone https://github.com/hummingbot/deploy.git deploy.git
 link = ln -svnf $PWD $HOME/src/hummingbot/deploy.link
 
-[src/github.com/hummingbot/hummingbot.git]
+[~/src/github.com/hummingbot/hummingbot.git]
 checkout = 
-    git clone git@github.com:hummingbot/hummingbot.git hummingbot.git
+    git clone https://github.com/hummingbot/hummingbot.git hummingbot.git
     git checkout development
 link = ln -svnf $PWD $HOME/src/hummingbot/hummingbot.link
 
 #ansible
-[src/github.com/LearnLinuxTV/personal_ansible_desktop_configs.git]
-checkout = git clone git@github.com:LearnLinuxTV/personal_ansible_desktop_configs.git personal_ansible_desktop_configs.git
+[~/src/github.com/LearnLinuxTV/personal_ansible_desktop_configs.git]
+checkout = git clone https://github.com/LearnLinuxTV/personal_ansible_desktop_configs.git personal_ansible_desktop_configs.git
 link = ln -svnf $PWD $HOME/src/ansible/dot-lab/LearnLinuxTV.link
 
-[src/github.com/TechDufus/dotfiles.git]
-checkout = git clone git@github.com:TechDufus/dotfiles.git dotfiles.git
+[~/src/github.com/TechDufus/dotfiles.git]
+checkout = git clone https://github.com/TechDufus/dotfiles.git dotfiles.git
 link =
     ln -svnf $PWD $HOME/src/ansible/dot-lab/TechDufus.link 
     ln -svnf $HOME/src/ansible/ $HOME/ansible/ansible_src.link
 
-[src/github.com/anuvyklack/dotfiles.git]
-checkout = git clone git@github.com:anuvyklack/dotfiles.git dotfiles.git
+[~/src/github.com/anuvyklack/dotfiles.git]
+checkout = git clone https://github.com/anuvyklack/dotfiles.git dotfiles.git
 link = ln -svnf $PWD $HOME/src/ansible/dot-lab/anuvyklack.link
 
-[src/github.com/aos/homelab.git]
-checkout = git clone git@github.com:aos/homelab.git homelab.git
+[~/src/github.com/aos/homelab.git]
+checkout = git clone https://github.com/aos/homelab.git homelab.git
 link = ln -svnf $PWD $HOME/src/ansible/dot-lab/aos.homelab.link
 
-[src/github.com/adithyakhamithkar/ansible-playbooks.git]
-checkout = git clone git@github.com:adithyakhamithkar/ansible-playbooks.git ansible-playbooks.git
+[~/src/github.com/adithyakhamithkar/ansible-playbooks.git]
+checkout = git clone https://github.com/adithyakhamithkar/ansible-playbooks.git ansible-playbooks.git
 link = ln -svnf $PWD $HOME/src/ansible/dot-lab/ansible-playbooks.link
 
 #full-up
-[src/github.com/nodiscc/xsrv.git]
-checkout = git clone git@github.com:nodiscc/xsrv.git xsrv.git
+[~/src/github.com/nodiscc/xsrv.git]
+checkout = git clone https://github.com/nodiscc/xsrv.git xsrv.git
 link = ln -svnf $PWD $HOME/src/ansible/full-up/xsrv.link
 
-[src/github.com/abpai94/personal-deployment.git]
-checkout = git clone git@github.com:abpai94/personal-deployment.git personal-deployment.git
+[~/src/github.com/abpai94/personal-deployment.git]
+checkout = git clone https://github.com/abpai94/personal-deployment.git personal-deployment.git
 link = ln -svnf $PWD $HOME/src/ansible/full-up/personal-deployment.link
 
 #ollama
-[src/github.com/cheifcyber/ollamaAnsible.git]
-checkout = git clone git@github.com:cheifcyber/ollamaAnsible.git ollamaAnsible.git
+[~/src/github.com/cheifcyber/ollamaAnsible.git]
+checkout = git clone https://github.com/cheifcyber/ollamaAnsible.git ollamaAnsible.git
 link = ln -svnf $PWD $HOME/src/ansible/ollama/ollamaAnsible.link
 
-[src/github.com/Work-From-Home-Tech/ollama-deploy.git]
-checkout = git clone git@github.com:Work-From-Home-Tech/ollama-deploy.git ollama-deploy.git
+[~/src/github.com/Work-From-Home-Tech/ollama-deploy.git]
+checkout = git clone https://github.com/Work-From-Home-Tech/ollama-deploy.git ollama-deploy.git
 link = ln -svnf $PWD $HOME/src/ansible/ollama/ollama-deploy.link
 
-[src/github.com/ygalblum/ansible-collection-ollama.git]
-checkout = git clone git@github.com:ygalblum/ansible-collection-ollama.git ansible-collection-ollama.git
+[~/src/github.com/ygalblum/ansible-collection-ollama.git]
+checkout = git clone https://github.com/ygalblum/ansible-collection-ollama.git ansible-collection-ollama.git
 link = ln -svnf $PWD $HOME/src/ansible/ollama/ansible-collection-ollama.link
 
-[src/github.com/bifrostlab/deploy-llm-bot.git]
-checkout = git clone git@github.com:bifrostlab/deploy-llm-bot.git deploy-llm-bot.git
+[~/src/github.com/bifrostlab/deploy-llm-bot.git]
+checkout = git clone https://github.com/bifrostlab/deploy-llm-bot.git deploy-llm-bot.git
 link = ln -svnf $PWD $HOME/src/ansible/ollama/deploy-llm-bot.link
 
 #docker
-[src/github.com/ChristianLempa/boilerplates.git]
-checkout = git clone git@github.com:ChristianLempa/boilerplates.git boilerplates.git
+[~/src/github.com/ChristianLempa/boilerplates.git]
+checkout = git clone https://github.com/ChristianLempa/boilerplates.git boilerplates.git
 link = 
     # ln -svnf $PWD/ansible $HOME/src/ansible/boilerplates.link
     ln -svnf $PWD/docker-compose $HOME/src/docker/boilerplates.link
 
-[src/github.com/ChristianLempa/homelab.git]
-checkout = git clone git@github.com:ChristianLempa/homelab.git homelab.git
+[~/src/github.com/ChristianLempa/homelab.git]
+checkout = git clone https://github.com/ChristianLempa/homelab.git homelab.git
 # link = ln -svnf $PWD/ansible $HOME/src/ansible/homelab.link 
 
-[src/github.com/stilicho2011/ubuntu_rep.git]
-checkout = git clone git@github.com:stilicho2011/ubuntu_rep.git ubuntu_rep.git
+[~/src/github.com/stilicho2011/ubuntu_rep.git]
+checkout = git clone https://github.com/stilicho2011/ubuntu_rep.git ubuntu_rep.git
 link =
     ln -svfn $PWD $HOME/src/docker/ubuntu_rep.link
     # ln -svnf $HOME/src/docker $HOME/ /docker_all.link
 
 #nix-home
-[src/github.com/aos/home.nix.git]
-checkout = git clone git@github.com:aos/home.nix.git home.nix.git
+[~/src/github.com/aos/home.nix.git]
+checkout = git clone https://github.com/aos/home.nix.git home.nix.git
 
-[src/github.com/benbrastmckie/.dotfiles.git]
-checkout = git clone git@github.com:benbrastmckie/.dotfiles.git .dotfiles.git
+[~/src/github.com/benbrastmckie/.dotfiles.git]
+checkout = git clone https://github.com/benbrastmckie/.dotfiles.git .dotfiles.git
 
 #zsh
-[src/github.com/unixorn/zsh-quickstart-kit.git]
-checkout = git clone git@github.com:unixorn/zsh-quickstart-kit.git zsh-quickstart-kit.git
+[~/src/github.com/unixorn/zsh-quickstart-kit.git]
+checkout = git clone https://github.com/unixorn/zsh-quickstart-kit.git zsh-quickstart-kit.git
 
-[src/github.com/geometry-zsh/geometry.git]
-checkout = git clone git@github.com:geometry-zsh/geometry.git geometry.git
+[~/src/github.com/geometry-zsh/geometry.git]
+checkout = git clone https://github.com/geometry-zsh/geometry.git geometry.git
 
-[src/github.com/denisidoro/cheats.git]
-checkout = git clone git@github.com:denisidoro/cheats.git cheats.git
-[src/github.com/papanito/cheats.git]
-checkout = git clone git@github.com:papanito/cheats.git cheats.git
-[src/github.com/mrVanDalo/navi-cheats.git]
-checkout = git clone git@github.com:mrVanDalo/navi-cheats.git navi-cheats.git
-[src/github.com/infosecstreams/cheat.sheets.git]
-checkout = git clone git@github.com:infosecstreams/cheat.sheets.git cheat.sheets.git
+[~/src/github.com/denisidoro/cheats.git]
+checkout = git clone https://github.com/denisidoro/cheats.git cheats.git
+[~/src/github.com/papanito/cheats.git]
+checkout = git clone https://github.com/papanito/cheats.git cheats.git
+[~/src/github.com/mrVanDalo/navi-cheats.git]
+checkout = git clone https://github.com/mrVanDalo/navi-cheats.git navi-cheats.git
+[~/src/github.com/infosecstreams/cheat.sheets.git]
+checkout = git clone https://github.com/infosecstreams/cheat.sheets.git cheat.sheets.git
 
 #secure
-[src/gitlab.com/apparmor/apparmor.git]
+[~/src/gitlab.com/apparmor/apparmor.git]
 checkout = git clone git@gitlab.com:apparmor/apparmor.git apparmor.git
 
-[src/launchpad.net/apparmor-profiles.git]
+[~/src/launchpad.net/apparmor-profiles.git]
 checkout = git clone git://git.launchpad.net/apparmor-profiles apparmor-profiles.git
 
-[src/build/apparmor.d]
-checkout = git clone git@github.com:roddhjav/apparmor.d.git apparmor.d
+[~/src/build/apparmor.d]
+checkout = git clone https://github.com/roddhjav/apparmor.d.git apparmor.d
 
-[src/build/lynis]
-checkout = git clone git@github.com:CISOfy/lynis.git lynis
+[~/src/build/lynis]
+checkout = git clone https://github.com/CISOfy/lynis.git lynis
 
-[src/build/AdGuardHome]
-checkout = git clone git@github.com:AdguardTeam/AdGuardHome.git AdGuardHome
+[~/src/build/AdGuardHome]
+checkout = git clone https://github.com/AdguardTeam/AdGuardHome.git AdGuardHome
 
 #awesome
-[src/github.com/suconakh/awesome-awesome-rc.git]
-checkout = git clone git@github.com:suconakh/awesome-awesome-rc.git awesome-awesome-rc.git
+[~/src/github.com/suconakh/awesome-awesome-rc.git]
+checkout = git clone https://github.com/suconakh/awesome-awesome-rc.git awesome-awesome-rc.git
 
-[src/github.com/streetturtle/awesome-wm-widgets.git]
-checkout = git clone git@github.com:streetturtle/awesome-wm-widgets.git awesome-wm-widgets.git
-[src/github.com/streetturtle/awesome-buttons.git]
-checkout = git clone git@github.com:streetturtle/awesome-buttons.git awesome-buttons.git
+[~/src/github.com/streetturtle/awesome-wm-widgets.git]
+checkout = git clone https://github.com/streetturtle/awesome-wm-widgets.git awesome-wm-widgets.git
+[~/src/github.com/streetturtle/awesome-buttons.git]
+checkout = git clone https://github.com/streetturtle/awesome-buttons.git awesome-buttons.git
 
-[src/github.com/Kasper24/KwesomeDE.git]
-checkout = git clone --recurse-submodules git@github.com:Kasper24/KwesomeDE KwesomeDE.git
+[~/src/github.com/Kasper24/KwesomeDE.git]
+checkout = git clone --recurse-submodules https://github.com/Kasper24/KwesomeDE KwesomeDE.git
 
-[src/github.com/pA0k/AwesomeWm-config.git]
-checkout = git clone git@github.com:pA0k/AwesomeWm-config.git AwesomeWm-config.git
-[src/github.com/alfunx/.dotfiles.git]
-checkout = git clone git@github.com:alfunx/.dotfiles.git .dotfiles.git
-[src/github.com/rxyhn/yoru.git]
-checkout = git clone git@github.com:rxyhn/yoru.git yoru.git
-[src/github.com/pablonoya/awesomewm-configuration.git]
-checkout = git clone git@github.com:pablonoya/awesomewm-configuration.git awesomewm-configuration.git
+[~/src/github.com/pA0k/AwesomeWm-config.git]
+checkout = git clone https://github.com/pA0k/AwesomeWm-config.git AwesomeWm-config.git
+[~/src/github.com/alfunx/.dotfiles.git]
+checkout = git clone https://github.com/alfunx/.dotfiles.git .dotfiles.git
+[~/src/github.com/rxyhn/yoru.git]
+checkout = git clone https://github.com/rxyhn/yoru.git yoru.git
+[~/src/github.com/pablonoya/awesomewm-configuration.git]
+checkout = git clone https://github.com/pablonoya/awesomewm-configuration.git awesomewm-configuration.git
 
 #owner
-[src/github.com/drduh/config.git]
-checkout = git clone git@github.com:drduh/config.git config.git
+[~/src/github.com/drduh/config.git]
+checkout = git clone https://github.com/drduh/config.git config.git
 
-[src/github.com/infokiller/config-public.git]
-checkout = git clone git@github.com:infokiller/config-public.git config-public.git
+[~/src/github.com/infokiller/config-public.git]
+checkout = git clone https://github.com/infokiller/config-public.git config-public.git
 
-[src/github.com/zanshin/dotfiles.git]
-checkout = git clone git@github.com:zanshin/dotfiles.git dotfiles.git 
-[src/github.com/zanshin/bin.git]
-checkout = git clone git@github.com:zanshin/bin.git bin.git
-[src/github.com/omerxx/dotfiles.git]
-checkout = git clone git@github.com:omerxx/dotfiles.git dotfiles.git
-[src/github.com/tadmccorkle/dotfiles.git]
-checkout = git clone -b cfg git@github.com:tadmccorkle/dotfiles.git dotfiles.git
-[src/github.com/weihanglo/dotfiles.git]
-checkout = git clone git@github.com:weihanglo/dotfiles.git dotfiles.git
-[src/github.com/2KAbhishek/Dotfiles.git]
-checkout = git clone git@github.com:2KAbhishek/Dotfiles.git Dotfiles.git
-[src/github.com/ChristianChiarulli/Machfiles.git]
-checkout = git clone git@github.com:ChristianChiarulli/Machfiles.git Machfiles.git
-[src/github.com/Traap/dotfiles.git]
-checkout = git clone git@github.com:Traap/dotfiles.git dotfiles.git
-[src/github.com/adalessa/dotfiles.git]
-checkout = git clone git@github.com:adalessa/dotfiles.git dotfiles.git
-[src/github.com/dane-harnett/dotfiles.git]
-checkout = git clone git@github.com:dane-harnett/dotfiles.git dotfiles.git
-[src/github.com/endoze/dotfiles.git]
-checkout = git clone git@github.com:endoze/dotfiles.git dotfiles.git
-[src/github.com/mathletedev/dotfiles.git]
-checkout = git clone git@github.com:mathletedev/dotfiles.git dotfiles.git
-[src/github.com/mischavandenburg/dotfiles-everforest.git]
-checkout = git clone git@github.com:mischavandenburg/dotfiles-everforest.git dotfiles-everforest.git
-[src/github.com/jtuz/dotfiles.git]
-checkout = git clone git@github.com:jtuz/dotfiles.git dotfiles.git
-[src/github.com/siduck/dotfiles.git]
-checkout = git clone git@github.com:siduck/dotfiles.git dotfiles.git
-[src/github.com/doctorfree/dotfiles-linux.git]
-checkout = git clone git@github.com:doctorfree/dotfiles-linux.git dotfiles-linux.git
-[src/gitlab.com/dwt1/dotfiles.git]
+[~/src/github.com/zanshin/dotfiles.git]
+checkout = git clone https://github.com/zanshin/dotfiles.git dotfiles.git 
+[~/src/github.com/zanshin/bin.git]
+checkout = git clone https://github.com/zanshin/bin.git bin.git
+[~/src/github.com/omerxx/dotfiles.git]
+checkout = git clone https://github.com/omerxx/dotfiles.git dotfiles.git
+[~/src/github.com/tadmccorkle/dotfiles.git]
+checkout = git clone -b cfg https://github.com/tadmccorkle/dotfiles.git dotfiles.git
+[~/src/github.com/weihanglo/dotfiles.git]
+checkout = git clone https://github.com/weihanglo/dotfiles.git dotfiles.git
+[~/src/github.com/2KAbhishek/Dotfiles.git]
+checkout = git clone https://github.com/2KAbhishek/Dotfiles.git Dotfiles.git
+[~/src/github.com/ChristianChiarulli/Machfiles.git]
+checkout = git clone https://github.com/ChristianChiarulli/Machfiles.git Machfiles.git
+[~/src/github.com/Traap/dotfiles.git]
+checkout = git clone https://github.com/Traap/dotfiles.git dotfiles.git
+[~/src/github.com/adalessa/dotfiles.git]
+checkout = git clone https://github.com/adalessa/dotfiles.git dotfiles.git
+[~/src/github.com/dane-harnett/dotfiles.git]
+checkout = git clone https://github.com/dane-harnett/dotfiles.git dotfiles.git
+[~/src/github.com/endoze/dotfiles.git]
+checkout = git clone https://github.com/endoze/dotfiles.git dotfiles.git
+[~/src/github.com/mathletedev/dotfiles.git]
+checkout = git clone https://github.com/mathletedev/dotfiles.git dotfiles.git
+[~/src/github.com/mischavandenburg/dotfiles-everforest.git]
+checkout = git clone https://github.com/mischavandenburg/dotfiles-everforest.git dotfiles-everforest.git
+[~/src/github.com/jtuz/dotfiles.git]
+checkout = git clone https://github.com/jtuz/dotfiles.git dotfiles.git
+[~/src/github.com/siduck/dotfiles.git]
+checkout = git clone https://github.com/siduck/dotfiles.git dotfiles.git
+[~/src/github.com/doctorfree/dotfiles-linux.git]
+checkout = git clone https://github.com/doctorfree/dotfiles-linux.git dotfiles-linux.git
+[~/src/gitlab.com/dwt1/dotfiles.git]
 checkout = git clone git@gitlab.com:dwt1/dotfiles.git dotfiles.git
-[src/gitlab.com/thelinuxcast/my-dots.git]
+[~/src/gitlab.com/thelinuxcast/my-dots.git]
 checkout = git clone git@gitlab.com:thelinuxcast/my-dots.git my-dots.git
-[src/github.com/ygalblum/linux-environment.git]
-checkout = git clone git@github.com:ygalblum/linux-environment.git linux-environment.git
+[~/src/github.com/ygalblum/linux-environment.git]
+checkout = git clone https://github.com/ygalblum/linux-environment.git linux-environment.git
 
-[src/github.com/tangledhelix/dotfiles.git]
-checkout = git clone git@github.com:tangledhelix/dotfiles.git dotfiles.git
+[~/src/github.com/tangledhelix/dotfiles.git]
+checkout = git clone https://github.com/tangledhelix/dotfiles.git dotfiles.git
 
 #nvim
-[src/github.com/milanglacier/nvim.git]
-checkout = git clone git@github.com:milanglacier/nvim.git nvim.git
+[~/src/github.com/milanglacier/nvim.git]
+checkout = git clone https://github.com/milanglacier/nvim.git nvim.git
 
-[src/github.com/LunarVim/nvim-basic-ide.git]
-checkout = git clone git@github.com:LunarVim/nvim-basic-ide.git nvim-basic-ide.git
+[~/src/github.com/LunarVim/nvim-basic-ide.git]
+checkout = git clone https://github.com/LunarVim/nvim-basic-ide.git nvim-basic-ide.git
 
-[src/github.com/LunarVim/starter.lvim.git]
+[~/src/github.com/LunarVim/starter.lvim.git]
 checkout =
-      git clone git@github.com:LunarVim/starter.lvim.git starter.lvim.git
+      git clone https://github.com/LunarVim/starter.lvim.git starter.lvim.git
       git checkout latex-ide
 
-[src/github.com/Traap/nvim.git]
-checkout = git clone git@github.com:Traap/nvim.git nvim.git
+[~/src/github.com/Traap/nvim.git]
+checkout = git clone https://github.com/Traap/nvim.git nvim.git
 
 #vim
-[src/github.com/RobMulla/vim_settings.git]
-checkout = git clone git@github.com:RobMulla/vim_settings.git vim_settings.git
+[~/src/github.com/RobMulla/vim_settings.git]
+checkout = git clone https://github.com/RobMulla/vim_settings.git vim_settings.git
 
 #tmux
-[src/github.com/gpakosz/.tmux.git]
-checkout = git clone git@github.com:gpakosz/.tmux.git .tmux.git
+[~/src/github.com/gpakosz/.tmux.git]
+checkout = git clone https://github.com/gpakosz/.tmux.git .tmux.git
 
 #scripts
-[src/github.com/bbugyi200/scripts.git]
-checkout = git clone git@github.com:bbugyi200/scripts.git scripts.git
-[src/github.com/ronniedroid/getnf.git]
+[~/src/github.com/bbugyi200/scripts.git]
+checkout = git clone https://github.com/bbugyi200/scripts.git scripts.git
+[~/src/github.com/ronniedroid/getnf.git]
 checkout = git clone https://github.com/ronniedroid/getnf.git getnf.git
-[src/github.com/yusuphwickama/wickerscripts.git]
-checkout = git clone git@github.com:yusuphwickama/wickerscripts.git wickerscripts.git
-[src/github.com/ksk0/nvim-install.git]
-checkout = git clone git@github.com:ksk0/nvim-install.git nvim-install.git
-[src/github.com/pystardust/ytfzf.git]
-checkout = git clone git@github.com:pystardust/ytfzf.git ytfzf.git
+[~/src/github.com/yusuphwickama/wickerscripts.git]
+checkout = git clone https://github.com/yusuphwickama/wickerscripts.git wickerscripts.git
+[~/src/github.com/ksk0/nvim-install.git]
+checkout = git clone https://github.com/ksk0/nvim-install.git nvim-install.git
+[~/src/github.com/pystardust/ytfzf.git]
+checkout = git clone https://github.com/pystardust/ytfzf.git ytfzf.git
 #rofi
-[src/github.com/adi1090x/rofi.git]
-checkout = git clone git@github.com:adi1090x/rofi.git rofi.git
-[src/github.com/gotbletu/shownotes.git]
-checkout = git clone git@github.com:gotbletu/shownotes.git shownotes.git
-[src/github.com/Andrey0189/recordrofi.git]
-checkout = git clone git@github.com:Andrey0189/recordrofi.git recordrofi.git
+[~/src/github.com/adi1090x/rofi.git]
+checkout = git clone https://github.com/adi1090x/rofi.git rofi.git
+[~/src/github.com/gotbletu/shownotes.git]
+checkout = git clone https://github.com/gotbletu/shownotes.git shownotes.git
+[~/src/github.com/Andrey0189/recordrofi.git]
+checkout = git clone https://github.com/Andrey0189/recordrofi.git recordrofi.git
 
-[src/github.com/ljcolling/termpdf.git]
-checkout = git clone git@github.com:ljcolling/termpdf.git termpdf.git
-[src/github.com/robherley/snips.sh.git]
-checkout = git clone git@github.com:robherley/snips.sh.git snips.sh.git
+[~/src/github.com/ljcolling/termpdf.git]
+checkout = git clone https://github.com/ljcolling/termpdf.git termpdf.git
+[~/src/github.com/robherley/snips.sh.git]
+checkout = git clone https://github.com/robherley/snips.sh.git snips.sh.git
 
 #R
-[src/github.com/jalvesaq/colorout.git]
-checkout = git clone git@github.com:jalvesaq/colorout colorout.git
+[~/src/github.com/jalvesaq/colorout.git]
+checkout = git clone https://github.com/jalvesaq/colorout colorout.git
 
 #latex
-[paperwork/templates/latex-gost-template]
-checkout = git clone git@github.com:ledovsky/latex-gost-template.git latex-gost-template
+[~/paperwork/templates/latex-gost-template]
+checkout = git clone https://github.com/ledovsky/latex-gost-template.git latex-gost-template
 
 #DICOM
-[src/github.com/orthanc-server/orthanc-setup-samples.git]
-checkout = git clone git@github.com:orthanc-server/orthanc-setup-samples.git orthanc-setup-samples.git
+[~/src/github.com/orthanc-server/orthanc-setup-samples.git]
+checkout = git clone https://github.com/orthanc-server/orthanc-setup-samples.git orthanc-setup-samples.git
 link = ln -svnf $PWD $HOME/src/orthanc/orthanc-setup-samples.link
 
-[src/github.com/orthanc-team/orthanc-auth-service.git]
-checkout = git clone git@github.com:orthanc-team/orthanc-auth-service.git orthanc-auth-service.git
+[~/src/github.com/orthanc-team/orthanc-auth-service.git]
+checkout = git clone https://github.com/orthanc-team/orthanc-auth-service.git orthanc-auth-service.git
 link = 
     ln -svnf $PWD $HOME/src/orthanc/orthanc-auth-service.link
     # ln -svnf $HOME/src/orthanc $HOME orthanc_all.link  
