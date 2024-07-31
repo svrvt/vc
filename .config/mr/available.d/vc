@@ -1,4 +1,4 @@
-[~/.config/vcsh/repo.d/vc.git]
+[$HOME/.config/vcsh/repo.d/vc.git]
 order = 1
 checkout = vcsh clone https://github.com/svrvt/vc.git
 pull = git pull --rebase
