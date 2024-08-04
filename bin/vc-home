@@ -192,18 +192,17 @@ cmd_verify() {
 	check_cmd "$VCSH_BASE"
 	export PATH=$PATH:$HOMEBIN
 
-	if ssh -T git@github.com 2>&1 | grep -q "Permission denied"; then
-		if ! grep -qE '[url "https://github.com/"]+[insteadOf = git@github.com:]' .gitconfig; then
-			cat <<EOF >>"$HOME/.gitconfig"
-# This string added via "$(realpath "$0")"
-[url "https://github.com/"]
-    insteadOf = git@github.com:
-EOF
-		fi
-	# else
-	# 	git config --global --remove-section url.git@github.com:
-	fi
+  if ssh -T git@github.com 2>&1 | grep -q "successfully authenticated"; then
+    # if ! grep -qE '[url "git@github.com:"]+[insteadOf = https://github.com/]' .gitconfig; then
+    if ! grep -q 'insteadOf = https://github.com/' ~/.gitconfig ~/.gitconfig.local; then
+      cat <<EOF >>"$HOME/.gitconfig"
 
+# This string added via "$(realpath "$0")"
+[url "git@github.com:"]
+    insteadOf = https://github.com/
+EOF
+    fi
+  fi
 	log "$VCSH_BASE setup is verified!"
 }
 
