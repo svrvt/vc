@@ -53,7 +53,6 @@ checkout = git clone https://github.com/amnezia-vpn/amneziawg-go
 [$HOME/src/build/zapret]
 checkout = git clone https://github.com/bol-van/zapret.git
 
-
 #tools
 [$HOME/src/build/repolib]
 checkout = git clone https://github.com/pop-os/repolib
@@ -88,14 +87,18 @@ link = ln -svnf $PWD $HOME/src/hummingbot/community-tools.link
 checkout = git clone https://github.com/hummingbot/helper.git helper.git
 link = ln -svnf $PWD $HOME/src/hummingbot/helper.link
 
+[$home/src/github.com/hummingbot/quants-lab.git]
+checkout = git clone https://github.com/hummingbot/quants-lab.git
+link = ln -svnf $PWD $HOME/src/hummingbot/quants-lab.link
+
 [$HOME/src/github.com/hummingbot/deploy.git]
 checkout = git clone https://github.com/hummingbot/deploy.git deploy.git
-link = ln -svnf $PWD $HOME/src/hummingbot/deploy.link
+link =
+    ln -svnf $PWD $HOME/src/hummingbot/deploy.link &&
+    ln -svnf $HOME/src/hummingbot $HOME/code/trade/hummingbot_all.link
 
 [$HOME/src/github.com/hummingbot/hummingbot.git]
-checkout = 
-    git clone https://github.com/hummingbot/hummingbot.git hummingbot.git
-    git checkout development
+checkout = git clone https://github.com/hummingbot/hummingbot.git hummingbot.git 
 link = ln -svnf $PWD $HOME/src/hummingbot/hummingbot.link
 
 #ansible
@@ -161,8 +164,8 @@ checkout = git clone https://github.com/ChristianLempa/homelab.git homelab.git
 [$HOME/src/github.com/stilicho2011/ubuntu_rep.git]
 checkout = git clone https://github.com/stilicho2011/ubuntu_rep.git ubuntu_rep.git
 link =
-    ln -svfn $PWD $HOME/src/docker/ubuntu_rep.link
-    # ln -svnf $HOME/src/docker $HOME/ /docker_all.link
+    ln -svfn $PWD $HOME/src/docker/ubuntu_rep.link &&
+    ln -svnf $HOME/src/docker $HOME/ansible/docker/docker_all.link
 
 #nix-home
 [$HOME/src/github.com/aos/home.nix.git]
@@ -320,7 +323,7 @@ link = ln -svnf $PWD $HOME/src/orthanc/orthanc-setup-samples.link
 [$HOME/src/github.com/orthanc-team/orthanc-auth-service.git]
 checkout = git clone https://github.com/orthanc-team/orthanc-auth-service.git orthanc-auth-service.git
 link = 
-    ln -svnf $PWD $HOME/src/orthanc/orthanc-auth-service.link
-    # ln -svnf $HOME/src/orthanc $HOME orthanc_all.link  
+    ln -svnf $PWD $HOME/src/orthanc/orthanc-auth-service.link &&
+    ln -svnf $HOME/src/orthanc $HOME/code/dicom/orthanc_all.link  
 
 # vim: ft=ini
