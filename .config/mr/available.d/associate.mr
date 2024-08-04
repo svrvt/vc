@@ -35,6 +35,9 @@ checkout = git clone https://github.com/ek9/vim-config.git vim-config.git
 link = ln -svnf $PWD $HOME/src/config/vcsh/ek9.vim-config.link
 
 #proxy
+[$HOME/src/build/proxychains-ng]
+checkout = git clone https://github.com/rofl0r/proxychains-ng.git proxychains-ng
+
 [$HOME/src/gitlab.com/tinyproxy/tinyproxy.git]
 checkout = git clone https://github.com/tinyproxy/tinyproxy.git tinyproxy.git
 
@@ -43,6 +46,33 @@ checkout = git clone https://github.com/Oxyd76/tor-service.git tor-service.git
 
 [$HOME/src/github.com/Oxyd76/tinyxit.git]
 checkout = git clone https://github.com/Oxyd76/tinyxit.git tinyxit.git
+
+[$HOME/src/build/amneziawg-go]
+checkout = git clone https://github.com/amnezia-vpn/amneziawg-go
+
+[$HOME/src/build/zapret]
+checkout = git clone https://github.com/bol-van/zapret.git
+
+
+#tools
+[$HOME/src/build/repolib]
+checkout = git clone https://github.com/pop-os/repolib
+
+#secure
+[$HOME/src/gitlab.com/apparmor/apparmor.git]
+checkout = git clone git@gitlab.com:apparmor/apparmor.git apparmor.git
+
+[$HOME/src/launchpad.net/apparmor-profiles.git]
+checkout = git clone git://git.launchpad.net/apparmor-profiles apparmor-profiles.git
+
+[$HOME/src/build/apparmor.d]
+checkout = git clone https://github.com/roddhjav/apparmor.d.git apparmor.d
+
+[$HOME/src/build/lynis]
+checkout = git clone https://github.com/CISOfy/lynis.git lynis
+
+[$HOME/src/build/AdGuardHome]
+checkout = git clone https://github.com/AdguardTeam/AdGuardHome.git AdGuardHome
 
 #trade
 [$HOME/src/github.com/andrewsiah/Arbitrage_Bot.git]
@@ -156,22 +186,6 @@ checkout = git clone https://github.com/papanito/cheats.git cheats.git
 checkout = git clone https://github.com/mrVanDalo/navi-cheats.git navi-cheats.git
 [$HOME/src/github.com/infosecstreams/cheat.sheets.git]
 checkout = git clone https://github.com/infosecstreams/cheat.sheets.git cheat.sheets.git
-
-#secure
-[$HOME/src/gitlab.com/apparmor/apparmor.git]
-checkout = git clone git@gitlab.com:apparmor/apparmor.git apparmor.git
-
-[$HOME/src/launchpad.net/apparmor-profiles.git]
-checkout = git clone git://git.launchpad.net/apparmor-profiles apparmor-profiles.git
-
-[$HOME/src/build/apparmor.d]
-checkout = git clone https://github.com/roddhjav/apparmor.d.git apparmor.d
-
-[$HOME/src/build/lynis]
-checkout = git clone https://github.com/CISOfy/lynis.git lynis
-
-[$HOME/src/build/AdGuardHome]
-checkout = git clone https://github.com/AdguardTeam/AdGuardHome.git AdGuardHome
 
 #awesome
 [$HOME/src/github.com/suconakh/awesome-awesome-rc.git]

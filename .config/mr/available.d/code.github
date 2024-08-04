@@ -6,7 +6,7 @@ checkout = git clone https://github.com/svrvt/re_set.git ansible
 
 [$HOME/src/ansible/forks/mrlesmithjr]
 checkout =
-      git clone https://github.com/svrvt/ansible-mrlesmithjr-collections.git mrlesmithjr
+      git clone https://github.com/svrvt/ansible-mrlesmithjr-collections.git mrlesmithjr &&
       git remote add upstream https://github.com/mrlesmithjr/Ansible.git
 
 #awesome
@@ -21,6 +21,11 @@ checkout =
 link = ln -svfn $PWD ~/.config/nvim-rafi
 
 #rofi
+[$HOME/code/forks/bukubrow-host]
+checkout =
+      git clone https://github.com/svrvt/bukubrow-host.git &&
+      git remote add upstream https://github.com/samhh/bukubrow-host.git
+
 [$HOME/code/forks/pass-rofi-gui]
 checkout = git clone https://github.com/svrvt/pass-rofi-gui.git
 
