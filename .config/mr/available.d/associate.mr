@@ -57,6 +57,9 @@ checkout = git clone https://github.com/bol-van/zapret.git
 [$HOME/src/build/repolib]
 checkout = git clone https://github.com/pop-os/repolib
 
+[$HOME/src/build/browserpass-native]
+checkout = git clone https://github.com/browserpass/browserpass-native.git 
+
 #secure
 [$HOME/src/gitlab.com/apparmor/apparmor.git]
 checkout = git clone git@gitlab.com:apparmor/apparmor.git apparmor.git
