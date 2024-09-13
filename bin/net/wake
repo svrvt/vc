@@ -1,0 +1,179 @@
+#!/bin/bash
+
+# black='\u001b[30;1m'
+red='\u001b[31;1m'
+green='\u001b[32;1m'
+yellow='\u001b[33;1m'
+blue='\u001b[34;1m'
+magenta='\u001b[35;1m'
+# cyan='\u001b[36;1m'
+# white='\u001b[37;1m'
+# background_black='\u001b[40;1m'
+# background_red='\u001b[41;1m'
+# background_green='\u001b[42;1m'
+# background_Yellow='\u001b[43;1m'
+# background_blue='\u001b[44;1m'
+# background_magenta='\u001b[45;1m'
+# background_cyan='\u001b[46;1m'
+# background_white='\u001b[47;1m'
+
+# bold='\u001b[1m'
+# underline='\u001b[4m'
+reversed='\u001b[7m'
+rc='\u001b[0m'
+
+this_dir_path="$(dirname "$(realpath "$0")")"
+this_config="$(readlink -f "$0")"
+
+if [ -z "$keysdir" ]; then
+	keysdir=${HOME}/.keysdir
+fi
+
+mac_file="$keysdir/macfile.sh"
+tmp_file="$TMP/wake"
+
+if [ -f "$mac_file" ]; then
+	source "$mac_file"
+	echo -e "${yellow} You have a ${#mac[@]} mac-address for lan-connection ${rc}"
+else
+	echo "${yellow} mac file not found, creating him in $keysdir ${rc}"
+	mkdir -p "$keysdir"
+	echo -e '#!/bin/bash \ndeclare -A mac' >"$mac_file"
+fi
+
+hosts=("${!mac[@]}")
+macs=("${mac[@]}")
+# broadcasts=("10.0.0.255" "192.168.1.255")
+broadcasts=()
+while IFS= read -r line; do
+	broadcasts+=("$line")
+done < <(ip -o a s | awk '$3 == "inet" && $2 != "lo" {print $6}')
+# mapfile -t broadcasts < <(ip -o a s | awk '$3 == "inet" && $2 != "lo" {print $6}')
+
+host_is="${hosts[0]}"
+mac_is="${macs[0]}"
+br_is="${broadcasts[0]}"
+
+if [ -f "$tmp_file" ]; then
+	command source "$tmp_file"
+else
+	cat <<EOF >"$tmp_file"
+#!/bin/bash
+host_is="${hosts[0]}"
+mac_is="${macs[0]}"
+br_is="${broadcasts[0]}"
+EOF
+fi
+
+for i in "$@"; do
+	name="${i}"
+	count=0
+	for h in "${hosts[@]}"; do
+		ind="$count"
+		count="$(("$count" + 1))"
+		[[ "$name" = "$h" ]] && break
+	done
+
+	host_is="${hosts[$ind]}"
+	mac_is="${macs[$ind]}"
+
+	sed -i "s/host_is=.*/host_is=\${hosts[$ind]}/" "$tmp_file"
+	sed -i "s/mac_is=.*/mac_is=\${macs[$ind]}/" "$tmp_file"
+done
+
+wake_f() {
+	echo "wakeonlan -p 8 -i $br_is $mac_is"
+}
+up() {
+	wakeonlan -p 8 -i "$br_is" "$mac_is"
+}
+
+# Menu TUI
+clear
+echo -e "${magenta}${reversed} wake up ${host_is} ${rc}"
+echo -e "$(wake_f)"
+echo -e "${blue} (y) confirm ${rc}"
+echo -e "${blue} (a) any hosts ${rc}"
+echo -e "${blue} (l) change lan ${rc}"
+# echo -e "${blue} (i) change interface ${rc}"
+echo -e "${red} (x) Anything else to exit ${rc}"
+echo -en "${green} ==> ${rc}"
+
+read -r option
+case $option in
+"y")
+	up
+	;;
+
+"a")
+  clear
+	echo -e "${magenta} setting up hosts ${rc}"
+
+	count=0
+	for h in "${hosts[@]}"; do
+		count="$(("$count" + 1))"
+		echo -e "${blue} ($count) - $h ${rc} "
+	done
+
+	echo -e "${green} (a) - add host ${rc} "
+	echo -e "${red} (x) - exit ${rc}"
+	echo -en "${green} ==> ${rc}"
+
+	read -r op
+	case $op in
+	[0-9])
+		p_ind="$(("$op" - 1))"
+
+		sed -i "s/host_is=.*/host_is=\${hosts[$p_ind]}/" "$tmp_file"
+		sed -i "s/mac_is=.*/mac_is=\${macs[$p_ind]}/" "$tmp_file"
+
+		"$this_config"
+		;;
+
+	"a")
+    clear
+		echo -e "${magenta} add host ${rc}"
+
+		echo -n "enter the host name: "
+		read -r hst
+		echo -n "enter the host mac: "
+		read -r mcc
+
+		echo -e "mac[$hst]=$mcc" >>"$mac_file"
+
+		hosts=("${hosts[@]}" "$hst")
+		macs=("${macs[@]}" "$mcc")
+		corr_num=$(("${#hosts[@]}" - 1))
+
+		sed -i "s/host_is=.*/host_is=\${hosts[$corr_num]}/" "$tmp_file"
+		sed -i "s/mac_is=.*/mac_is=\${macs[$corr_num]}/" "$tmp_file"
+
+		"$this_config"
+		;;
+
+	esac
+	;;
+
+"l")
+  clear
+	echo -e "${magenta} set lan ${rc}"
+
+	count=0
+	for l in "${broadcasts[@]}"; do
+		count="$(("$count" + 1))"
+		echo -e "${blue} ($count) - $l ${rc} "
+	done
+	echo -e "${red} (x) - exit ${rc}"
+	echo -en "${green} ==> ${rc}"
+
+	read -r op
+	case $op in
+	[0-9])
+		br_ind="$(("$op" - 1))"
+		sed -i "s/br_is=.*/br_is=\${broadcasts[$br_ind]}/" "$tmp_file"
+		"$this_config"
+		;;
+	esac
+	;;
+
+esac
