@@ -22,8 +22,11 @@ include =
         else
             ln -s ../available.d/vc/vc .
         fi
+        cat $HOME/.config/mr/config.d-$HOSTNAME/vc
+        for conf in $HOME/.config/mr/config.d-$HOSTNAME/*; do
+            [ $conf != vc ] && test -x $conf && $conf || cat $conf
+        done
     fi
-    cat $HOME/.config/mr/config.d-$HOSTNAME/vc
 
 [ALIAS]
 
