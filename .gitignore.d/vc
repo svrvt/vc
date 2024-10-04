@@ -28,6 +28,7 @@
 !/.config/mr/available.d/code.github
 !/.config/mr/available.d/repo-vc.bak
 !/.config/mr/available.d/vc
+!/.config/mr/available.d/vc/vc
 !/.config/vcsh
 !/.config/vcsh/config
 !/.config/vcsh/gitmodules

@@ -2,17 +2,28 @@
 git_gc = git gc "$@"
 jobs = 5
 
-include = 
-	if [ -f $HOME/.config/mr/config.d-$HOSTNAME/vc ]; then
-	  cat $HOME/.config/mr/config.d-$HOSTNAME/vc
-		for conf in $HOME/.config/mr/config.d-$HOSTNAME/*; do
-			[ $conf != vc ] && test -x $conf && $conf || cat $conf
-		done
-  elif [ ! -d $HOME/.config/mr/config.d-$HOSTNAME ]; then
-    mkdir $HOME/.config/mr/config.d-$HOSTNAME 
-    cd $HOME/.config/mr/config.d-$HOSTNAME && ln -s ../available.d/vc .
+include =
+    if [ -f $HOME/.config/mr/config.d-$HOSTNAME/vc ]; then
+        cat $HOME/.config/mr/config.d-$HOSTNAME/vc
+        for conf in $HOME/.config/mr/config.d-$HOSTNAME/*; do
+            [ $conf != vc ] && test -x $conf && $conf || cat $conf
+        done
+    elif [ ! -d $HOME/.config/mr/config.d-$HOSTNAME ]; then
+        mkdir $HOME/.config/mr/config.d-$HOSTNAME
+        cd "$HOME/.config/mr/config.d-$HOSTNAME" || exit
+        if [ $HOSTNAME != vps ]; then
+            for l in $(command ls "$HOME/.config/mr/available.d"); do
+                if [ -d "$HOME/.config/mr/available.d/$l" ]; then
+                    ln -sf ../available.d/"$l"/* .
+                elif [ -f "$HOME/.config/mr/available.d/$l" ]; then
+                    ln -sf ../available.d/"$l" .
+                fi
+            done
+        else
+            ln -s ../available.d/vc/vc .
+        fi
+    fi
     cat $HOME/.config/mr/config.d-$HOSTNAME/vc
-  fi
 
 [ALIAS]
 
