@@ -1,0 +1,11 @@
+#newsboat
+[$HOME/src/build/newsboat]
+checkout = git clone https://github.com/newsboat/newsboat.git
+
+[$HOME/src/build/stfl]
+checkout = git clone https://github.com/newsboat/stfl.git
+
+[$HOME/src/build/json-c]
+checkout = git clone https://github.com/json-c/json-c.git
+
+# vim: ft=ini

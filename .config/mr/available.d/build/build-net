@@ -1,0 +1,18 @@
+### see also ~/.config/mr/available.d/see/see-net
+
+[$HOME/src/build/proxychains-ng]
+checkout = git clone https://github.com/rofl0r/proxychains-ng.git proxychains-ng
+
+[$HOME/src/build/amneziawg-go]
+checkout = git clone https://github.com/amnezia-vpn/amneziawg-go amneziawg-go
+
+[$HOME/src/build/zapret]
+checkout = git clone https://github.com/bol-van/zapret.git zapret
+
+[$HOME/src/build/AdGuardHome]
+checkout = git clone https://github.com/AdguardTeam/AdGuardHome.git AdGuardHome
+
+[$HOME/src/build/repolib]
+checkout = git clone https://github.com/pop-os/repolib
+
+# vim: ft=ini
