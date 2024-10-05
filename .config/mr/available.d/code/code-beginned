@@ -1,0 +1,8 @@
+
+[$HOME/code/init/pass_template]
+checkout = git clone https://github.com/svrvt/pass_template.git
+
+[$HOME/code/init/auth_template]
+checkout = git clone https://github.com/svrvt/auth_template.git
+
+# vim: ft=ini syntax=sh

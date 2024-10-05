@@ -1,0 +1,14 @@
+### see also
+### ~/src/hummingbot
+
+[$HOME/code/trade/hummingbot]
+checkout =
+      git clone https://github.com/svrvt/hummingbot.git hummingbot &&
+      git remote add upstream https://github.com/hummingbot/hummingbot.git
+
+[$HOME/code/trade/hummingbot-deploy]
+checkout =
+      git clone https://github.com/svrvt/hummingbot-deploy.git hummingbot-deploy &&
+      git remote add upstream https://github.com/hummingbot/deploy.git
+
+# vim: ft=ini syntax=sh
