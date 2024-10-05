@@ -27,7 +27,6 @@
 !/.config/mr/available.d/associate.mr
 !/.config/mr/available.d/build
 !/.config/mr/available.d/build/build-net
-!/.config/mr/available.d/build/build-newsboat
 !/.config/mr/available.d/build/build-secure
 !/.config/mr/available.d/code.github
 !/.config/mr/available.d/repo-vc.bak
