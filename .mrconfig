@@ -8,8 +8,8 @@ include =
         for conf in $HOME/.config/mr/config.d-$HOSTNAME/*; do
             [ $conf != vc ] && test -x $conf && $conf || cat $conf
         done
-    elif [ ! -d $HOME/.config/mr/config.d-$HOSTNAME ]; then
-        mkdir $HOME/.config/mr/config.d-$HOSTNAME
+    else
+        mkdir -p $HOME/.config/mr/config.d-$HOSTNAME
         cd "$HOME/.config/mr/config.d-$HOSTNAME" || exit
         if [ $HOSTNAME != vps ]; then
             for l in $(command ls "$HOME/.config/mr/available.d"); do
