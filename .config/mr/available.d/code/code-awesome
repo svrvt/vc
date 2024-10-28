@@ -1,0 +1,5 @@
+
+[$HOME/code/edit/wm_via_systemd-with_xdg]
+checkout = git clone https://github.com/svrvt/wm_via_systemd-with_xdg.git
+
+# vi: ft=ini syntax=bash

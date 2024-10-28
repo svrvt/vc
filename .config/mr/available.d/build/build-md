@@ -1,9 +1,11 @@
 ### see also
 ### ~/src/orthanc
 
-[$HOME/code/dicom/ohif]
+[$HOME/src/build/ohif]
 checkout =
       git clone https://github.com/svrvt/ohif.git ohif &&
       git remote add upstream https://github.com/OHIF/Viewers.git
 
-# vim: ft=ini syntax=sh
+link = ln -snf $PWD $HOME/code/md/ohif.link
+
+# vi: ft=ini syntax=bash

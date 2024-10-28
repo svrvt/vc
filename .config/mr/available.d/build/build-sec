@@ -1,12 +1,9 @@
 ### see also ~/.config/mr/available.d/see/see-secure
 
-[$HOME/src/build/browserpass-native]
-checkout = git clone https://github.com/browserpass/browserpass-native.git 
-
 [$HOME/src/build/apparmor.d]
 checkout = git clone https://github.com/roddhjav/apparmor.d.git apparmor.d
 
 [$HOME/src/build/lynis]
 checkout = git clone https://github.com/CISOfy/lynis.git lynis
 
-# vim: ft=ini
+# vi: ft=ini syntax=bash

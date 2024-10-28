@@ -3,5 +3,5 @@ order = 1
 checkout = vcsh clone https://github.com/svrvt/vc.git
 pull = git pull --rebase
 
-# vim: ft=ini syntax=sh
+# vi: ft=ini syntax=bash
 

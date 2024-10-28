@@ -5,4 +5,4 @@ checkout = git clone --recursive https://github.com/adambard/learnxinyminutes-si
 [$HOME/code/study/GB_DSinM]
 checkout = git clone https://github.com/svrvt/GB_DSinM.git
 
-# vim: ft=ini syntax=sh
+# vi: ft=ini syntax=bash

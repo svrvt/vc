@@ -1,8 +1,0 @@
-
-[$HOME/code/forks/wm_via_systemd-with_xdg]
-checkout = git clone https://github.com/svrvt/wm_via_systemd-with_xdg.git
-
-[$HOME/code/forks/rofi-systemd]
-checkout = git clone https://github.com/svrvt/rofi-systemd.git
-
-# vim: ft=ini syntax=sh

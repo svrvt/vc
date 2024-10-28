@@ -1,4 +1,4 @@
-### see also ~/.config/mr/available.d/see/see-net
+### see also ~/.config/mr/available.d/see/see-netsetup
 
 [$HOME/src/build/proxychains-ng]
 checkout = git clone https://github.com/rofl0r/proxychains-ng.git proxychains-ng
@@ -15,4 +15,4 @@ checkout = git clone https://github.com/AdguardTeam/AdGuardHome.git AdGuardHome
 [$HOME/src/build/repolib]
 checkout = git clone https://github.com/pop-os/repolib
 
-# vim: ft=ini
+# vi: ft=ini syntax=bash

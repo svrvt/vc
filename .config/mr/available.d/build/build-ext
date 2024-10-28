@@ -1,0 +1,18 @@
+
+[$HOME/src/build/browserpass-native]
+checkout = git clone https://github.com/browserpass/browserpass-native.git
+
+## https://chromewebstore.google.com/detail/browserpass/naepdomgkenhinolocfifgehidddafch
+[$HOME/src/build/browserpass-extension]
+checkout =
+      git clone https://github.com/svrvt/browserpass-extension.git &&
+      git remote add upstrean https://github.com/browserpass/browserpass-extension.git
+link = ln -snf $PWD $HOME/code/edit/browserpass-extension.link
+
+[$HOME/src/build/bukubrow-host]
+checkout =
+      git clone https://github.com/svrvt/bukubrow-host.git &&
+      git remote add upstream https://github.com/samhh/bukubrow-host.git
+link = ln -snf $PWD $HOME/code/edit/bukubrow-host.link
+
+# vi: ft=ini syntax=bash
