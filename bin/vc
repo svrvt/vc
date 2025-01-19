@@ -10,6 +10,8 @@ fi
 
 if [ "$1" = "vc" ]; then
 	repo=vc
+elif [[ "$1" == "vcsh"* ]]; then
+  repo=$1
 else
 	repo=vc_$1
 fi
