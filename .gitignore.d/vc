@@ -25,10 +25,10 @@
 !/.config/mr
 !/.config/mr/available.d
 !/.config/mr/available.d/build
-!/.config/mr/available.d/build/build-ext
-!/.config/mr/available.d/build/build-md
-!/.config/mr/available.d/build/build-net
-!/.config/mr/available.d/build/build-sec
+!/.config/mr/available.d/build/build-browser-extensions
+!/.config/mr/available.d/build/build-medicine-workflow
+!/.config/mr/available.d/build/build-network
+!/.config/mr/available.d/build/build-secure
 !/.config/mr/available.d/code
 !/.config/mr/available.d/code/code-ansible
 !/.config/mr/available.d/code/code-awesome
