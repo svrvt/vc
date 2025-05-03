@@ -1,0 +1,8 @@
+
+[$HOME/code/pass_template]
+checkout = git clone https://github.com/svrvt/pass_template.git pass_template
+
+[$HOME/code/auth_template]
+checkout = git clone https://github.com/svrvt/auth_template auth_template
+
+# vi: ft=ini syntax=bash

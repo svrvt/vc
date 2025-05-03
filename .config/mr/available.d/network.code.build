@@ -1,0 +1,35 @@
+### see also ~/.config/mr/available.d/network.example
+
+[$HOME/src/github.com/proxychains-ng/proxychains-ng]
+checkout = git clone https://github.com/rofl0r/proxychains-ng proxychains-ng
+link = ln -sfn $PWD $HOME/src/build/proxychains-ng.link
+
+[$HOME/src/github.com/amnezia-vpn/amneziawg-go]
+checkout = git clone https://github.com/amnezia-vpn/amneziawg-go amneziawg-go
+link = ln -sfn $PWD $HOME/src/build/amneziawg-go.link
+
+[$HOME/src/github.com/bol-van/zapret]
+checkout = git clone https://github.com/bol-van/zapret zapret
+link = ln -sfn $PWD $HOME/src/build/zapret.link
+
+[$HOME/src/github.com/AdguardTeam/AdGuardHome]
+checkout = git clone https://github.com/AdguardTeam/AdGuardHome AdGuardHome
+link = ln -sfn $PWD $HOME/src/build/AdGuardHome.link
+
+[$HOME/src/github.com/pop-os/repolib]
+checkout = git clone https://github.com/pop-os/repolib repolib
+link = ln -sfn $PWD $HOME/src/build/repolib.link
+
+
+## Tor
+[$HOME/src/github.com/voriazu/torctl]
+checkout =
+		git clone https://github.com/voriazu/torctl.git torctl &&
+		git remote add bridged https://github.com/JohnMcLaren/torctl-bridged.git &&
+		git remote add upstream https://github.com/BlackArch/torctl.git
+link =
+		ln -sfn $PWD $HOME/code/torctl.link
+		ln -sfn $HOME/src/proxy $HOME/code/proxy.link
+
+
+# vi: ft=ini syntax=bash

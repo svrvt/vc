@@ -1,0 +1,13 @@
+[$HOME/src/github.com/awesomeWM/awesome]
+checkout = git clone https://github.com/awesomeWM/awesome.git awesome
+link = ln -sfn $PWD $HOME/src/build/awesome.link
+
+[$HOME/src/github.com/lgi-devs/lgi]
+checkout = git clone https://github.com/lgi-devs/lgi.git lgi
+link = ln -sfn $PWD $HOME/src/build/lgi.link
+
+[$HOME/src/github.com/RMTT/lua-pam]
+checkout = git clone https://github.com/RMTT/lua-pam.git lua-pam
+link = ln -sfn $PWD $HOME/src/build/lua-pam.link
+
+# vi: ft=ini syntax=bash

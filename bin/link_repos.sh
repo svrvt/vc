@@ -1,14 +1,14 @@
 #!/bin/bash
 o_dir="$HOME/src/github.com"
 owner=$(command ls "$o_dir")
-config="nvim tmux zellij ranger xplr bash zsh shell scripts awesome bin wezterm alacritty"
+config="nvim tmux zellij ranger xplr bash zsh shell scripts awesome bin wezterm alacritty,kitty,nyxt"
 
 for c in $config; do
 	path=()
 	mkdir -p "$HOME/src/config/$c"
 done
 
-mkdir -p "$HOME"/src/{ansible/{dot-lab,full-up,ollama},docker,hummingbot,config/{vcsh,},orthanc}
+mkdir -p "$HOME"/src/{ansible/{dot-lab,full-up,ollama},docker,hummingbot,config/{vcsh,},orthanc,proxy}
 
 for o in $owner; do
 	for c in $config; do
