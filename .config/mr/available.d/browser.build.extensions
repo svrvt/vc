@@ -1,21 +1,21 @@
 
 [$HOME/src/github.com/browserpass/browserpass-native]
-checkout = git clone https://github.com/browserpass/browserpass-native.git
+checkout = git clone https://github.com/browserpass/browserpass-native.git browserpass-native
 link = ln -sfn $PWD $HOME/src/build/browserpass-native.link
 
 ## https://chromewebstore.google.com/detail/browserpass/naepdomgkenhinolocfifgehidddafch
 [$HOME/src/github.com/svrvt/browserpass-extension]
 checkout =
-      git clone https://github.com/svrvt/browserpass-extension.git &&
-      git remote add upstream https://github.com/browserpass/browserpass-extension.git
+      git clone https://github.com/svrvt/browserpass-extension.git browserpass-extension &&
+      git -C $HOME/src/github.com/svrvt/browserpass-extension remote add upstream https://github.com/browserpass/browserpass-extension.git
 link =
       ln -snf $PWD $HOME/code/browserpass-extension.link &&
       ln -sfn $PWD $HOME/src/build/browserpass-extension.link
 
 [$HOME/src/github.com/svrvt/bukubrow-host]
 checkout =
-      git clone https://github.com/svrvt/bukubrow-host.git &&
-      git remote add upstream https://github.com/samhh/bukubrow-host.git
+      git clone https://github.com/svrvt/bukubrow-host.git bukubrow-host &&
+      git -C $HOME/src/github.com/svrvt/bukubrow-host remote add upstream https://github.com/samhh/bukubrow-host.git
 link =
       ln -snf $PWD $HOME/code/bukubrow-host.link
       ln -sfn $PWD $HOME/src/build/bukubrow-host.link

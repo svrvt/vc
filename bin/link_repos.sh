@@ -1,7 +1,7 @@
 #!/bin/bash
 o_dir="$HOME/src/github.com"
 owner=$(command ls "$o_dir")
-config="nvim tmux zellij ranger xplr bash zsh shell scripts awesome bin wezterm alacritty,kitty,nyxt"
+config="nvim tmux zellij ranger xplr bash zsh shell scripts awesome bin wezterm alacritty kitty nyxt"
 
 for c in $config; do
 	path=()

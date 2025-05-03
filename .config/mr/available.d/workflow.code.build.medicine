@@ -4,7 +4,7 @@
 [$HOME/src/github.com/svrvt/ohif]
 checkout =
       git clone https://github.com/svrvt/ohif.git ohif &&
-      git remote add upstream https://github.com/OHIF/Viewers.git
+      git -C $HOME/src/github.com/svrvt/ohif remote add upstream https://github.com/OHIF/Viewers.git
 
 link = ln -snf $PWD $HOME/code/ohif.link
 

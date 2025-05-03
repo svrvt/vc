@@ -7,6 +7,6 @@ checkout = git clone https://github.com/svrvt/re_set.git ansible
 [$HOME/src/ansible/forks/mrlesmithjr-all]
 checkout =
       git clone https://github.com/svrvt/ansible-all-mrlesmithjr.git mrlesmithjr-all &&
-      git remote add upstream https://github.com/mrlesmithjr/Ansible.git
+      git -C $HOME/src/ansible/forks/mrlesmithjr-all remote add upstream https://github.com/mrlesmithjr/Ansible.git
 
 # vi: ft=ini syntax=bash

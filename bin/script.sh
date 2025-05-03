@@ -10,9 +10,11 @@ for l in $list; do
 	# fi
 
 	if [ "$l" != vc ]; then
-    # vcsh upgrade vc_"$l"
-    # vcsh write-gitignore vc_"$l"
-		vc "$l" add -f "/home/ru/.config/mr/available.d/vc_$l"
+		# vcsh upgrade vc_"$l"
+		# vcsh write-gitignore vc_"$l"
+		vc "$l" add "/home/ru/.config/mr/available.d/vc/vc_$l"
+		vc "$l" add -f "/home/ru/.config/mr/available.d/workflow.vc.$l"
+
 		# vc "$l" commit -m "add available.d/vc_$l"
 		# echo -e "$HOME/.config/mr/available.d/vc_$l.vcsh"
 	fi

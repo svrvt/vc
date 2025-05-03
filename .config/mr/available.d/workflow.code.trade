@@ -4,11 +4,11 @@
 [$HOME/code/trade/hummingbot]
 checkout =
       git clone https://github.com/svrvt/hummingbot.git hummingbot &&
-      git remote add upstream https://github.com/hummingbot/hummingbot.git
+      git -C $HOME/code/trade/hummingbot remote add upstream https://github.com/hummingbot/hummingbot.git
 
 [$HOME/code/trade/hummingbot-deploy]
 checkout =
       git clone https://github.com/svrvt/hummingbot-deploy.git hummingbot-deploy &&
-      git remote add upstream https://github.com/hummingbot/deploy.git
+      git -C $HOME/code/trade/hummingbot-deploy remote add upstream https://github.com/hummingbot/deploy.git
 
 # vi: ft=ini syntax=bash

@@ -2,30 +2,17 @@
 git_gc = git gc "$@"
 jobs = 5
 
+lite="vps vaio-p"
+hard="vaio aldebaran"
+
 include =
-    if [ -f $HOME/.config/mr/config.d-$HOSTNAME/vc ]; then
-        cat $HOME/.config/mr/config.d-$HOSTNAME/vc
+    if [ -d $HOME/.config/mr/config.d-$HOSTNAME ]; then
         for conf in $HOME/.config/mr/config.d-$HOSTNAME/*; do
-            [ $conf != vc ] && test -x $conf && $conf || cat $conf
+            test -x $conf && $conf || cat $conf
         done
     else
         mkdir -p $HOME/.config/mr/config.d-$HOSTNAME
-        cd "$HOME/.config/mr/config.d-$HOSTNAME" || exit
-        if [ $HOSTNAME != vps ]; then
-            for l in $(command ls "$HOME/.config/mr/available.d"); do
-                if [ -d "$HOME/.config/mr/available.d/$l" ]; then
-                    ln -sf ../available.d/"$l"/* .
-                elif [ -f "$HOME/.config/mr/available.d/$l" ]; then
-                    ln -sf ../available.d/"$l" .
-                fi
-            done
-        else
-            ln -s ../available.d/vc/vc .
-        fi
-        cat $HOME/.config/mr/config.d-$HOSTNAME/vc
-        for conf in $HOME/.config/mr/config.d-$HOSTNAME/*; do
-            [ $conf != vc ] && test -x $conf && $conf || cat $conf
-        done
+        "$HOME/bin/link_mr"
     fi
 
 [ALIAS]
