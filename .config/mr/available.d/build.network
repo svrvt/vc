@@ -1,0 +1,27 @@
+### see also ~/.config/mr/available.d/example.network
+
+[$HOME/src/github.com/proxychains-ng/proxychains-ng]
+checkout = git clone https://github.com/rofl0r/proxychains-ng proxychains-ng
+link = ln -sfn $PWD $HOME/src/build/proxychains-ng.link
+
+[$HOME/src/github.com/amnezia-vpn/amneziawg-go]
+checkout = git clone https://github.com/amnezia-vpn/amneziawg-go amneziawg-go
+link = ln -sfn $PWD $HOME/src/build/amneziawg-go.link
+
+[$HOME/src/github.com/bol-van/zapret]
+checkout = git clone https://github.com/bol-van/zapret zapret
+link = ln -sfn $PWD $HOME/src/build/zapret.link
+
+[$HOME/src/github.com/AdguardTeam/AdGuardHome]
+checkout = git clone https://github.com/AdguardTeam/AdGuardHome AdGuardHome
+link = ln -sfn $PWD $HOME/src/build/AdGuardHome.link
+
+[$HOME/src/gitlab.com/tinyproxy/tinyproxy.git]
+checkout = git clone https://github.com/tinyproxy/tinyproxy.git tinyproxy.git
+link = ln -sfn $PWD $HOME/src/build/tinyproxy.link
+
+[$HOME/src/github.com/pop-os/repolib]
+checkout = git clone https://github.com/pop-os/repolib repolib
+link = ln -sfn $PWD $HOME/src/build/repolib.link
+
+# vi: ft=ini syntax=bash

@@ -1,0 +1,26 @@
+
+[$HOME/src/github.com/Oxyd76/tinyxit]
+checkout = git clone https://github.com/Oxyd76/tinyxit.git tinyxit
+link = ln -svnf $PWD $HOME/src/proxy/tinyxit.link
+
+[$HOME/src/github.com/Oxyd76/tor-service]
+checkout = git clone https://github.com/Oxyd76/tor-service tor-service
+link = ln -svnf $PWD $HOME/src/proxy/tor-service.link
+
+[$HOME/src/github.com/ayadseghairi/tornet]
+checkout = git clone https://github.com/ayadseghairi/tornet tornet
+link = ln -svnf $PWD $HOME/src/proxy/tornet.link
+
+[$HOME/src/github.com/hmgle/graftcp]
+checkout = git clone https://github.com/hmgle/graftcp graftcp
+link = ln -svnf $PWD $HOME/src/proxy/graftcp.link
+
+[$HOME/src/github.com/jonathanio/update-systemd-resolved]
+checkout = git clone https://github.com/jonathanio/update-systemd-resolved update-systemd-resolved
+link = ln -svnf $PWD $HOME/src/proxy/update-systemd-resolved.link
+
+[$HOME/src/github.com/C0nvert/namespaced-openvpn-transmission]
+checkout = git clone https://github.com/C0nvert/namespaced-openvpn-transmission namespaced-openvpn-transmission
+link = ln -svnf $PWD $HOME/src/proxy/namespaced-openvpn-transmission.link
+
+# vi: ft=ini syntax=bash

@@ -2,9 +2,6 @@
 git_gc = git gc "$@"
 jobs = 5
 
-lite="vps vaio-p"
-hard="vaio aldebaran"
-
 include =
     if [ -d $HOME/.config/mr/config.d-$HOSTNAME ]; then
         for conf in $HOME/.config/mr/config.d-$HOSTNAME/*; do

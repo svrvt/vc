@@ -1,0 +1,5 @@
+#latex example
+[$HOME/paperwork/templates/latex-gost-template]
+checkout = git clone https://github.com/ledovsky/latex-gost-template.git latex-gost-template
+
+# vi: ft=ini syntax=bash

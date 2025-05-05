@@ -1,0 +1,71 @@
+#ansible
+[$HOME/src/github.com/vbotka/ansible-linux-postinstall.git]
+checkout = git clone https://github.com/vbotka/ansible-linux-postinstall.git ansible-linux-postinstall.git
+link = ln -svnf $PWD $HOME/src/ansible/dot-lab/ansible-linux-postinstall.link
+
+[$HOME/src/github.com/LearnLinuxTV/personal_ansible_desktop_configs.git]
+checkout = git clone https://github.com/LearnLinuxTV/personal_ansible_desktop_configs.git personal_ansible_desktop_configs.git
+link = ln -svnf $PWD $HOME/src/ansible/dot-lab/LearnLinuxTV.link
+
+[$HOME/src/github.com/TechDufus/dotfiles.git]
+checkout = git clone https://github.com/TechDufus/dotfiles.git dotfiles.git
+link =
+    ln -svnf $PWD $HOME/src/ansible/dot-lab/TechDufus.link
+    ln -svnf $HOME/src/ansible/ $HOME/ansible/ansible_src.link
+
+[$HOME/src/github.com/anuvyklack/dotfiles.git]
+checkout = git clone https://github.com/anuvyklack/dotfiles.git dotfiles.git
+link = ln -svnf $PWD $HOME/src/ansible/dot-lab/anuvyklack.link
+
+[$HOME/src/github.com/aos/homelab.git]
+checkout = git clone https://github.com/aos/homelab.git homelab.git
+link = ln -svnf $PWD $HOME/src/ansible/dot-lab/aos.homelab.link
+
+[$HOME/src/github.com/adithyakhamithkar/ansible-playbooks.git]
+checkout = git clone https://github.com/adithyakhamithkar/ansible-playbooks.git ansible-playbooks.git
+link = ln -svnf $PWD $HOME/src/ansible/dot-lab/ansible-playbooks.link
+
+#full-up
+[$HOME/src/github.com/nodiscc/xsrv.git]
+checkout = git clone https://github.com/nodiscc/xsrv.git xsrv.git
+link = ln -svnf $PWD $HOME/src/ansible/full-up/xsrv.link
+
+[$HOME/src/github.com/abpai94/personal-deployment.git]
+checkout = git clone https://github.com/abpai94/personal-deployment.git personal-deployment.git
+link = ln -svnf $PWD $HOME/src/ansible/full-up/personal-deployment.link
+
+#ollama
+[$HOME/src/github.com/cheifcyber/ollamaAnsible.git]
+checkout = git clone https://github.com/cheifcyber/ollamaAnsible.git ollamaAnsible.git
+link = ln -svnf $PWD $HOME/src/ansible/ollama/ollamaAnsible.link
+
+[$HOME/src/github.com/Work-From-Home-Tech/ollama-deploy.git]
+checkout = git clone https://github.com/Work-From-Home-Tech/ollama-deploy.git ollama-deploy.git
+link = ln -svnf $PWD $HOME/src/ansible/ollama/ollama-deploy.link
+
+[$HOME/src/github.com/ygalblum/ansible-collection-ollama.git]
+checkout = git clone https://github.com/ygalblum/ansible-collection-ollama.git ansible-collection-ollama.git
+link = ln -svnf $PWD $HOME/src/ansible/ollama/ansible-collection-ollama.link
+
+[$HOME/src/github.com/bifrostlab/deploy-llm-bot.git]
+checkout = git clone https://github.com/bifrostlab/deploy-llm-bot.git deploy-llm-bot.git
+link = ln -svnf $PWD $HOME/src/ansible/ollama/deploy-llm-bot.link
+
+#docker
+[$HOME/src/github.com/ChristianLempa/boilerplates.git]
+checkout = git clone https://github.com/ChristianLempa/boilerplates.git boilerplates.git
+link =
+    # ln -svnf $PWD/ansible $HOME/src/ansible/boilerplates.link
+    ln -svnf $PWD/docker-compose $HOME/src/docker/boilerplates.link
+
+[$HOME/src/github.com/ChristianLempa/homelab.git]
+checkout = git clone https://github.com/ChristianLempa/homelab.git homelab.git
+# link = ln -svnf $PWD/ansible $HOME/src/ansible/homelab.link
+
+[$HOME/src/github.com/stilicho2011/ubuntu_rep.git]
+checkout = git clone https://github.com/stilicho2011/ubuntu_rep.git ubuntu_rep.git
+link =
+    ln -svfn $PWD $HOME/src/docker/ubuntu_rep.link &&
+    ln -svnf $HOME/src/docker $HOME/ansible/docker/docker_all.link
+
+# vi: ft=ini syntax=bash

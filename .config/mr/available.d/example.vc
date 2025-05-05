@@ -1,0 +1,39 @@
+
+# vcsh
+[$HOME/src/github.com/aspiers/mr-config.git]
+order = 11
+checkout = git clone https://github.com/aspiers/mr-config.git mr-config.git
+link =
+    link_repos.sh
+    ln -svnf $PWD $HOME/src/config/vcsh/mr-config.link
+
+[$HOME/src/github.com/alerque/que.git]
+checkout = git clone https://github.com/alerque/que.git que.git
+link = ln -svnf $PWD $HOME/src/config/vcsh/que.link
+
+[$HOME/src/github.com/lierdakil/vcsh-modules.git]
+checkout = git clone https://github.com/lierdakil/vcsh-modules.git vcsh-modules.git
+link = ln -svnf $PWD $HOME/src/config/vcsh/vcsh-modules.link
+
+[$HOME/src/github.com/srgvg/dotfiles.git]
+checkout = git clone https://github.com/srgvg/dotfiles.git dotfiles.git
+link = ln -svnf $PWD $HOME/src/config/vcsh/srvg.dotfiles.link
+
+[$HOME/src/github.com/ek9/vcsh-dotfiles.git]
+checkout = git clone https://github.com/ek9/vcsh-dotfiles.git vcsh-dotfiles.git
+link = ln -svnf $PWD $HOME/src/config/vcsh/ek9.vcsh-dotfiles.link
+
+[$HOME/src/github.com/ek9/x11-config.git]
+checkout = git clone https://github.com/ek9/x11-config.git x11-config.git
+link = ln -svnf $PWD $HOME/src/config/vcsh/ek9.x11-config.link
+
+[$HOME/src/github.com/ek9/shell-config.git]
+checkout = git clone https://github.com/ek9/shell-config.git shell-config.git
+link = ln -svnf $PWD $HOME/src/config/vcsh/ek9.shell-config.link
+
+[$HOME/src/github.com/ek9/vim-config.git]
+checkout = git clone https://github.com/ek9/vim-config.git vim-config.git
+link = ln -svnf $PWD $HOME/src/config/vcsh/ek9.vim-config.link
+
+# vi: ft=ini syntax=bash
+

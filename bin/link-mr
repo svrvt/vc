@@ -1,0 +1,23 @@
+#!/bin/bash
+
+host="$HOSTNAME"
+lite=""
+hard="vaio aldebaran"
+
+# echo -e "${lite[@]}"
+
+for h in $hard; do
+	if [[ $host = "$h" ]]; then
+		use="max"
+	else
+		use="min"
+	fi
+done
+
+case $use in
+	max)
+	ln -snf "$HOME"/.config/mr/available.d/* "$HOME"/.config/mr/config.d-"$HOSTNAME"
+	;;
+esac
+
+
