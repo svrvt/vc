@@ -1,5 +1,0 @@
-
-[$HOME/code/learnxinyminutes-site]
-checkout = git clone --recursive https://github.com/adambard/learnxinyminutes-site learnxinyminutes-site
-
-# vi: ft=ini syntax=bash

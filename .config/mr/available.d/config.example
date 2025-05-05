@@ -1,5 +1,0 @@
-
-[$HOME/src/sr.ht/cnx/dotfiles]
-checkout = git clone https://git.sr.ht/~cnx/dotfiles dotfiles
-
-# vi: ft=ini syntax=bash
