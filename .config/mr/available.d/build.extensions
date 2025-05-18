@@ -20,4 +20,12 @@ link =
       ln -snf $PWD $HOME/code/bukubrow-host.link
       ln -sfn $PWD $HOME/src/build/bukubrow-host.link
 
+[$HOME/src/github.com/svrvt/bukubrow-webext]
+checkout = git clone https://github.com/svrvt/bukubrow-webext.git bukubrow-webext &&
+      git -C $HOME/src/github.com/svrvt/bukubrow-webext remote add upstream https://github.com/samhh/bukubrow-webext.git &&
+      git -C $HOME/src/github.com/svrvt/bukubrow-webext remote add -t context-menu context-menu https://github.com/proteanblank/bukubrow.git
+link =
+      ln -snf $PWD $HOME/code/bukubrow-webext.link
+      ln -sfn $PWD $HOME/src/build/bukubrow-webext.link
+
 # vi: ft=ini syntax=bash
