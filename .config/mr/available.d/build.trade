@@ -2,28 +2,26 @@
 [$HOME/src/github.com/andrewsiah/Arbitrage_Bot.git]
 checkout = git clone https://github.com/andrewsiah/Arbitrage_Bot.git Arbitrage_Bot.git
       # git checkout feat/script_strategy
-link = ln -svnf $PWD $HOME/src/hummingbot/Arbitrage_Bot.link
+link = ln -svnf $PWD $HOME/code/hummingbot/Arbitrage_Bot.link
 
 [$HOME/src/github.com/hummingbot/community-tools.git]
 checkout = git clone https://github.com/hummingbot/community-tools.git community-tools.git
-link = ln -svnf $PWD $HOME/src/hummingbot/community-tools.link
+link = ln -svnf $PWD $HOME/code/hummingbot/community-tools.link
 
 [$HOME/src/github.com/hummingbot/helper.git]
 checkout = git clone https://github.com/hummingbot/helper.git helper.git
-link = ln -svnf $PWD $HOME/src/hummingbot/helper.link
+link = ln -svnf $PWD $HOME/code/hummingbot/helper.link
 
 [$home/src/github.com/hummingbot/quants-lab.git]
 checkout = git clone https://github.com/hummingbot/quants-lab.git
-link = ln -svnf $PWD $HOME/src/hummingbot/quants-lab.link
+link = ln -svnf $PWD $HOME/code/hummingbot/quants-lab.link
 
 [$HOME/src/github.com/hummingbot/deploy.git]
 checkout = git clone https://github.com/hummingbot/deploy.git deploy.git
-link =
-    ln -svnf $PWD $HOME/src/hummingbot/deploy.link &&
-    ln -svnf $HOME/src/hummingbot $HOME/code/trade/hummingbot_all.link
+#link = ln -svnf $PWD $HOME/code/hummingbot/deploy.link
 
 [$HOME/src/github.com/hummingbot/hummingbot.git]
 checkout = git clone https://github.com/hummingbot/hummingbot.git hummingbot.git
-link = ln -svnf $PWD $HOME/src/hummingbot/hummingbot.link
+#link = ln -svnf $PWD $HOME/code/hummingbot/hummingbot.link
 
 # vi: ft=ini syntax=bash

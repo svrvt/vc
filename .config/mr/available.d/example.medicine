@@ -1,12 +1,9 @@
 #DICOM
 [$HOME/src/github.com/orthanc-server/orthanc-setup-samples.git]
 checkout = git clone https://github.com/orthanc-server/orthanc-setup-samples.git orthanc-setup-samples.git
-link = ln -svnf $PWD $HOME/src/orthanc/orthanc-setup-samples.link
+#link = ln -svnf $PWD $HOME/code/orthanc/orthanc-setup-samples.link
 
 [$HOME/src/github.com/orthanc-team/orthanc-auth-service.git]
 checkout = git clone https://github.com/orthanc-team/orthanc-auth-service.git orthanc-auth-service.git
-link =
-    ln -svnf $PWD $HOME/src/orthanc/orthanc-auth-service.link &&
-    ln -svnf $HOME/src/orthanc $HOME/code/md/orthanc_all.link
-
+#link = ln -snf $PWD $HOME/code/orthanc/orthanc-auth-service.link
 # vi: ft=ini syntax=bash

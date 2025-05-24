@@ -9,7 +9,7 @@ include =
         done
     else
         mkdir -p $HOME/.config/mr/config.d-$HOSTNAME
-        "$HOME/bin/link_mr"
+        "$HOME/bin/mr-enable"
     fi
 
 [ALIAS]

@@ -1,0 +1,21 @@
+#!/bin/bash
+
+source_dir=$HOME"/.config/mr/available.d"
+dest_dir="$HOME"/.config/mr/config.d-"$HOSTNAME"
+
+type="$1"
+
+# echo -e "${lite[@]}"
+
+mkdir -p "$dest_dir"
+
+if [[ $type = "all" ]]; then
+	ln -snf "$source_dir"/* "$dest_dir"
+else
+	for t in tmux zsh ; do
+		[ -f "$source_dir/vc.$t" ] && ln -snf "$HOME/.config/mr/available.d/vc.$t" "$dest_dir"
+	done
+fi
+
+
+

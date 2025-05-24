@@ -1,4 +1,3 @@
-### see also ~/.config/mr/available.d/secure.example
 
 [$HOME/src/github.com/roddhjav/apparmor.d]
 checkout = git clone https://github.com/roddhjav/apparmor.d.git apparmor.d

@@ -1,0 +1,5 @@
+
+[$HOME/src/github.com/svrvt/pass_template]
+checkout = git clone https://github.com/svrvt/pass_template.git pass_template
+
+# vi: ft=ini syntax=bash

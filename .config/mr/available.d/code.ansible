@@ -1,0 +1,6 @@
+### ~/src/ansible
+
+[$HOME/ansible]
+checkout = git clone https://github.com/svrvt/re_set.git ansible
+
+# vi: ft=ini syntax=bash
