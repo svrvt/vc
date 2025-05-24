@@ -28,6 +28,7 @@
 !/.config/mr/available.d/code.medicine
 !/.config/mr/available.d/code.network
 !/.config/mr/available.d/code.secure
+!/.config/mr/available.d/code.trade
 !/.config/mr/available.d/example.ansible
 !/.config/mr/available.d/example.awesome
 !/.config/mr/available.d/example.config

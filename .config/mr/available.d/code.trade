@@ -1,0 +1,15 @@
+### see also
+### ~/src/hummingbot
+
+[$HOME/code/hummingbot/hummingbot]
+checkout =
+      git clone https://github.com/svrvt/hummingbot.git hummingbot &&
+      git -C $HOME/code/hummingbot/hummingbot remote add upstream https://github.com/hummingbot/hummingbot.git
+
+[$HOME/code/hummingbot/hummingbot-deploy]
+checkout =
+      git clone https://github.com/svrvt/hummingbot-deploy.git hummingbot-deploy &&
+      git -C $HOME/code/hummingbot/hummingbot-deploy remote add upstream https://github.com/hummingbot/deploy.git
+#link = ln -snf $PWD $HOME/code/hummingbot/hummingbot-deploy.link
+
+# vi: ft=ini syntax=bash
