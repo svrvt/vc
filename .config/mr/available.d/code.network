@@ -7,7 +7,7 @@ checkout =
 		git -C $HOME/src/github.com/voriazu/torctl remote add bridged https://github.com/JohnMcLaren/torctl-bridged.git &&
 		git -C $HOME/src/github.com/voriazu/torctl remote add upstream https://github.com/BlackArch/torctl.git
 link =
-		ln -sfn $PWD $HOME/code/torctl.link
+		ln -sfn $PWD $HOME/code/torctl.link &&
 		ln -sfn $HOME/src/proxy $HOME/code/torctl.link/proxy.link
 
 

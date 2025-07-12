@@ -24,4 +24,8 @@ link = ln -sfn $PWD $HOME/src/build/tinyproxy.link
 checkout = git clone https://github.com/pop-os/repolib repolib
 link = ln -sfn $PWD $HOME/src/build/repolib.link
 
+#[$HOME/src/torproject.org/tpo/core/oniux]
+#checkout = git clone https://gitlab.torproject.org/tpo/core/oniux.git/ oniux
+#link = ln -sfn $PWD $HOME/src/build/oniux.link
+
 # vi: ft=ini syntax=bash
