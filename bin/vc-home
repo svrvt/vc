@@ -46,6 +46,7 @@ SELF="$(basename "$0")"
 GITHUB_USER=svrvt
 VCSH_BASE=vc
 VCSH_TRAIT="$VCSH_BASE"_
+VCSH_TRAIT_LOCAL="$VCSH_BASE".
 
 SELF_URL="https://github.com/$GITHUB_USER/$VCSH_BASE"
 VCSH_URL="https://github.com/RichiH/vcsh/releases/latest/download/vcsh-standalone.sh"
@@ -257,16 +258,19 @@ cmd_clone() {
 		case $r in
 		"$VCSH_BASE")
 			REPO_NAME="$VCSH_BASE"
+			FILE_NAME="$VCSH_BASE"
+			
 			;;
 		*)
 			REPO_NAME="$VCSH_TRAIT$r"
+			FILE_NAME="$VCSH_TRAIT_LOCAL$r"
 			;;
 		esac
 
 		REPO_ADDRESS="git@github.com:$GITHUB_USER/$REPO_NAME"
 
 		if [ -d "$HOME/.config/vcsh/repo.d/$REPO_NAME.git" ]; then
-			log "$REPO_NAME is already cloned"
+			log "$REPO_ADDRESS is already cloned"
 		else
 			log "Cloning $REPO_ADDRESS"
 			(cd "$HOME" && vcsh clone "$REPO_ADDRESS")
@@ -275,10 +279,10 @@ cmd_clone() {
 		if [ ! -d "$HOME"/.config/mr/config.d-"$HOSTNAME" ]; then
 			mkdir -p "$HOME/.config/mr/config.d-$HOSTNAME"
 			cd "$HOME/.config/mr/config.d-$HOSTNAME"
-			ln -sf ../available.d/"$REPO_NAME" .
+			ln -sf ../available.d/"$FILE_NAME" .
 		else
 			cd "$HOME/.config/mr/config.d-$HOSTNAME"
-			ln -sf ../available.d/"$REPO_NAME" .
+			ln -sf ../available.d/"$FILE_NAME" .
 		fi
 
 	done

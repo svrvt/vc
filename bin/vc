@@ -1,6 +1,6 @@
 #!/bin/zsh
 
-if [ "$1" = "status" ]; then
+if [ "$#" -eq 0 ] || [ "$1" = "status" ]; then
   vcsh status
   exit
 elif [[ "$1" = "push" ]]; then
@@ -18,7 +18,12 @@ fi
 
 shift
 
-vcsh run $repo git $@
+if [ "$#" -eq 0 ]; then
+  vcsh run $repo git status
+  #vcsh run $repo git diff HEAD
+else
+  vcsh run $repo git $@
+fi
 
 if [ "$1" = "add" -a "$2" = "-f" ]; then
 	vcsh write-gitignore $repo
